@@ -1,0 +1,822 @@
+CS166: Modeling and Analysis of Complex Systems
+Spring 2026
+
+Course Description
+Have you ever wondered how people use computers to make decisions? In this course, you will learn
+how to apply advanced modeling techniques such as cellular automata, network concepts from graph
+theory, probability theory, and Monte Carlo simulation to analyze and predict the behavior of social,
+physical, and economic systems. You will learn from specific examples of portfolio management, traffic
+flow management, and analyzing social networks.
+We start the course by diving straight into your first simulation in the first week. You write structured code
+in Python from the first until the last week of the course. After the first week, we cover three modeling
+frameworks—cellular automata for modeling interactions on grids of cells, networks for more general
+interactions between nodes in a graph, and Monte Carlo simulations showing how we can use simulation
+to generate random numbers and how we can use random numbers to drive simulations of complex
+phenomena. We cover each framework's theoretical (mathematical) and practical (implementation)
+aspects.
+Please read the course prerequisites and course policies to be adequately prepared for the start of the
+course.
+Course Objectives & Learning Outcomes
+
+
+(Modeling & Simulation) Represent scenarios using mathematical and programming structures.
+#networks: Apply network analysis to explain outcomes that arise out the structure of
+connections. (C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data,
+and generate predictions. (C) EA
+#cs166-PythonImplementation: Based on a model description, implement a simulation of
+the model in Python using appropriate data and programming structures; and demonstrate
+that the code is correct and produces the expected behavior of the model.
+(Analysis) Analyze models and simulations using theoretical and empirical techniques.
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#cs166-TheoreticalAnalysis: Mathematically analyze a model or simulation to determine or
+estimate the characteristics of the model or simulation.
+(KeySkills) Employ key HCs supporting the application of modeling and simulation concepts.
+#emergentproperties: Identify emergent properties of complex systems and discern the
+interactions that give rise to them. (C) CX
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and
+basins--to describe and predict the ways a complex system changes over time. (C) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively
+implement working code. (C) FA
+#confidenceintervals: Apply and interpret confidence intervals. (C) FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#distributions: Identify different types of distributions and make inferences based on
+samples from distributions appropriately. (C) FA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H)
+FA
+#estimation: Use estimation and approximation techniques appropriately. (H) FA
+(Communication) Effectively communicate and apply professional conventions in quantitative fields.
+
+
+#audience: Tailor oral and written work by considering the situation and perspective of the
+people receiving it. (H) MC
+#composition: Communicate with a clear and precise style. (H) MC
+#organization: Effectively organize communications. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#expression: Interpret, evaluate, and utilize nonverbal communication. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise.
+Include meaningful comments, choose clear variable names, use naming conventions
+consistently, and include, where appropriate, helpful error messages. Strive to produce code
+that not only works but can also be run by external readers.
+(Class Scores) Prepare effectively and participate meaningfully during class sessions.
+#ClassParticipation: Contribute to a productive learning environment by attending class
+prepared and on time, participating actively in class sessions, and applying learning
+outcomes through in-class assessments.
+Prerequisites & Working Knowledge
+Course prerequisites
+CS114 ++or++ CS130. Reason: Understanding and creating statistical models.
+CS110. Reason: Writing object-oriented programs in Python.
+Prerequisite knowledge & Summer prep
+Programming in Python
+We use Python 3 in this course and avoid using new functionalities provided by more recent versions
+than Python 3.6 unnecessarily. The recommended Python 3 distribution is Anaconda, which you can
+download for free from https://www.anaconda.com/products/individual. Make sure the Anaconda
+distribution is installed and working on your computer.
+You should know how to write functions, for-loops, while-loops, conditional (if-elif-else) statements.
+
+
+You should be comfortable with manipulating basic data structures like classes, lists, dictionaries,
+and strings.
+You should have a passing familiarity with NumPy and SciPy.
+You should be comfortable plotting data using Matplotlib.
+Resources
+Work through Part 1 (“Getting started with Python for science”) of SciPy Lecture Notes for a
+practical introduction to basic programming in Python for computational statistics.
+Linear algebra
+straightforward products of vectors and matrices,
+some experience in computing eigenvectors and eigenvalues will be beneficial but is not required.
+Probability and statistics
+the sum and product rules,
+marginal and conditional probabilities,
+Bayes’ rule,
+probabilities over discrete and continuous variables,
+probability density and cumulative density functions,
+expected values, mean, variance, and standard deviation.
+Resources
+The Statistics Fundamentals YouTube channel by Josh Starmer (StatQuest). Easy-to-understand
+explanations with clear visualizations.
+Statistics and Probability by Khan Academy. A good resource for students who feel they lack
+foundational probability knowledge or are relatively new to probability. There are lots of exercises
+available.
+Exercises on statistics from Oxford College.
+Assignments
+
+
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+First project 5x Thu, Week 3 Sun of Week 1 Sun of Week 4
+Implementation & Analysis 5x Sat, Week 7 Mon of Week 4 Tue of Week 8
+Final project proposal 0x Wed, Week 10 Mon of Week 4 Tue of Week 11
+LBA project 6x Thu, Week 13 Mon of Week 10 Sun of Week 14
+Final project 8x Thu, Week 15 Fri of Week 13 Fri of Week 15
+Course Scoring
+Objective % of Course Score
+Default Course Objective 0%
+(Modeling & Simulation) Represent scenarios using mathematical and programming 27.5%
+structures.
+#cs166-PythonImplementation
+#modeling
+#networks
+(Analysis) Analyze models and simulations using theoretical and empirical 27.5%
+techniques.
+#cs166-EmpiricalAnalysis
+#cs166-TheoreticalAnalysis
+(KeySkills) Employ key HCs supporting the application of modeling and simulation 12.5%
+concepts.
+#algorithms
+#confidenceintervals
+#dataviz
+#descriptivestats
+#distributions
+#emergentproperties
+#estimation
+#systemdynamics
+#variables
+
+
+(Communication) Effectively communicate and apply professional conventions in 10%
+quantitative fields.
+#audience
+#composition
+#cs110-CodeReadability
+#expression
+#organization
+#professionalism
+#responsibility
+(Class Scores) Prepare effectively and participate meaningfully during class 20%
+sessions.
+#ClassParticipation
+Other 2.5%
+Required Texts
+Sayama, H. (2015). Introduction to the modeling and analysis of complex systems. Open SUNY
+Textbooks, Milne Library. Genesco, NY. (Creative Commons)
+https://milneopentextbooks.org/introduction-to-the-modeling-and-analysis-of-complex-systems/
+Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo methods. Springer.
+https://link.springer.com/book/10.1007/978-0-387-87837-9
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Introduction
+What is modeling, simulation and decision making and what is it used for.
+Session 1: [1.1] The modeling process
+Learning Outcomes
+
+
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H) FA
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+NASA (2010, June 2). Supercomputing the climate [Video file]
+https://www.youtube.com/watch?v=jj0WsQYtT7M
+Chapters 1 and 2 of Sayama, H. (2015). Introduction to the modeling and analysis of complex
+systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+Vaton, S. (2017). Queuing theory.
+https://www.youtube.com/watch?v=jPHJkZ3iOfQ&list=PLjXls-
+kqM6JBzXb6pBnC8WDo28dWc4_qL&index=2
+Assignment 1 description
+https://course-resources.minerva.edu/uploaded_files/mu/00369041-4903/cs166-project1.pdf
+(Optional) TU Delft. (2017). Mathematical Modelling.
+https://www.youtube.com/watch?
+v=bBWaDKJUWAU&list=PL5ad7U1E4nhTq1f8cHB977VtLNH1QWd4w
+(Optional) Servedio, M.R., et al. (2014). Not just a theory – The utility of mathematical models in
+evolutionary biology. PLoS Biol 12(12): e1002017.
+https://doi.org/10.1371/journal.pbio.1002017
+Session 2: [1.2] Queueing theory
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+
+
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H) FA
+#cs166-TheoreticalAnalysis: Mathematically analyze a model or simulation to determine or
+estimate the characteristics of the model or simulation.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+(Optional) Vaton, S. (2017). Queuing theory.
+https://www.youtube.com/watch?v=jPHJkZ3iOfQ&list=PLjXls-
+kqM6JBzXb6pBnC8WDo28dWc4_qL&index=2
+Session 3: [2.1] Implementing a simulation
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include
+meaningful comments, choose clear variable names, use naming conventions consistently, and
+include, where appropriate, helpful error messages. Strive to produce code that not only works but
+can also be run by external readers.
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Amos, D. (2020, July 6). Object-oriented programming (OOP) in Python 3. Real Python.
+https://realpython.com/python3-object-oriented-programming/
+Zadka, M. (2020, June 24). The Python heapq module: Using heaps and priority queues. Real
+Python.
+
+
+https://realpython.com/python-heapq-module/
+(Optional) Zhané, J. (2020, March 25). SimPy: Simulating real-world processes with Python. Real
+Python.
+https://realpython.com/simpy-simulating-with-python/
+Session 4: [2.2] Empirical analysis
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#confidenceintervals: Apply and interpret confidence intervals. (C) FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Rougier, N.P., et al. (2014). Ten simple rules for better figures. PLOS Computational Biology 10(9).
+https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003833&type=printable
+(Optional) Rougier, N.P. (n.d.). Matplotlib tutorial.
+https://github.com/rougier/matplotlib-tutorial/blob/master/README.rst
+(Optional) Petty, N. (2014, March 26). Calculating the confidence interval for a mean using a formula.
+YouTube.
+https://www.youtube.com/watch?v=s4SRdaTycaw
+Unit 2: Modeling discrete systems with cellular automata
+
+
+We model a number of scenarios from epidemiology, biology and traffic flow by discretizing time and
+space in cellular automata. Work through a detailed case study of using cellular automata to simulate
+traffic flow patterns and the effect of accidents, construction, or adding new roads to traffic flow.
+Session 5: [3.1] Introduction to cellular automata
+Learning Outcomes
+#emergentproperties: Identify emergent properties of complex systems and discern the interactions
+that give rise to them. (C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Shiffman, D. (2015). The game of life [Video file]
+https://www.youtube.com/watch?v=tENSCEO-LEc
+Sections 11.1–11.2 of Sayama, H. (2015). Introduction to the modeling and analysis of complex
+systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+Section 12.1 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+Rule 30. (2018, December 9). Wikipedia.
+https://en.wikipedia.org/wiki/Rule_30
+(Optional) Section 12.2 of Sayama, H. (2015). Introduction to the modeling and analysis of complex
+systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+(Optional) Wolfram, S. (1983). Cellular automata. Los Alamos Science, 9:2–21.
+https://permalink.lanl.gov/object/tr?what=info:lanl-repo/lareport/LA-UR-83-2940-01
+(Optional) Cook, M. (2004). Universality in elementary cellular automata. Complex Systems, 15:1–40.
+https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-1-1.pdf
+
+
+Session 6: [3.2] Simulating cellular automata
+Learning Outcomes
+#emergentproperties: Identify emergent properties of complex systems and discern the interactions
+that give rise to them. (C) CX
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Sections 11.3–11.4 of Sayama, H. (2015). Introduction to the modeling and analysis of complex
+systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+Rossant, C. (n.d.). Simulating an elementary cellular automaton.
+https://ipython-books.github.io/122-simulating-an-elementary-cellular-automaton/
+(Optional) Engelen, G., et al. (1995). Using cellular automata for integrated modelling of socio-
+environmental systems. Environmental Monitoring and Assessment, 34(2):203–214.
+(Optional) Chan, B.W. (2018). Lenia: Biology of artificial life.
+https://arxiv.org/pdf/1812.05433v2.pdf
+Session 7: [4.1] Mean-field approximation
+Learning Outcomes
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#estimation: Use estimation and approximation techniques appropriately. (H) FA
+#cs166-TheoreticalAnalysis: Mathematically analyze a model or simulation to determine or
+estimate the characteristics of the model or simulation.
+
+
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Section 11.5 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+Section 12.3 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+Bliss, C. (2018, January 28). Introduction to cobweb plots [Video file].
+https://www.youtube.com/watch?v=gojeMEkQqTM
+Session 8: [4.2] Percolation and renormalization
+Learning Outcomes
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#estimation: Use estimation and approximation techniques appropriately. (H) FA
+#cs166-TheoreticalAnalysis: Mathematically analyze a model or simulation to determine or
+estimate the characteristics of the model or simulation.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Section 11.5 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+Section 12.4 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+(Optional) Parts 1 and 3 of DeDeo, S. (n.d.). Introduction to Renormalization. Complexity Explorer.
+Santa Fe Institute.
+https://www.complexityexplorer.org/courses/67-introduction-to-renormalization/segments/5407?
+summary
+
+
+Session 9: [5.1] Synthesis: Connecting theory and simulation
+Learning Outcomes
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#cs166-TheoreticalAnalysis: Mathematically analyze a model or simulation to determine or
+estimate the characteristics of the model or simulation.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Grey, C.G.P. (2016, August 31). The Simple Solution to Traffic [Video file].
+https://www.youtube.com/watch?v=iHzzSao6ypE
+Nagel, K., Schreckenberg, M. (1992). A cellular automaton model for freeway traffic. Journal de
+Physique I, 2(12), 2221–2229.
+https://hal.archives-ouvertes.fr/jpa-00246697/document
+(Optional) Schadschneider, A., Schreckenberg, M. (1995). Cellular automata for traffic flow: Analytical
+results. arXiv.
+https://arxiv.org/pdf/cond-mat/9511037.pdf
+Unit 3: Simulations with random variables
+There is a deep connection between random numbers and simulations. We explore how to use simple
+random numbers to drive simulations, and how to use simulations to generate random values from ever
+more complex distributions.
+
+
+Session 10: [5.2] Simulations with random numbers
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Guttag, J. (2017, May 19). Monte Carlo simulation [Video file].
+https://www.youtube.com/watch?v=OgO1gpXSUzU
+Sections 1.1–1.4 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo methods.
+Springer.
+Session 11: [6.2] Random numbers from simulations
+Learning Outcomes
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+
+
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Sections 2.1, 2.3, 2.4, 2.5 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo
+methods. Springer.
+[mathematicalmonk]. (2011, July 18). Smirnov transform (Inverse transform sampling) — Invertible
+case [Video file].
+https://www.youtube.com/watch?v=irheiVXJRm8
+(Optional) Haran, B. (2013, April 10). Random numbers — Numberphile [Video file].
+https://www.youtube.com/watch?v=SxP30euw3-0
+(Optional) Sections 2.6, 2.7 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo
+methods. Springer.
+Session 12: [7.1] The Metropolis-Hastings method
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Sections 3.2–3.3 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo methods.
+Springer.
+Kun, J. (2015, April 6). Markov chain Monte Carlo without all the bullshit.
+https://jeremykun.com/2015/04/06/markov-chain-monte-carlo-without-all-the-bullshit/
+
+
+Feng, C. (n.d.). The Markov chain Monte Carlo interactive gallery.
+https://chi-feng.github.io/mcmc-demo/app.html?algorithm=RandomWalkMH&target=banana
+(Optional) Wiecki, T. (2015, November 10). MCMC sampling for dummies.
+https://twiecki.github.io/blog/2015/11/10/mcmc-sampling/
+(Optional) Niemi, J. (2013, March 3). Metropolis-Hastings algorithm [Video file].
+https://www.youtube.com/watch?v=VGRVRjr0vyw
+Session 13: [7.2] The Ising model—Part I
+Learning Outcomes
+#emergentproperties: Identify emergent properties of complex systems and discern the interactions
+that give rise to them. (C) CX
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Section 3.1 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo methods. Springer.
+Powell, V., Lehe, L. (n.d.) Markov chains: Explained visually.
+http://setosa.io/ev/markov-chains/
+[mathematicalmonk]. (2011, July 6). Markov models — motivating examples [Video file].
+https://www.youtube.com/watch?v=7KGdE2AK_MQ
+Low, N., Thomas, C. (2015, July 20). The effect of temperature on magnet performance [Video file].
+
+
+https://www.youtube.com/watch?v=LiBL5CXpv0k
+Dufresne, S. (2014, May 23). Curie temperature/point experiment in ferromagnetism [Video file].
+https://www.youtube.com/watch?v=rOgGJaO5C00
+(Optional) Bate, T. (2013, September 14). Finding a stationary distribution of a Markov chain [Video
+file].
+https://www.youtube.com/watch?v=pyRJENi6O1Q
+(Optional) [mathematicalmonk]. (2011, July 25). Stationary distributions, irreducibility, and aperiodicity
+[Video file].
+https://www.youtube.com/watch?v=tByUQbJdt14
+Session 14: [8.1] The Ising model—Part II
+Learning Outcomes
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Sections 3.4–3.5 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo methods.
+Springer.
+Krauth, W. (n.d.) Ising model from enumeration to cluster Monte Carlo simulations [Video file].
+https://www.coursera.org/lecture/statistical-mechanics/lecture-8-ising-model-from-enumeration-to-
+cluster-monte-carlo-simulations-uz6b3
+(Optional) Altosaar, J. (n.d.). How does physics connect to machine learning?
+
+
+https://jaan.io/how-does-physics-connect-machine-learning/
+(Optional) Extra notes on the Ising model (2019)
+https://drive.google.com/file/d/14E-g906EEbCgTqByCQCDIxYlIJGfubrR/view?usp=sharing
+Session 15: [8.2] Random walks in finance
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Poulos, B. (2013, December 10). Call options & put options explained in 8 minutes [Video file].
+https://www.youtube.com/watch?v=EfmTWu2yn5Q
+Houston-Edwards, K. (2017, March 23). What is a random walk? PBS Infinite Series. [Video file]
+https://www.youtube.com/watch?v=stgYW6M5o4k
+Sections 5.1–5.3 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo methods.
+Springer.
+(Optional) Guttag, J. (2017, May 19). Random walks. MIT OpenCourseWare. [Video file]
+https://www.youtube.com/watch?v=6wUD_gp5WeE
+(Optional) Mohanty, U.S., Harrison, M. (2017, March 6). A random walk & Monte Carlo simulation.
+Socratica. [Video file]
+https://www.youtube.com/watch?v=BfS2H1y6tzQ
+
+
+(Optional) Eager, E. (2015, May 30). Derivation of PDE for random walk. [Video file]
+https://www.youtube.com/watch?v=MEfSOuTKNTA
+(Optional) Eager, E. (2015, May 30). Solution of PDE for random walk. [Video file]
+https://www.youtube.com/watch?v=54st2b11JdY
+Session 16: [9.1] The Kelly criterion
+Learning Outcomes
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#utility: Use utility to represent preferences and analyze purposeful decision-making. (C) FA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Sections 5.4–5.5 of Shonkwiler, R.W., Mendivil, F. (2009). Explorations in Monte Carlo methods.
+Springer.
+Haghani, V., Dewey, R. (2017). Rational decision-making under uncertainty: Observed betting
+patterns on a biased coin. Journal of Portfolio Management 43(3).
+https://arxiv.org/pdf/1701.01427.pdf
+Session 17: [9.2] Synthesis: Trading strategies
+Learning Outcomes
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+
+
+#utility: Use utility to represent preferences and analyze purposeful decision-making. (C) FA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Coffin, R. (2018, August 31). Stock options explained [Video file]
+https://www.youtube.com/watch?v=VJgHkAqohbU
+Twin, A. (2020, May 31). Risk tolerance. Investopedia.
+https://www.investopedia.com/terms/r/risktolerance.asp
+Unit 4: Modeling with networks
+We model, simulate and analyze social and other networks using graphs. We look at simulating state
+changes on the vertices and edges of a network, as well as simulating changes in the structure of the
+network itself.
+Session 18: [10.1] Introduction to networks
+Learning Outcomes
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+
+
+Reading, Videos, and Other Preparation Resources
+Sections 15.1–15.5 of Sayama, H. (2015). Introduction to the modeling and analysis of complex
+systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+Complexity Labs. (2015). Graph theory overview, Network connections, Network centrality, Network
+theory topology [Video file].
+https://www.youtube.com/watch?v=82zlRaRUsaY&list=PL5ad7U1E4nhR_LNU46OjtUp4TY-
+m_0_ZA
+Chapter 14 of Rossant, C. (2018). IPython Cookbook, Second Edition.
+https://ipython-books.github.io/chapter-14-graphs-geometry-and-geographic-information-systems/
+Session 19: [10.2] Dynamics on networks
+Learning Outcomes
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Sections 16.1–16.2 of Sayama, H. (2015). Introduction to the modeling and analysis of complex
+systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+(Optional) Zhukov, L. (2015, March 31). Network analysis, Lecture 11, Diffusion and random walks on
+graphs [Video file].
+https://www.youtube.com/watch?v=reTP7XAJztU
+
+
+(Optional) Zhukov, L. (2015, April 14). Network analysis, Lecture 13, Epidemics on networks [Video
+file].
+https://www.youtube.com/watch?v=6pneK0tN1-I
+(Optional) Zhukov, L. (2015, April 21). Network analysis, Lecture 14, Social contagion and spread of
+information [Video file].
+https://www.youtube.com/watch?v=HFix0j5OOFo&t=2s
+Session 20: [12.1] Dynamics of network structure
+Learning Outcomes
+#emergentproperties: Identify emergent properties of complex systems and discern the interactions
+that give rise to them. (C) CX
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#cs166-PythonImplementation: Based on a model description, implement a simulation of the model
+in Python using appropriate data and programming structures; and demonstrate that the code is
+correct and produces the expected behavior of the model.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Section 16.3 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+Zhukov, L. (2015, February 3). Network Analysis, Lecture 4, Small world and dynamical growth
+models [Video file].
+https://www.youtube.com/watch?v=sjF_-s5Xzwg
+(Optional) Leskovec, J. (2008, May 30). Dynamics of real-world networks [Video file].
+https://www.youtube.com/watch?v=5AxNTJ3Yesk
+(Optional) Complexity Labs. (2015, November 12). Economic network dynamics [Video file].
+
+
+https://www.youtube.com/watch?v=P8KGUaIiPks
+(Optional) Wohlgemuth, J., Matache, M.T. (2014). Small-world properties of Facebook group
+networks. Complex Systems, 23.
+https://content.wolfram.com/uploads/sites/13/2018/12/23-3-1.pdf
+(Optional) Majdandzic, A., et al. (2014). Spontaneous recovery in dynamical networks. Nature
+Physics 10:34–38.
+https://www.nature.com/articles/nphys2819
+Session 21: [12.2] Adaptive networks
+Learning Outcomes
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#systemmapping: Develop and analyze representations of complex systems by deconstructing
+them and conceptualizing their constituent parts in different ways, guided by an explanatory
+challenge. (C) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Section 16.4 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+Sousa, J. 2011, February 26). Introduction to vector fields [Video file].
+https://www.youtube.com/watch?v=pwiSCrlP98o
+(Optional) Huepe, C., et al. (2011). Adaptive-network models of swarm dynamics. New Journal of
+Physics 13.
+https://iopscience.iop.org/article/10.1088/1367-2630/13/7/073022
+
+
+(Optional) Malik, N., Shi, F. (2017). Adaptive networks in action: Opinion formation, epidemics and the
+evolution of cooperation. Dynamical Systems Magazine.
+https://dsweb.siam.org/The-Magazine/Article/adaptive-networks-in-action-opinion-formation-
+epidemics-and-the-evolution-of-cooperation
+Session 22: [13.1] Network metrics and percolation
+Learning Outcomes
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#cs166-TheoreticalAnalysis: Mathematically analyze a model or simulation to determine or
+estimate the characteristics of the model or simulation.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Chapter 17 of Sayama, H. (2015). Introduction to the modeling and analysis of complex systems.
+Open SUNY Textbooks, Milne Library. Genesco, NY.
+Complexity Labs (2015). Network metrics [Video file]
+https://www.youtube.com/playlist?list=PL5ad7U1E4nhQqa0bXpDXNvtZ-58-IYAUR
+Page, S.E. (n.d.). Percolation models [Video file].
+https://www.coursera.org/lecture/model-thinking/percolation-models-GiJJw
+(Optional) Li, D., et al. (2015). Percolation transition in dynamical traffic network with evolving critical
+bottlenecks. PNAS 112(3):669–672.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4311803/
+Session 23: [13.2] PageRank in citation networks
+
+
+Learning Outcomes
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Austin, D. (n.d.). How Google finds your needle in the web's haystack. American Mathematical
+Society.
+http://www.ams.org/publicoutreach/feature-column/fcarc-pagerank
+Leskovec, J. (2016). Stanford University, Lectures on PageRank [Video File].
+https://www.youtube.com/watch?
+v=fL41WSVDunM&index=1&list=PL5ad7U1E4nhTCesJDXvqP8lU7l1WytIxa
+(Optional) Brin, S., Page, L. (1998). The anatomy of a large-scale hypertextual web search engine.
+Computer Networks, 30, 107–117.
+http://infolab.stanford.edu/pub/papers/google.pdf
+Session 24: [14.1] Mean-field approximation
+Learning Outcomes
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#estimation: Use estimation and approximation techniques appropriately. (H) FA
+#cs166-EmpiricalAnalysis: Empirically analyze the results of a simulation using appropriate
+quantitative techniques and draw appropriate conclusions based on the results.
+
+
+#cs166-TheoreticalAnalysis: Mathematically analyze a model or simulation to determine or
+estimate the characteristics of the model or simulation.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Reading, Videos, and Other Preparation Resources
+Sections 18.4–18.6 of Sayama, H. (2015). Introduction to the modeling and analysis of complex
+systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+Newman, M.E.J., Moore, C., Watts, D.J. (1999). Mean-field solution of the small-world network
+model.
+https://arxiv.org/pdf/cond-mat/9909165.pdf
+(Optional) Sections 18.1–18.3 of Sayama, H. (2015). Introduction to the modeling and analysis of
+complex systems. Open SUNY Textbooks, Milne Library. Genesco, NY.
+Unit 5: Synthesis
+Session 25: [14.2] Networks unit synthesis
+Learning Outcomes
+#emergentproperties: Identify emergent properties of complex systems and discern the interactions
+that give rise to them. (C) CX
+#networks: Apply network analysis to explain outcomes that arise out the structure of connections.
+(C) CX
+#systemdynamics: Use the tools of phase spaces--including attractors, critical points, and basins--to
+describe and predict the ways a complex system changes over time. (C) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared
+and on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+
+
+Reading, Videos, and Other Preparation Resources
+Heylighen, F. (2008). Complexity and self-organization. In M. J. Bates & M. N. Maack (Eds.),
+Encyclopedia of Library and Information Sciences.
+http://pespmc1.vub.ac.be/Papers/ELIS-complexity.pdf
+Complexity Labs. (2016, January 3). Social self-organization [Video file].
+https://www.youtube.com/watch?v=y-UrbnAwjO0
+Complexity Labs. (2016, February 14). Ecological self-organization [Video file].
+https://www.youtube.com/watch?v=6mzr5ABhCNc
+Complexity Labs. (2017, August 14). Political self-organization [Video file].
+https://www.youtube.com/watch?v=WLUVVLdi1mc
+(Optional) Chialvo, D.R. (2010). Emergent complex neural dynamics: the brain at the edge. Nature
+Physics 6:744–750.
+https://arxiv.org/pdf/1010.2530.pdf
+(Optional) Ouellette, J. (2018, June 14). Brains may teeter near their tipping point. Quanta Magazine.
+https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-20180614/
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course
+Scoring” section of this syllabus, above. The same information is reflected in the Outcome Index on
+Forum: from the "Courses" tab, click on "View Course Score Calculation".
+Grading Policy
+Please note that this video is an integral part of the guide, and you should bookmark this resource for
+easy reference throughout the semester.
+
+
+Professionalism
+This course has a #professionalism LO. Writing high-quality reports with easily interpretable plots,
+precise mathematics, and well-documented code is essential to using statistical modeling. You should
+use the feedback on this LO to improve your work presentation and how you conduct yourself throughout
+the course. This LO is targeted in every assignment.
+Pre-class work
+The typical class format of CS166 places a strong emphasis on pre-class work. The pre-class work
+almost always forms the basis of an in-class activity, and you will not learn meaningfully from the class
+session if you have not thoroughly worked through the pre-class exercises.
+You do not have to get everything right, but you have to try and show your work. If you get stuck
+and find that you cannot complete the pre-class work, explain why. Please explain what you
+attempted and why you think it didn't work. Many students have documented their learning process
+and were able to get "unstuck" by doing so.
+Teaching assistants will provide formative feedback on your pre-class work to help you learn from
+your mistakes and improve.
+Not completing pre-class work to a satisfactory level will result in penalties on #ClassParticipation.
+You will occasionally get graded on pre-class work as part of your in-class assessment alongside
+poll and video grading. Which sessions get graded on pre-class work is determined randomly but
+still following pedagogical directives.
+Makeup work
+1. Do all the assigned reading and pre-class work and watch the video recording of the class.
+2. Meet with one of the TAs for ~15 minutes to discuss the class session and address any questions
+you still have.
+Make-up work should be completed within two weeks. E.g., if you miss a Tuesday class, complete the
+make-up work before class on the Tuesday two weeks later.
+If you do not complete the make-up work within four class sessions, you will receive a "bonus" 0 on
+#responsibility for the session.
+Spring break and Quinquatria do not count towards the make-up work clock.
+Any make-up work not complete by the end of Week 15 will be receive a 0 on #responsibility.

@@ -1,0 +1,464 @@
+CS146: Computational Methods for Bayesian Statistics
+
+Spring 2026
+Course Description
+How do weather scientists know for sure that a hurricane will hit the coast in two days? How would one
+devise methods to forecast sales of a product? At the end of this course, you will be equipped with tools
+to gather and interpret data, and to inform a scientific or business decision on the basis of statistically
+rigorous arguments.
+We start the course by applying PyMC — a Python library for automatically computing approximate
+posterior distributions — to a case study. This allows you to see how we use a state-of-the-art tool to
+compute Bayesian posterior distributions in non-trivial statistical models. Next, we develop our statistical
+modeling toolbox by learning how to create ever more complicated models for complicated data sets. We
+also learn how to identify when a model is too complicated and how to avoid overfitting in Bayesian
+inference. The last four weeks of the course are spent on understanding how PyMC works under the
+hood — how we can fit functions and draw samples to compute approximations of complicated posterior
+distributions.
+Course Objectives & Learning Outcomes
+(Modeling) Apply concepts from Probability and Statistics to develop statistical models for inference
+and prediction.
+
+
+#modeling: Recognize how models can be used to describe a system, explain a set of data,
+and generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on
+samples from distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional
+and Bayesian probabilities. (C) FA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify
+problems with a statistical model in order to construct a better model for the given scenario.
+(Computing) Implement and apply algorithms for exact and approximate inference in statistical
+models.
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively
+implement working code. (C) FA
+#cs146-AnalyticalApproximation: Given a statistical model, select appropriate analytical
+approximations and derive rules with closed form solutions for inference and prediction.
+#cs146-SamplingApproximation: Given a statistical model, develop Monte Carlo
+simulations to compute approximate statistics and probability distributions for inference and
+prediction.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to
+analyze or solve problems.
+(KeySkills) Employ key HCs supporting the application of computational statistical modeling concepts.
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#regression: Apply and interpret regression. (C) FA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine
+which model generated observed data.
+#cs114-ParameterEstimation: Apply appropriate statistical theory and methods to
+determine which parameter values generated observed data.
+(Communication) Effectively communicate and apply professional conventions in quantitative fields.
+#composition: Communicate with a clear and precise style. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+
+
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+(Class Scores) Participate meaningfully during class and class preparation
+#ClassParticipation: Contribute to a productive learning environment by attending class
+prepared and on time, participating actively in class sessions, and applying learning
+outcomes through in-class assessments.
+Prerequisites & Working Knowledge
+Course prerequisites
+CS114: Probability and Statistics
+Prerequisite knowledge & Summer prep
+Foundations of probability theory
+the sum and product rules,
+marginal and conditional probabilities,
+Bayes’ rule,
+probabilities over discrete and continuous variables,
+probability density and cumulative density functions,
+expected values, mean, variance, and standard deviation.
+Standard probability distributions
+Discrete: Bernoulli, Binomial, Geometric, Negative Binomial, Poisson
+Continuous: Uniform, Normal, Exponential, Gamma, Beta
+probability mass/density function, cumulative distribution function
+Resources for refreshing your Probability and Statistics knowledge
+If you want a detailed CS114 refresher, work through Statistics 110: Probability by Joe Blitzstein at
+Harvard. This page contains links to a free textbook, a free online course, and a cheat sheet. The
+course has animations and practice questions embedded but is otherwise similar to the textbook.
+So, you should either go through the textbook or take the course to save time. The probability
+cheat sheet is handy if you want a quick refresher.
+The Statistics Fundamentals YouTube channel by Josh Starmer (StatQuest). Easy-to-understand
+explanations with clear visualizations.
+Statistics and Probability by Khan Academy. It is a good resource for students who feel they lack
+foundational probability knowledge or are relatively new to probability. There are lots of exercises
+
+
+available.
+For a more technical background reading on basic probability and statistics, see MacKay’s
+Information theory, inference, and learning algorithms, Chapter 2 (available for free at
+http://www.inference.org.uk/itila/book.html) up to the end of Section 2.3. Do all examples and
+exercises in MacKay’s text up to the end of Section 2.3 — there are 11 of them. Optionally, you can
+also do Exercises 2.16, 2.21–2.24, 2.31, 2.33, 2.34, 2.36, 2.37. If you are really into statistical data
+modeling, work through everything in Chapter 2.
+Scripting in Python
+Familiarity with Python is essential for computational statistical modeling in CS146. You are not required
+to write complex Python programs in this course, so no knowledge of object-oriented programming,
+programming best practices, or software engineering is assumed.
+We use Python 3 and a package called PyMC in this course. Pre-class work can be done on Forum
+where the required packages are installed for you. If you want to run code on your own computer, the
+recommended Python 3 distribution is Anaconda, which you can download for free. You may also use
+cloud-based Python notebooks — DeepNote and Google Colab both support PyMC. Sign up with your
+Minerva email address to get free educational access.
+You should know how to write functions, for-loops, while-loops, conditional (if-elif-else) statements.
+You should be comfortable with manipulating basic data structures like classes, lists, dictionaries,
+and strings,
+You should have a passing familiarity with NumPy and SciPy.
+You should have a passing familiarity with plotting data using Matplotlib.
+Assignments
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Problem set: Priors, Posteriors, and PyMC 10x Fri, Week 4 Sun of Week 2 Mon of Week 5
+
+
+Project 1: Linear regression and model 10x Wed, Week 8 Sun of Week 4 Sat of Week 8
+comparison (LBA)
+Project 2: Discrete and multi-level models 10x Mon, Week 12 Sun of Week 9 Thu of Week 12
+Interview: Project 2 debrief 10x Thu, Week 15 Sun of Week 9 Fri of Week 15
+Course Scoring
+Objective % of Course Score
+Default Course Objective 0%
+(Modeling) Apply concepts from Probability and Statistics to develop statistical 20%
+models for inference and prediction.
+#cs146-ModelDebugging
+#distributions
+#modeling
+#probability
+(Computing) Implement and apply algorithms for exact and approximate inference 20%
+in statistical models.
+#CS-ComputationalTools
+#algorithms
+#cs146-AnalyticalApproximation
+#cs146-SamplingApproximation
+(KeySkills) Employ key HCs supporting the application of computational statistical 10%
+modeling concepts.
+#cs111-Differentiation
+#cs114-ModelSelection
+#cs114-ParameterEstimation
+#descriptivestats
+#optimization
+#regression
+(Communication) Effectively communicate and apply professional conventions in 10%
+quantitative fields.
+#composition
+#dataviz
+#professionalism
+(Class Scores) Participate meaningfully during class and class preparation 35%
+#ClassParticipation
+
+
+Other 5%
+Required Texts
+McElreath, R. (2020). Statistical Rethinking, Second Edition. Chapman and Hall/CRC Press.
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Introduction
+Welcome to Computational Methods for Bayesian Statistics! We get an overview of the content covered
+in the course and get started with our first data modeling case study.
+Session 1: [1.1] Bayesian statistics
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+Session 2: [1.2] Automated inference
+Learning Outcomes
+
+
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Unit 2: Automated inference with PyMC
+Doing Bayesian inference by hand is tedious and error-prone — especially in complicated models.
+Modern statistical models are solved using automated methods. However, none of these automated
+methods are perfect — they all make assumptions and approximations. In practice, we need to be aware
+of how these automated methods can fail and how to diagnose and fix problems as they come up.
+Session 3: [2.1] Priors: Story of your model
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+Reading, Videos, and Other Preparation Resources
+Session 4: [2.2] Posteriors: Story of your data, as told by your model
+Learning Outcomes
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+
+
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+Session 5: [3.1] Picking a good prior
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+Reading, Videos, and Other Preparation Resources
+Session 6: [3.2] Diagnostics: When things go wrong
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+
+
+Reading, Videos, and Other Preparation Resources
+Unit 3: Building statistical models
+We cover the elements and construction of statistical models in depth, working with common probability
+distributions, and building up to more complex data models. We learn how to update models based on
+what we learn about them during the data modeling process, how to compare alternative models to
+determine which to use, and how to communicate your statistical results effectively.
+Session 7: [4.1] Linear regression
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#regression: Apply and interpret regression. (C) FA
+Reading, Videos, and Other Preparation Resources
+Session 8: [4.2] Robust linear regression
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#regression: Apply and interpret regression. (C) FA
+
+
+Reading, Videos, and Other Preparation Resources
+Session 9: [5.1] Linear regression for non-linear data
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#regression: Apply and interpret regression. (C) FA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+Reading, Videos, and Other Preparation Resources
+Session 10: [5.2] Model comparison 1: Intuition
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#regression: Apply and interpret regression. (C) FA
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+Reading, Videos, and Other Preparation Resources
+Session 11: [6.2] Model comparison 2: Theory
+Learning Outcomes
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+
+
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+Reading, Videos, and Other Preparation Resources
+Session 12: [7.1] Model comparison 3: Practice
+Learning Outcomes
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 13: [7.2] Categorical and count data 1
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#regression: Apply and interpret regression. (C) FA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H) FA
+Reading, Videos, and Other Preparation Resources
+
+
+Session 14: [8.1] Categorical and count data 2
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#regression: Apply and interpret regression. (C) FA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+Reading, Videos, and Other Preparation Resources
+Session 15: [8.2] Mixture models
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+Reading, Videos, and Other Preparation Resources
+Session 16: [9.1] Hierarchical models 1
+Learning Outcomes
+
+
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+Reading, Videos, and Other Preparation Resources
+Session 17: [9.2] Hierarchical models 2
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#cs146-ModelDebugging: Use prior and posterior predictive distributions to identify problems with a
+statistical model in order to construct a better model for the given scenario.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Unit 4: Monte Carlo inference algorithms
+Monte Carlo methods use random samples to replace intractable integrals with straightforward sums,
+allowing us to approximate any complex model or distribution. We learn how to implement and discuss
+the convergence properties of a few simple Monte Carlo methods before we get a conceptual
+understanding of how an advanced sampling algorithm used in PyMC works.
+Session 18: [10.1] Rejection and importance sampling
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+
+
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs146-SamplingApproximation: Given a statistical model, develop Monte Carlo simulations to
+compute approximate statistics and probability distributions for inference and prediction.
+Reading, Videos, and Other Preparation Resources
+Session 19: [10.2] The Metropolis-Hastings algorithm
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#correlation: Apply and interpret measures of correlation; distinguish correlation and causation. (H)
+FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs146-SamplingApproximation: Given a statistical model, develop Monte Carlo simulations to
+compute approximate statistics and probability distributions for inference and prediction.
+Reading, Videos, and Other Preparation Resources
+Session 20: [12.1] Hamiltonian Monte Carlo
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs146-SamplingApproximation: Given a statistical model, develop Monte Carlo simulations to
+compute approximate statistics and probability distributions for inference and prediction.
+Reading, Videos, and Other Preparation Resources
+
+
+Session 21: [12.2] Tuning and divergences in PyMC
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#cs146-SamplingApproximation: Given a statistical model, develop Monte Carlo simulations to
+compute approximate statistics and probability distributions for inference and prediction.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Unit 5: Variational inference algorithms
+Variational algorithms approximate a complicated probability density function using a simpler density
+function, allowing us to compute approximate expected values and make approximate predictions for a
+complicated statistical model. We learn how simple variational approximations are computed before we
+get a conceptual understanding of how an advanced variational inference algorithm in PyMC works.
+Session 22: [13.1] Central limit theorem
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+
+
+#cs146-AnalyticalApproximation: Given a statistical model, select appropriate analytical
+approximations and derive rules with closed form solutions for inference and prediction.
+Reading, Videos, and Other Preparation Resources
+Session 23: [13.2] ADVI
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs146-AnalyticalApproximation: Given a statistical model, select appropriate analytical
+approximations and derive rules with closed form solutions for inference and prediction.
+Reading, Videos, and Other Preparation Resources
+Session 24: [14.1] Case study: TrueSkill
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs146-AnalyticalApproximation: Given a statistical model, select appropriate analytical
+approximations and derive rules with closed form solutions for inference and prediction.
+Reading, Videos, and Other Preparation Resources
+
+
+Session 25: [14.2] Case study: Mauna Loa
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#regression: Apply and interpret regression. (C) FA
+#cs146-SamplingApproximation: Given a statistical model, develop Monte Carlo simulations to
+compute approximate statistics and probability distributions for inference and prediction.
+Reading, Videos, and Other Preparation Resources
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course
+Scoring” section of this syllabus, above. The same information is reflected in the Outcome Index on
+Forum: from the "Courses" tab, click on "View Course Score Calculation".
+Overview
+There is no make-up work in CS146, but you must always submit pre-class work, even if you are
+going to be absent.
+
+
+Pre-class work
+The typical class format of CS146 places a strong emphasis on pre-class work. The pre-class work
+almost always forms the basis of an activity in class, and you will not learn meaningfully from the class
+session if you have not worked through the pre-class exercises in detail.
+You have to do the pre-class work every time.
+Even if you intend to skip a class, you have to do the pre-class work, and you will still get
+graded on it.
+You do not have to get everything right, but you have to try, and you have to show your work. If you
+get stuck and find that you are unable to complete the pre-class work, explain why. Explain what
+you attempted and why you think it didn’t work.
+Teaching assistants will provide formative feedback on your pre-class work to help you learn from
+your mistakes and improve.
+You will frequently get graded on pre-class work as part of your in-class assessment.
+Which sessions get graded on pre-class work is determined randomly.
+Not completing pre-class work to a satisfactory level will result in a low score.
+Not engaging meaningfully with the pre-class work at all will result in a score of 0.
+Make-up work
+There is no make-up work, but remember that you have to submit your pre-class work even if you
+will be absent from class.
+It is in your best interest to watch the class recording when it is available. If the video recording is
+unavailable for some reason (for example, a technical problem), contact your instructor. Where
+possible, a recording of another section of the same course will be shared with you.

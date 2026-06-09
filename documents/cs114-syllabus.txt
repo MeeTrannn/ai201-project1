@@ -1,0 +1,447 @@
+CS114: Probability, Statistics, and the Structure of Randomness
+Spring 2026
+Course Description
+Recommended: Read the 2-page summary of this syllabus
+We apply the theory of probability and statistics to make sense of real-world observations in scientific,
+social, economic, medical, and various other contexts. In this course (and, in more detail, in the
+concentration courses of the Statistics & Data Science track), we learn how to answer the types of
+questions used to find structure in messy real-world data.
+What is the value of a variable we can not observe or measure directly? How do we use the data
+we can observe to gain information about the variables we cannot observe? (This is called
+parameter estimation.)
+How well do different or competing models explain our data or observations? Which model is the
+best at explaining the available data? (This is called model selection.)
+What are the plausible or most likely values of variables we can potentially observe but haven’t
+observed yet? (This is called prediction.)
+What would happen if we intervened in a system? What would have happened if we had not
+intervened in a system? (This is called causal inference.)
+In CS114, we focus on the theory underlying these questions and on applications related to parameter
+estimation, prediction, and model selection. (For more on causal inference, amongst other topics, see
+CS130.)
+
+
+Course Objectives & Learning Outcomes
+(Probability) Apply the concepts and rules of probability theory and interpret the results.
+#distributions: Identify different types of distributions and make inferences based on
+samples from distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional
+and Bayesian probabilities. (C) FA
+(Statistics) Apply the concepts and rules of statistics and interpret the results.
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine
+which model generated observed data.
+#cs114-ParameterEstimation: Apply appropriate statistical theory and methods to
+determine which parameter values generated observed data.
+(KeySkills) Employ mathematical, computational, and visual tools supporting the application of
+probability and statistics concepts throughout the course.
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#confidenceintervals: Apply and interpret confidence intervals. (C) FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#significance: Apply, interpret, and distinguish practical and statistical significance. (C) FA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H)
+FA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve
+problems in probability and statistics.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to
+analyze or solve problems.
+(Communication) Effectively communicate and apply professional conventions in quantitative fields.
+
+
+#composition: Communicate with a clear and precise style. (H) MC
+#organization: Effectively organize communications. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+Class Scores
+#ClassParticipation: Contribute to a productive learning environment by attending class
+prepared and on time, participating actively in class sessions, and applying learning
+outcomes through in-class assessments.
+Prerequisites & Working Knowledge
+Required courses
+CS111: Single and Multivariable Calculus
+Preparing for the course
+This course builds on Formal Analyses, where you covered concepts and applications of Probability and
+Statistics but without going into much mathematical detail. In CS114, we focus on the mathematical and
+computational aspects of Probability and Statistics, looking at the fundamentals and the applications of
+these fields.
+To prepare for CS114, you can do the following:
+Review Formal Analyses. For basic probability and statistics, we assume and expand on the
+conceptual understanding you developed in FA.
+Review CS111. For continuous random variables and distributions, we assume knowledge of
+Calculus and elementary mathematical functions like the exponential and logarithm functions.
+Install Python. The recommended Python 3 distribution is Anaconda, which you can download for
+free. You may also use Google Colab, Deepnote, or other online tools for viewing or creating
+Python notebooks.
+Review Python basics. We won't write complicated Python code in CS114 but we do use Python
+generally and in the NumPy, SciPy, and SymPy packages in particular to simulate random
+processes and to analyze data. For a practical introduction to basic programming in Python for
+
+
+computational statistics, work through Sections 1.1 and 1.2 from “Getting started with Python for
+science” of the SciPy Lecture Notes.
+Assignments
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Midterm Technical Interview 5x Fri, Week 8 Mon of Week 3 Mon of Week 9
+Problem set 1 2x Thu, Week 10 Fri of Week 6 Sun of Week 11
+Problem set 1 reflection 3x Tue, Week 12 Fri of Week 7 Fri of Week 12
+LBA 3x Thu, Week 13 Fri of Week 4 Sun of Week 14
+Final Technical Interview 5x Thu, Week 15 Mon of Week 8 Fri of Week 15
+Course Scoring
+Objective % of Course Score
+Default Course Objective 0%
+(Probability) Apply the concepts and rules of probability theory and interpret the 25%
+results.
+#distributions
+#probability
+(Statistics) Apply the concepts and rules of statistics and interpret the results. 25%
+#cs114-ModelSelection
+#cs114-ParameterEstimation
+(KeySkills) Employ mathematical, computational, and visual tools supporting the 15%
+application of probability and statistics concepts throughout the course.
+#CS-ComputationalTools
+#confidenceintervals
+#cs111-Integration
+#cs114-MathTools
+#dataviz
+
+
+#descriptivestats
+#significance
+#variables
+(Communication) Effectively communicate and apply professional conventions in 5%
+quantitative fields.
+#composition
+#organization
+#professionalism
+Class Scores 25%
+#ClassParticipation
+Other 5%
+Required Texts
+Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press. Available here (free access):
+https://projects.iq.harvard.edu/stat110/home and http://probabilitybook.net
+https://drive.google.com/file/d/1VmkAAGOYCTORq1wxSQqy255qLJjTNvBI/view
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Setting the Stage
+We situate the content of CS114 in the broader Computational Sciences curriculum — and especially the
+Data Science curriculum — by looking at the differences between probability, statistics, and causality.
+We also build a toolbox of general techniques that we use through the rest of the course, namely,
+simulations, mathematical notation, and graphical notation.
+Session 1: [1.1] Probability
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+
+
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+§1.1–§1.2 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+CS114 syllabus.
+https://bit.ly/cs114-syllabus
+Session 2: [1.2] Statistics
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+#cs114-ParameterEstimation: Apply appropriate statistical theory and methods to determine which
+parameter values generated observed data.
+Reading, Videos, and Other Preparation Resources
+Session 3: [2.1] Causality
+Learning Outcomes
+#correlation: Apply and interpret measures of correlation; distinguish correlation and causation. (H)
+FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+
+
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Huszár, F. (2019). Causal Inference in everyday Machine Learning, Part 1. Machine Learning
+Summer School 2019.
+https://www.youtube.com/watch?v=HOgx_SBBzn0&t=866s
+Section 1.2 of Pearl, J., Glymour, M., Jewell, N.P. (2016). Causal Inference in Statistics: A Primer.
+Wiley & Sons. (Fair use)
+http://bayes.cs.ucla.edu/PRIMER/
+Unit 2: Discrete outcomes and events
+The foundations of probability theory start with the definitions that make sense of a theory of uncertain
+events and with discrete (as opposed to continuous) outcomes. We explore counting arguments,
+symmetry arguments, and their implications for drawing conclusions from error-prone measurements.
+Session 4: [2.2] Combinatorics 1
+Learning Outcomes
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+§1.3–§1.4 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 5: [3.1] Combinatorics 2
+Learning Outcomes
+
+
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+§1.6 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 6: [3.2] Conditional probability 1
+Learning Outcomes
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+§2.1–§2.4 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 7: [4.1] Conditional probability 2
+Learning Outcomes
+#correlation: Apply and interpret measures of correlation; distinguish correlation and causation. (H)
+FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+§2.5–§2.8 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 8: [4.2] Discrete random variables 1
+Learning Outcomes
+
+
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H) FA
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+Reading, Videos, and Other Preparation Resources
+§3.1–§3.5 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 9: [5.1] Discrete random variables 2
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+Reading, Videos, and Other Preparation Resources
+§3.6–§3.9 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 10: [5.2] Expectations 1
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+
+
+§4.1–§4.4 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 11: [6.2] Expectations 2
+Learning Outcomes
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+§4.5–§4.8 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 12: [7.1] Synthesis: Review of discrete probabilities and
+distributions
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Session 13: [7.2] Synthesis: Model selection
+Learning Outcomes
+#significance: Apply, interpret, and distinguish practical and statistical significance. (C) FA
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+Reading, Videos, and Other Preparation Resources
+Session 14: [8.1] Synthesis: Parameter estimation
+Learning Outcomes
+#confidenceintervals: Apply and interpret confidence intervals. (C) FA
+#cs114-ParameterEstimation: Apply appropriate statistical theory and methods to determine which
+parameter values generated observed data.
+Reading, Videos, and Other Preparation Resources
+Session 15: [8.2] Synthesis: Coding theory application
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+
+
+Unit 3: Continuous and multivariate distributions
+For continuous random variables, we cannot determine the probabilities of particular outcomes but we
+can for ranges or sets of outcomes. We discover how we can use Calculus to go from discrete random
+variables to continuous random variables by applying limit theorems, turning counts into sizes of
+intervals and sets, and sums into integrals.
+Session 16: [9.1] Continuous random variables 1
+Learning Outcomes
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H) FA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+Reading, Videos, and Other Preparation Resources
+§5.1–§5.3 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 17: [9.2] Continuous random variables 2
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+Reading, Videos, and Other Preparation Resources
+§5.4–§5.7 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+
+
+Session 18: [10.1] Joint and marginal distributions 1
+Learning Outcomes
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+§7.1.1 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 19: [10.2] Joint and marginal distributions 2
+Learning Outcomes
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+Reading, Videos, and Other Preparation Resources
+§7.1.2–§7.2 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 20: [12.1] Joint and marginal distributions 3
+Learning Outcomes
+#correlation: Apply and interpret measures of correlation; distinguish correlation and causation. (H)
+FA
+#descriptivestats: Calculate and interpret descriptive statistics appropriately. (H) FA
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+
+
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+Reading, Videos, and Other Preparation Resources
+§7.3–§7.5 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 21: [12.2] Transformations 1
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+#cs114-ParameterEstimation: Apply appropriate statistical theory and methods to determine which
+parameter values generated observed data.
+Reading, Videos, and Other Preparation Resources
+§8.1, §8.2, §8.4 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 22: [13.1] Transformations 2
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+#cs114-ParameterEstimation: Apply appropriate statistical theory and methods to determine which
+parameter values generated observed data.
+Reading, Videos, and Other Preparation Resources
+
+
+§8.3, §8.5, §8.6 of Blitzstein, J.K., Hwang, J. (2015). Introduction to Probability. CRC Press.
+Session 23: [13.2] Synthesis: Review of continuous and multivariate
+distributions
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 24: [14.1] The T-test
+Learning Outcomes
+#significance: Apply, interpret, and distinguish practical and statistical significance. (C) FA
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Session 25: [14.2] Bayesian linear regression
+Learning Outcomes
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#regression: Apply and interpret regression. (C) FA
+#cs114-MathTools: Use appropriate mathematical skills, theorems, and notation to solve problems
+in probability and statistics.
+#cs114-ModelSelection: Apply appropriate statistical theory and methods to determine which model
+generated observed data.
+#cs114-ParameterEstimation: Apply appropriate statistical theory and methods to determine which
+parameter values generated observed data.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course
+Scoring” section of this syllabus, above. The same information is reflected in the Outcome Index on
+Forum: from the "Courses" tab, click on "View Course Score Calculation".
+
+
+Participation in CS114
+You will likely be graded for participation in almost all classes. Participation in CS114 is set up to
+encourage and reward engagement with the class discussion, both to support your learning of CS114
+content and to practice being engaged in team discussions. Your participation score is based on both the
+frequency of the comments and your preparedness for the class.
+You are responsible for being an engaged participant. In short, it is your responsibility to be an
+engaged member of the discussion, rather than the instructor’s responsibility to force reluctant
+participation. There will be some “cold calling" in CS114, but much less compared to many other
+courses at Minerva, and if you only speak when cold called you might receive low participation
+scores. With that said, there may be a rare day where you don’t end up saying anything, and that is
+fine; there is no need to inform your instructor about anything (e.g., “I was feeling sick that day…”);
+across the semester, you should make sure that on most days you are an active member of the
+class discussion.
+**There is no particular metric to “hack” for a good participation score. **A good participation score
+in CS114 is not about talking a certain number of times (e.g., twice in a session) or minutes (e.g.,
+2-3 minutes in a session) or anything else. Instead, it is about being an engaged member of the
+class discussion in general. Notably, “holistic” participation scores such as this are a common part
+of many classrooms around the world, and we are excited about how the video recording of our
+Forum classes allows us to review the actual participation rather than an instructor relying on their
+memory.
+Pre-class work policy
+Regardless of whether you attend the class or not, you will be graded on your pre-class works. PCWs
+come with extensive guides but since the PCWs are mainly about new topics and some might be
+challenging, you will be mainly graded on your effort. Please make sure you put in significant amount of
+work into the PCWs. You cannot use AI to help you with the pre-class work and we'll do an extensive
+check on your submissions. If you are absent in a session, you will receive a 0 on the PCW until you
+submit them as a pdf to the instructor within exactly 7 days of the class. Then your submitted work will be
+graded and the new grade will replace the 0.
+Collaboration
+
+
+Learning often works better with friends in pre-class work, breakouts, and assignments.
+✓ Do:
+Discuss concepts and ideas
+Ask and answer questions
+Cite your sources — people and resources
+✘ Don’t:
+Share or copy any written work or code
+Find or copy solutions from online sources
+If you miss a class session:
+Do the readings.
+Complete the pre-class work.
+Attempt breakout problems.
+Watch the class recording.

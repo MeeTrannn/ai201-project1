@@ -1,0 +1,461 @@
+CS113: Theory and Applications of Linear Algebra
+Spring 2026
+Course Description
+Learn the foundational techniques from linear algebra that are essential for mastering the computational
+sciences. This course develops the tools necessary for the analysis of linear systems, emphasizing both
+abstract notions such as vector spaces, linear maps between them, and their matrix representations, plus
+concrete applications such as Markov chains and graphical network analysis. Build proficiency with these
+tools by exploring Page Rank, least-squares fitting, and traffic modeling. In addition to mastering
+foundational computational tools, this course places an emphasis on using deductive reasoning to
+effectively establish the validity of results.
+This course requires an online meeting with the instructor outside of normal class hours as part of the final
+project. This meeting will be scheduled during weeks 14 or 15.
+Course Objectives & Learning Outcomes
+(LinearSystems) Apply the tools of linear systems and interpret the results.
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+(Vectors) Apply the tools of vector spaces and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+(Transformations) Apply the tools of linear transformations and interpret the results.
+
+
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+(KeySkills) Use appropriate computational tools and apply professional conventions that are
+appropriate in quantitative fields.
+#audience: Tailor oral and written work by considering the situation and perspective of the
+people receiving it. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to
+analyze or solve problems.
+(Class Scores) Participate meaningfully during class and class preparation.
+#ClassParticipation: Contribute to a productive learning environment by attending class
+prepared and on time, participating actively in class sessions, and applying learning outcomes
+through in-class assessments.
+Prerequisites & Working Knowledge
+Assignments
+You will complete two types of assignments in this course:
+Skill-Builder problems that reinforce the skills you build during class sessions. You will complete
+these problems most weeks.
+Deep Dive problems that are robust applications of the course LOs to theoretical and applied
+contexts. You will complete these problems at the end of each unit. The Deep Dive for Unit 3 is a
+group LBA project.
+The culminating assessment of the semester is a technical interview with your professor.
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+
+
+Skill Builder 1.1: Linear Systems 1x Mon, Week 2 Mon of Week 1 Tue of Week 2
+Skill Builder 1.2: Vectors and Matrices 1x Mon, Week 3 Mon of Week 2 Tue of Week 3
+Deep Dive: Systems of Linear Equations 3x Fri, Week 4 Mon of Week 2 Mon of Week 5
+Skill Builder 1.3: Analyzing Matrices 1x Mon, Week 4 Mon of Week 3 Tue of Week 4
+Skill Builder 2.4: Vector Spaces 1x Mon, Week 5 Mon of Week 4 Thu of Week 5
+Skill Builder 2.5 Bases I 1x Mon, Week 7 Mon of Week 5 Tue of Week 7
+Skill Builder 2.7: Bases II 1x Mon, Week 8 Mon of Week 7 Tue of Week 8
+Deep Dive: Vector Space Structure 3x Fri, Week 9 Sun of Week 7 Mon of Week 10
+Skill Builder 2.8: Fundamental Subspaces I 1x Mon, Week 9 Mon of Week 8 Tue of Week 9
+Skill Builder 3.9 Linear Transformations 1x Mon, Week 10 Mon of Week 9 Tue of Week 10
+Skill Builder 3.10: Fundamental Subspaces 1x Mon, Week 13 Mon of Week 10 Tue of Week 13
+II
+Skill Builder 3.12: Eigenstuff 1x Mon, Week 14 Wed of Week 11 Tue of Week 14
+Technical Interview and Self-Reflection 5x Fri, Week 14 Wed of Week 12 Mon of Week 15
+Deep Dive (LBA): Foot Traffic Modeling 3x Thu, Week 15 Mon of Week 12 Fri of Week 15
+Course Scoring
+Objective % of Course Score
+(LinearSystems) Apply the tools of linear systems and interpret the results. 22%
+#cs113-LinearSystems
+(Vectors) Apply the tools of vector spaces and interpret the results. 22%
+#cs113-Vectors
+
+
+(Transformations) Apply the tools of linear transformations and interpret the results. 22%
+#cs113-Transformations
+(KeySkills) Use appropriate computational tools and apply professional conventions 9%
+that are appropriate in quantitative fields.
+#CS-ComputationalTools
+#audience
+#professionalism
+(Class Scores) Participate meaningfully during class and class preparation. 20%
+#ClassParticipation
+Other 5%
+Required Texts
+This course provides its own videos and notes. However, we suggest you purchase a graphic drawing
+tablet for drawing on the in-class whiteboard. The engineering team recommends choosing between the
+Huion 420 (least expensive, most portable), the Huion 680s (slightly larger, slightly more expensive), or
+an iPad with the Astropad app (most expensive, only works with Mac, can run other apps). Note that this
+is an investment that you will be able to use in all your courses.
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Systems of Linear Equations
+This unit is an introduction to the solution of systems of linear equations. Topics include determining when
+solutions exist, and if so, their quantity, describing such solutions, and interpreting solutions in a variety of
+applied contexts.
+Session 1: (1.1) Linear Systems I
+Learning Outcomes
+
+
+#audience: Tailor oral and written work by considering the situation and perspective of the people
+receiving it. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Linear Systems
+https://drive.google.com/a/minerva.kgi.edu/file/d/1Cv78A10ANOP0wjBdB13DU_pOkWN80RTi/view?
+usp=sharing
+Math Core Assessment Guide
+https://docs.google.com/document/d/1qw0_p10vEFXc1vYjbGn_foSObghO4kT6BRo0C1DjBHw/edit?
+usp=sharing
+SageMath Environment Set-Up
+https://docs.google.com/document/d/1ihk9HQNt0Pk_tzGCJh6Azj6v9n7LtP8kdTXDbrGj424/edit?
+usp=sharing
+Beezer, R. A. (n.d.). Sage Quick Reference: Linear Algebra. Retrieved from
+https://wiki.sagemath.org/quickref?action=AttachFile&do=get&target=quickref-linalg.pdf
+https://wiki.sagemath.org/quickref?action=AttachFile&do=get&target=quickref-linalg.pdf
+Session 2: (1.2) Linear Systems II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Video: Gaussian Elimination
+https://drive.google.com/a/minerva.kgi.edu/file/d/1F1bTIsesZwX35nO42usUQf2WoTtwkGNT/view?
+usp=sharing
+Video: Inconsistent Systems
+https://drive.google.com/a/minerva.kgi.edu/file/d/1DZyh7UzIOQdFk1k_4h2HJn_AggCSpkp-/view?
+usp=sharing
+Video: Infinite Solutions
+https://drive.google.com/a/minerva.kgi.edu/file/d/1scDymxwUph14Ow7lceK7_MpiEAO44iR8/view?
+usp=sharing
+Session 3: (2.1) Visualizing Solutions
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Introduction to Vectors
+https://drive.google.com/a/minerva.kgi.edu/file/d/1tjr-RS_eRr_HiscfF_nssZJI1vwGiPan/view?
+usp=sharing
+Video: The Geometry of Solution Sets
+https://drive.google.com/a/minerva.kgi.edu/file/d/1zq3FdfnaJkguLi_oxo2-6ugEzEVOgN5L/view?
+usp=sharing
+Session 4: (2.2) Matrix Operations
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+
+
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Matrix Multiplication
+https://drive.google.com/a/minerva.kgi.edu/file/d/1d9_JUDFkVtOLOXE6NFOK3UO0btTib8j3/view?
+usp=sharing
+Video: Elementary Matrices
+https://drive.google.com/a/minerva.kgi.edu/file/d/1B4HmnJ2JDjHc_efj_OkXztdYfu760Svt/view?
+usp=sharing
+Session 5: (3.1) Inverse Matrices
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Elementary Matrices and Systems
+https://drive.google.com/a/minerva.kgi.edu/file/d/14lkATPxHeyxwVm-K8WBeb9lUkBstwXxU/view?
+usp=sharing
+Video: Inverse Matrices
+https://drive.google.com/a/minerva.kgi.edu/file/d/1HlymAaxd4ZPHCsFV7QrFRHz-
+BRz47mK6/view?usp=sharing
+Session 6: (3.2) Determinants and Transposes
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+
+
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Matrix Tranpose
+https://drive.google.com/file/d/1YA1VQlVKLFLVjXwcEkYP1EpTj5VMMpap/view?usp=sharing
+Video: Determinants
+https://drive.google.com/a/minerva.kgi.edu/file/d/1lQkBhc2ek9nr35mPjvgUfaYxR76ab4bT/view?
+usp=sharing
+Unit 2: Vector Space Structure
+This unit is about an abstract model of vectors known as a vector space, an example of which is the
+solution set to a homogeneous linear system-as seen in Unit 1. These spaces have a special structure.
+This structure provides a framework for finding deep connections between applications of interest. The
+unit starts with the study of a second familiar example, vectors in Euclidean spaces, before moving to
+more complex material.
+Session 7: (4.1) Vector Spaces and Subspaces
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Vector Spaces
+https://drive.google.com/a/minerva.kgi.edu/file/d/1ZFj69AGm9Ui1rOMa_RqzQWOZlPvJPdZT/view?
+usp=sharing
+
+
+Video: Subspaces
+https://drive.google.com/a/minerva.kgi.edu/file/d/18iy4DH_tAk594zC88ZHQyQ0qTcYKd56N/view?
+usp=sharing
+Session 8: (4.2) Independence and Span
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Span
+https://drive.google.com/a/minerva.kgi.edu/file/d/1GbZWr0i9BqU-uWTyIXCRGBXyb8T2RC-w/view?
+usp=sharing
+Video: Linear Independence
+https://drive.google.com/a/minerva.kgi.edu/file/d/1u7sCXfQ6E_ixzvpOT4QJnbFs929ttAYp/view?
+usp=sharing
+Session 9: (5.1) Bases and Dimension
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Basis and Dimension
+https://drive.google.com/a/minerva.kgi.edu/file/d/1rh4dKwHWy0wcvN5etu3m8pfNf6zPVqgg/view?
+usp=sharing
+
+
+Video: Coordinates
+https://drive.google.com/a/minerva.kgi.edu/file/d/133r1m7cadAsWhBb7B8PpcnRra3Lp1Llp/view?
+usp=sharing
+Video: Finding a Basis
+https://drive.google.com/a/minerva.kgi.edu/file/d/15qLkl1b0abw7oyWfA3D0zf01dBj9KxRM/view?
+usp=sharing
+Session 10: (5.2) Dot Product and Vector Projection
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Dot Product
+https://drive.google.com/a/minerva.kgi.edu/file/d/120EYejzhSVQVLn2SrymIIoNnyUohRAfm/view?
+usp=sharing
+Video: Vector Projection
+https://drive.google.com/a/minerva.kgi.edu/file/d/1v9DppbtnLwCgxfxKh8uDGARFZklkLJld/view?
+usp=sharing
+Session 11: (6.2) Orthonormal Bases
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+
+
+Reading, Videos, and Other Preparation Resources
+Video: Orthonormal Bases
+https://drive.google.com/a/minerva.kgi.edu/file/d/1x3PUKNQWBa31Z1FB4EyhosTqtD1mWbRt/view?
+usp=sharing
+Session 12: (7.1) Orthogonal Matrices
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Orthogonal Matrices
+https://drive.google.com/a/minerva.kgi.edu/file/d/1wOjD68n2VCplm8EmdrX5NXtwZbAZUCdl/view?
+usp=sharing
+Session 13: (7.2) Change of Basis I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Video: Change of Basis
+https://drive.google.com/a/minerva.kgi.edu/file/d/1n5ReUfxIFd5JLinwf5JFwxWO2yONOqFg/view?
+usp=sharing
+Session 14: (8.1) Fundamental Subspaces I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Rank
+https://drive.google.com/a/minerva.kgi.edu/file/d/1e8Ulo0JJfuT8iVbWuY3s4H9hjC5upM-G/view?
+usp=sharing
+Video: Nullspace
+https://drive.google.com/a/minerva.kgi.edu/file/d/1UGAt0YIfrbnGSXo_wKPlsYmApxki0V-0/view?
+usp=sharing
+Video: Fundamental Subspaces
+https://drive.google.com/a/minerva.kgi.edu/file/d/1McA4VKxPqIk9uv87fLaY8jAAd3MK9Lvz/view?
+usp=sharing
+Video: Fundamental Subspaces and Systems of Equations
+https://drive.google.com/a/minerva.kgi.edu/file/d/1nHbJHUj6mM5r_I8gy4sJ1d3zTleA5mmL/view?
+usp=sharing
+Session 15: (8.2) Linear Regression
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+
+
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Unit 3: Linear Transformations
+This unit is about maps between vector spaces. Such maps are intimately connected to matrix
+multiplication. Two of the many things this allows us to do are changing problem domains to a well-
+understood one, and changing coordinates to simplify calculation and/or presentation.
+Session 16: (9.1) Linear Transformations
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Linear Transformations
+https://drive.google.com/a/minerva.kgi.edu/file/d/193hbacl1JEBce1J0WQ-LwEFAh8kqvDhL/view?
+usp=sharing
+Video: Linear Transformations and Matrix Multiplication
+https://drive.google.com/a/minerva.kgi.edu/file/d/112P1z5G_LOtPBgYug97hD2FV933_Y_BZ/view?
+usp=sharing
+Session 17: (9.2) Change of Basis II
+
+
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Linear Transformations and Change of Basis
+https://drive.google.com/open?id=1yn0zzKELOHM9sq7e-5Gq8W0vuRvPbaFv
+Session 18: (10.1) Fundamental Subspaces II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Linear Transformations and Fundamental Subspaces
+https://drive.google.com/a/minerva.kgi.edu/file/d/1BXmsEMr3bHpkbK2S1tf9ZIy0EK58TEzg/view?
+usp=sharing
+Session 19: (10.2) Eigenstuff
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+
+
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Eigenvector Introduction
+https://drive.google.com/a/minerva.kgi.edu/file/d/1d_v0zOa9M-DsLAYHhKzIzVlxfPM2lVyq/view?
+usp=sharing
+Video: Characteristic Polynomials
+https://drive.google.com/a/minerva.kgi.edu/file/d/1K86ihuCp7e6fYbyT4Eaew9yCZ8IXfivM/view?
+usp=sharing
+Session 20: (12.1) Markov Matrices
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-LinearSystems: Apply the tools of linear systems and interpret the results.
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Markov Matrices
+https://drive.google.com/a/minerva.kgi.edu/file/d/1k7J0aUMmYh3FKpylFnlFSvvbOQLgm6wK/view?
+usp=sharing
+Session 21: (12.2) Page Rank
+
+
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 22: (13.1) Diagonalization
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Video: Diagonalization
+https://drive.google.com/a/minerva.kgi.edu/file/d/1_5B08y6R27D8QKz5_18eBpn8lwtD3nI6/view?
+usp=sharing
+Session 23: (13.2) The Spectral Theorem
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+
+
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 24: (14.1) Singular Value Decomposition I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 25: (14.2) Singular Value Decomposition II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#cs113-Transformations: Apply the tools of linear transformations and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Course Policies and Assessment
+
+
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course
+Scoring” section of this syllabus, above. The same information is reflected in the Outcome Index on
+Forum: from the "Courses" tab, click on "View Course Score Calculation".
+**Preclass Work **is an essential component of this course. Completing the exercises gives you the
+opportunity to practice the basic concepts you learn from the videos. In many cases, there are answer
+checkers to give you immediate feedback on computations. You will frequently be assessed on the
+thoroughness and quality of your answers and given brief formative feedback by the teaching assistant.
+If you are absent from CS113:
+The content and skills in this course are scaffolded, each session building upon the previous ones.
+Missing a class session in CS113 may create a domino effect, as you might find it difficult to follow future
+sessions unless you perform the following actions:
+1) Watch the pre-class work videos for the missed session,
+2) Complete the pre-class work problems, AND
+3) Watch the session recording.
+Ideally, you should also attempt the breakout problems, as they are crucial aspects of this course.**
+**They should be attempted prior to watching the debrief in the video.
+You must SUBMIT your answers to the Preclass Work within 1 week of the class session. Failing to do
+so results in a 0 on an LO related to the course session.
+Makeup Work will take the format of your completed PCW workbook. Submit the link HERE.

@@ -1,0 +1,661 @@
+CS130: Statistical Modeling: Prediction and Causal Inference
+Spring 2026
+
+Course Description
+Predictive and Causal Inference for Decision Making
+How do we use data to predict the future, understand the past, and estimate the impacts of events, policies, and decisions? This
+course explores the application of predictive and causal statistical inference for decision-making. This course is designed to
+challenge and enrich students at all levels of coding and quantitative ability--everyone from seasoned computer science
+students to students with no statistics or coding background beyond CS50/51.
+The first part of the course focuses on useful, practical predictive modeling methods, reviewing foundational methods like linear
+regression and introducing non-parametric techniques such as random forests and nonlinear local regression. The second part
+(the main part) shifts to causal inference, equipping you with the toolkit necessary to evaluate impact in real-world settings.
+This course provides more than academic credit; it provides a professional edge. Students who have taken this class have
+leveraged skills learned here to win highly competitive positions in public policy, business, and the sciences.
+Course Objectives & Learning Outcomes
+Episteme: Students will learn the conceptual frameworks underpinning quantitative methods of causal inference and
+prediction that are essential for rational evidence-based decision making.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal
+inference, recognizing the circumstances in which these problems overlap, and assessing the utility of these
+inferential frameworks in realistic settings.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive
+and mathematical understanding of all key underlying assumptions.
+Techne: Students will learn to apply computational methods for prediction, classification, and impact estimation, learning the
+limitations and pitfalls of these methodologies.
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-
+mediated transactions to enable rational decision making.
+
+
+Phronesis: Students will learn to assess when and how to apply learnings in realistic decision settings; that is, given a decision
+problem, how to apply understanding of counterfactual inference and computational methods to inform decision making (i.e.,
+0
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision
+problem, considering real-world factors such as data availability, the standard of evidence required, the anticipated
+level of effort, likely operationalizability of results.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+Prerequisites & Working Knowledge
+For the past decade, CS130 students have been required to use the statistical programming language known as R, and R
+(simple, rather elementary-level R code) will continue to be the default language of the class. This means that R code will be
+used for in-class instruction, and pre-class work will occasionally require some R coding. You are welcome to use AI to help you
+craft your code; if you are fluent in Python, you can also write your code in Python and use AI to translate it into R. You are, of
+course, responsible for the accuracy of any code you submit as your work, even if the code was actually written by (or with
+significant support from) AI.
+I strongly recommend everyone complete DataCamp's free-to-the-public "Introduction to R" course (a 1-4 hour commitment,
+depending upon prior coding know-how). In prior years, I had also required additional DataCamp courses (Intermediate R and
+Introduction to Importing Data in R), but this year, they are recommended but not required. Even so, all CS130 students are
+granted free access to DataCamp (email invitations were sent out on Fri Jan 2 in the evening EST). If you need help with
+DataCamp, please contact the professor at adiamond@minerva.edu asap.
+For information on setting up an R coding environment, please see this link:_ ++instructions are here++._
+Before the first day of class, students are also expected to have read the following short passages:
+Rubin, D. B. (2003). Basic concepts of statistical inference for causal effects in experiments and observational studies.
+Cambridge, MA: Harvard University, Department of Statistics. Read pages 1-10 (up through I-3.2).
+https://drive.google.com/file/d/1nNDMdCfR6BvNepx2bOb7VplDauKdNdwK/view?usp=sharing
+AND
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (June 2023). An introduction to statistical learning: With applications in R. New
+York: Springer. (Creative Commons). Pages 1-14 (Introduction).
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+The link can also be found here: https://www.statlearning.com/
+
+
+Please also watch the following short video (2021 Nobel Lectures in Economics) -- only from 1:01:10 to 1:15:10: (by the way,
+there's a reference to Minerva Prof Alexis Diamond at 1:27:22):
+https://www.youtube.com/watch?v=DV4IjRfjTs0
+Feel free to watch it at a fast speed (e.g., 1.5X)
+Please email the prof at adiamond@minerva.edu, anytime if you have any questions or concerns. I would be delighted to hear
+from you, and I am happy to help you.
+Assignments
+This class is designed to be challenging, and not just because of its coding and statistics; beyond these technical challenges,
+the class is conceptually challenging as well. Therefore, I anticipate that from time to time every student will get stuck and have
+questions. When this happens to you, do not fret, try not to get discouraged, and do not struggle on your own for more than 30-
+45 minutes without seeking assistance from peers/TAs/professors.
+If you use an AI tools to complete your submission, and/or you collaborated with another student, please explain at the top of
+your submission. You are, of course, required to follow Minerva's AI policies. You are responsible for the quality and accuracy of
+any code submitted, regardless of the extent of your AI use. You may be asked to orally explain or discuss any work product
+submitted, and your answers may factor into your grade for that work product.
+Relevant code or a link to code must be included in all assignment submissions. One excellent and free way to share code is to
+use GitHub gists. Info on that here (same procedure for sharing code in any programming language, not just Python):
+https://python.plainenglish.io/how-to-make-beautiful-code-snippets-with-github-gist-e54af113578f
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Assignment 1: Foundational Assignment 1x Sat, Week 2 Sun of Week 1 Tue of Week 3
+Assignment 2: Regression 4x Sat, Week 6 Fri of Week 2 Tue of Week 7
+Assignment 3: Causal Inference 4x Mon, Week 10 Fri of Week 6 Thu of Week 10
+Final Project: Oral Exam or 'Replication' Paper (with permission of 8x Wed, Week 15 Fri of Week 4 Thu of Week 15
+instructor)
+Course Scoring
+
+
+Type % of Course Score
+Assignments 70%
+Assignment 1: Foundational Assignment 5.65%
+Assignment 2: Regression 13.55%
+Final Project: Oral Exam or 'Replication' Paper (with permission of instructor) 33.87%
+Assignment 3: Causal Inference 16.93%
+Classroom Scores 30%
+Pre-Class Work 12.5%
+Poll Responses & Makeup Work 5%
+Verbal Contributions 12.5%
+Breakouts 0%
+Required Texts
+General guidance regarding readings and videos:
+(1) Readings: I usually assign SECTIONS of a chapter, article, or book, but the syllabus often shows the entire resource (not
+the subset that is required). So do not be troubled by what looks like a lot of readings. I have tried hard to limit readings to
+what I deem strictly necessary, and generally reading for this class should not require more than 1 hour of preparation time
+(although more may be needed from time to time).
+(2) Videos: I suggest that you always try to watch a video at a faster speed. Try 1.25x, 1.5x, or even 2x normal speed. This
+can save you a lot of time.
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Introduction to the course
+Overall introduction to the course—the big picture with respect to statistical approaches to causal inference and prediction for
+data-driven decision making.
+Session 1: Introducing CS130
+Learning Outcomes
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+Reading, Videos, and Other Preparation Resources
+
+
+Howard, J. (2012). *From predictive modelling to optimization: The next frontier *[Video file]. Retrieved March 10, 2016 from:
+https://www.youtube.com/watch?v=vYrWTDxoeGg&feature=youtu.be
+Ted Talk. (2010), February. Esther Duflo: Social experiments to fight poverty [Video file]. Retrieved March 10, 2016 from:
+https://www.ted.com/talks/esther_duflo_social_experiments_to_fight_poverty?language=en
+Abbanat, C.. Guidelines for writing decision memos (n.d.) [PDF Document: MIT11_027S11_decision_memo.pdf]. Retrieved
+March 10, 2016 from:
+https://ocw.mit.edu/courses/11-027-city-to-city-comparing-researching-and-writing-about-cities-new-orleans-spring-
+2011/resources/mit11_027s11_decision_memo/
+(From the "Prerequisites and Working Knowledge" section, above)
+Rubin, D. B. (2003). Basic concepts of statistical inference for causal effects in experiments and observational
+studies.Cambridge, MA: Harvard University, Department of Statistics. Read pages 1-10 (up through I-3.2). (permission of the
+author)
+https://drive.google.com/file/d/1nNDMdCfR6BvNepx2bOb7VplDauKdNdwK/view?usp=sharing
+(From the "Prerequisites and Working Knowledge" section, above)
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (June 2023). An introduction to statistical learning: With applications in R.
+New York: Springer. (Creative Commons). Pages 1-14 (Introduction).
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+Session 2: Descriptive, Predictive, and Causal Inference
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+Kleinberg, J., Ludwig, J., Mullainathan, S., and Obermeyer, Z (2015). Prediction Policy Problems. American Economic
+Review: Papers & Proceedings, 105 (5), 491–495. Please read the Introduction (page 491) and section IV (pages 494-495).
+Retrieved from:
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4869349/
+Simpson’s Paradox. (n.d.). In Wikipedia. Retrieved September 1, 2012, from
+https://en.wikipedia.org/wiki/Simpson%27s_paradox.
+https://en.wikipedia.org/wiki/Simpson%27s_paradox
+King, G. (2020) “Overview”. Video. From 00:40 to 20:08 and also from 34:21 to the end.
+https://drive.google.com/file/d/1CoeJR9i4hqDhjhWZ7e_r3PLezuo21hPf/view?usp=sharing
+
+
+Ima, K. (Spring 2016). Basic Principles of Statistical Inference. PowerPoint. Read only up to and including slide 3/66.
+Retrieved July 31, 2023 from:
+https://imai.fas.harvard.edu/teaching/files/basics.pdf
+Unit 2: Statistical Learning (Classification and Prediction)
+We begin the statistical learning (classification and prediction) unit by reviewing linear regression. We then describe logistic
+regression (logit) as an extension suitable for binary classification problems. We also discuss out-of-sample prediction and
+cross-validation to assess and address overfitting. The unit ends with an introduction to random forest modeling.
+Session 3: Statistical Learning
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). An introduction to statistical learning: With applications in R. New
+York: Springer. Read from page 15 to page 37 (no need to read about Classification beginning on page page 37). Also read
+304 to 306 on local regression.
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+Econometrics blog. (2023). The R Formula Cheatsheet. Retrieved from:
+https://www.econometrics.blog/post/the-r-formula-cheatsheet/
+“Formula” R-help File. Retrieved from:
+https://stat.ethz.ch/R-manual/R-devel/library/stats/html/formula.html
+Session 4: Linear Regression
+Learning Outcomes
+
+
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning (Vol. 112). New York: Springer.
+Read pp. 59-71. Also, work through the lab (section 3.6), page 110-114.
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+Session 5: Multiple Regression and Nonlinear Predictors
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning (Vol. 112). New York: Springer.
+Read pp. 71-75 and also 83-87, and lastly 93-103. Also, work through the lab (section 3.6), page 114-116 and 119 to 121.
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+Session 6: Regression for Predictive Inference I: Predicted Values/Prediction Intervals vs.
+Confidence Intervals
+
+
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+Zach (May 30, 2019). How to Create a Prediction Interval in R. Statology.org. Retrieved July 31, 2023 from:
+https://www.statology.org/prediction-interval-r/
+Tupper, L. (Nov 2021). Confidence and prediction intervals, one predictor. Stat 340 Notes: Fall 2021. Retrieved July 31, 2023
+from:
+https://bookdown.org/ltupper/340f21_notes/confidence-and-prediction-intervals-one-predictor.html
+The distinction between confidence intervals, prediction intervals and tolerance intervals. KnowledgeBase #1506.
+GraphPad.com. Retrieved July 31, 2023 from:
+https://www.graphpad.com/support/faq/the-distinction-between-confidence-intervals-prediction-intervals-and-tolerance-
+intervals/
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning (Vol. 112). New York: Springer.
+Read (review) pp. 82-83.
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+Session 7: Regression for Predictive Inference II: Interaction Terms
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+
+
+Reading, Videos, and Other Preparation Resources
+Tupper, L. (Nov 2021). Interactions. Stat 340 Notes: Fall 2021. Retrieved July 31, 2023 from:
+https://bookdown.org/ltupper/340f21_notes/interactions.html
+McGill. "Interactions in Multiple Linear Regression". Epidemiology.
+https://joseph.research.mcgill.ca/courses/EPIB-621/interaction.pdf
+Kassambara, October 2018. "Model Predictions and Confidence Intervals". STHDA.
+http://www.sthda.com/english/articles/40-regression-analysis/166-predict-in-r-model-predictions-and-confidence-
+intervals/#confidence-interval
+Session 8: Classification (Logistic Regression)
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). An introduction to statistical learning: With applications in R. New
+York: Springer. Read from page 129 to 139.
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+Nathaniel Beck, Gary King, and Langche Zeng. 2004. “Theory and Evidence in International Conflict: A Response to de
+Marchi, Gelpi, and Grynaviski,” American Political Science Review, 98(2), pp. 379-389. Reading found in JSTOR Essentials.
+Read as much as needed to truly understand Figures 1, 2, and 3.
+https://gking.harvard.edu/files/gking/files/toe-resp.pdf
+ROC Curve Video. YouTube. Retrieved on 2020-01-26 from:
+https://www.youtube.com/watch?v=2Iw5TiGzJI4
+
+
+Session 9: Resampling Methods (Cross-Validation)
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning: With applications in R. New
+York: Springer, pp. 197-208.
+https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html
+Session 10: Predictive Inference Synthesis
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+Burkov, A. (2019). The Hundred-Page Machine Learning Book. Sections 5.3 to 5.7.
+
+
+http://ema.cri-info.cm/wp-content/uploads/2019/07/2019BurkovTheHundred-pageMachineLearning.pdf
+King, G., Tomz, M. and Wittenberg, J. (2000) Making the Most of Statistical Analyses: Improving Interpretation and
+Presentation. American Journal of Political Science, 44, 341-355
+https://gking.harvard.edu/files/making.pdf
+Unit 3: Causal Inference
+We launch the section on causal inference and begin with the counterfactual framework for causal inference, also known as the
+Rubin Causal Model. Concepts associated with confounding, randomized control trials (RCTs), and observational studies are
+discussed and contextualized with respect to data-driven decision making.
+In the first session of this unit, we briefly discuss the various methods we'll be covering and connect those methods to
+expectations for the Final Project assignment.
+Session 11: Statistical Models for Causation: The Bridge to Causal Inference
+Learning Outcomes
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+Freedman, D. A. (2006). Statistical Models for Causation: What Inferential Leverage Do They Provide?Evaluation
+Review,30(6). Read sections , 1, 5, 6, and 9.
+https://www.stat.berkeley.edu/~census/oxcauser.pdf
+Cunningham, Scott. Causal Inference: The Mixtape. Yale University Press, 2021. Read section 4, up to but not including 4.2.
+Accessed 9 Feb. 2021.
+https://mixtape.scunning.com/04-potential_outcomes
+MIT Video. Duflo, E. “Causality”. Uploaded Jan 18, 2018.
+https://www.youtube.com/watch?v=sQwxrD4JDRs
+
+
+Session 12: Counterfactuals: The Rubin Causal Model
+Learning Outcomes
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+Rubin causal model. Excerpt from Wikipedia, Retrieved March 10, 2016 from:
+https://en.wikipedia.org/wiki/Rubin_causal_model
+Rubin, D. (1986). Which ifs have causal answers (comment). Journal of the American Statistical Association, 81(396), 961-
+962. Retrieved March 10, 2016 from:
+http://fitelson.org/woodward/rubin.pdf
+MIT Video. Duflo, E. “Rubin Causal Model”. Uploaded Jan 18, 2018.
+https://www.youtube.com/watch?v=sQwxrD4JDRs
+Expected value. (n.d.). Excerpt from Wikipedia. Excerpted July 24, 2016 from:
+https://en.wikipedia.org/wiki/Expected_value
+OPTIONAL: Holland, P. W. (1986). Statistics and causal inference. Journal of the American Statistical Association, 81(396),
+945-960. Reading found in JSTOR Essentials
+OPTIONAL: Rubin's 2016 Lecture: His legacy, in his own words.
+Only for hardcore Rubin fans. By approx min 40, he discusses the fundamental problem of causal inference.
+https://www.youtube.com/watch?v=AH7lvy45k2U
+Session 13: Randomized Experiments & Intro to Randomization Inference
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+
+
+Reading, Videos, and Other Preparation Resources
+Tollefson, J. (2015). Can randomized trials eliminate global poverty?. Nature, 524(7564), 150. Retrieved March 10, 2016
+from:
+https://www.povertyactionlab.org/sites/default/files/2015.08.12-J-PAL-Nature.pdf
+Lalonde, R.J. (1986). Evaluating the Econometric Evaluations of Training Programs with Experimental Data. American
+Economic Review 76: 604-20. (Intro and also the first paragraph of Conclusion only—see “Why/Use”.) Reading found in
+JSTOR Essentials
+https://business.baylor.edu/scott_cunningham/teaching/lalonde-1986.pdf
+John Rauser keynote: "Statistics Without the Agonizing Pain" -- Strata + Hadoop 2014
+https://www.youtube.com/watch?v=5Dnw46eC-0o
+O'Malley, Deborah (December, 2021). How to Correctly Calculate Sample Size in A/B Testing. Retrieved July 31, 2023 at:
+https://guessthetest.com/calculating-sample-size-in-a-b-testing-everything-you-need-to-know/
+Session 14: Randomization Inference II + Case Study
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+Rubin, D. B. (2003). Basic concepts of statistical inference for causal effects in experiments and observational studies.
+Cambridge, MA: Harvard University, Department of Statistics. Read pages 30-39.
+https://drive.google.com/file/d/1nNDMdCfR6BvNepx2bOb7VplDauKdNdwK/view?usp=sharing
+Session 15: Observational Study Design & Matching I
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Rosenbaum, P. R. (1999). Choice as an alternative to control in observational studies. Statistical Science, 259-278. Section 1
+is required. Please read sections 1, 2, 3, and 5. Feel free to skip section 4.
+http://www.sas.rochester.edu/psc/clarke/214/Rosenbaum99.pdf
+
+
+PEP. (Mar 1, 2019). Lesson 2: Matching Methods. Quasi-Experimental Evaluation Methods. YouTube. Retrieved on July 31,
+2023:
+https://www.youtube.com/watch?v=CEikQRj5n_A&t=2077s
+Rubin, D. B. (2003). Basic concepts of statistical inference for causal effects in experiments and observational
+studies.Cambridge, MA: Harvard University, Department of Statistics. Read page 85 / 140 (beginning with "Here we give
+some details on estimating propensity scores..." all the way to the bottom of that page.
+https://drive.google.com/file/d/1nNDMdCfR6BvNepx2bOb7VplDauKdNdwK/view?usp=sharing
+Rubin, D. B. (2001). Using propensity scores to help design observational studies: Application to the tobacco litigation.
+Health Services and Outcomes Research Methodology, 2(3-4), 169-188
+https://course-resources.minerva.edu/uploaded_files/mke/00219270-5282/rubin2001.pdf
+Session 16: Matching II
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Diamond, A. PPT Given at Amazon.com. 2019
+https://drive.google.com/file/d/1gCwmgxCk4WtIlTdd-Q6E93IxJU5c2Mta/view?usp=sharing
+Diamond, Alexis. "Genetic Matching". [Video] 2018.
+https://drive.google.com/file/d/0B3ECwzWL2AHgbWFLTm9saW1oOXc/view?usp=sharing&resourcekey=0-
+JazdynM1OA6stUfsTgY5Kw
+OPTIONAL: Diamond, Alexis. 2019 “Very Long Genetic Matching Training Video”.
+https://drive.google.com/file/d/0B7xb7ljgS9qYUUNkRkZZLUtNcjg/view?usp=sharing&resourcekey=0-
+td_NIr6d1FeSQOgmH0YIeg
+1. Notebook LM Summary of Genetic Matching.
+https://docs.google.com/document/d/119vJvC_jDwrzIEx_IYzW3bHurep9dFRzeT3Um-VjBzw/edit?usp=sharing
+Session 17: Quantile Effects: Matching vs. Quantile Regression vs. Combo!
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Diamond, A. (2005), “Reliable Quantile Effect Estimation in Observational Studies” (unpublished). Read the Introduction, and
+section 2.2 onward.
+http://web.mit.edu/econometrics/diamond-quantile2.pdf
+[Optional] DeJesus, March 4, 2019. “What, Why, and How to Read an Empirical CDF”. Towards Data Science.
+
+
+https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480
+Session 18: Sensitivity to Hidden Bias (Endogeneity)
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Youtube (2020), useR! 2020: sensemakr: Sensitivity Analysis Tools for OLS (C.Cinelli), Retrieved from:
+https://www.youtube.com/watch?v=p3dfHj6ki68
+Rubin, D. B. (2004). Basic concepts of statistical inference for causal effects in experiments and observational studies.
+Cambridge, MA: Harvard University, Department of Statistics. Read pages 98-103. (Fair Use)
+https://drive.google.com/file/d/1nNDMdCfR6BvNepx2bOb7VplDauKdNdwK/view?usp=sharing
+Cinelli, C. and Hazlett, C. "An Introduction to Sensitivity Analysis Using sensemakr". Retrieved from https://cran.r-
+project.org/web/packages/sensemakr/vignettes/sensemakr.html on March 5, 2024.
+https://cran.r-project.org/web/packages/sensemakr/vignettes/sensemakr.html
+Notebook LM. Summary of Sensitivity Analysis.
+https://drive.google.com/file/d/1UYZek937IQHvfmCLHFw4DwtmDD55N_S4/view?usp=sharing
+Session 19: Matching Case Study: Matching + Hidden Bias + Quantile Effects Case Study
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Sekhon, J. S. (2011). Multivariate and Propensity Score Matching Software with Automated Balance Optimization: The
+Matching package for R. Journal of Statistical Software, 42(7), 1–52. https://doi.org/10.18637/jss.v042.i07
+https://www.jsekhon.com/papers/MatchingJSS.pdf
+Session 20: Synthetic Controls I
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Abadie, A., & Gardeazabal, J. (2003). The economic costs of conflict: A case study of the Basque Country. American
+Economic Review, 113-132. Please read up to BUT NOT INCLUDING Section III, skipping references to Figure 3. Appendix
+B (“Estimation of Per Capita GDP Gap”) is optional. Retrieved March 10, 2016 from:
+
+
+https://www.nber.org/papers/w8478
+Optional: Abadie, A., Diamond, A., & Hainmueller, J. (2011). Synth : An R Package for Synthetic Control Methods in
+Comparative Case Studies. Journal of Statistical Software J. Stat. Soft., 42(13). doi:10.18637/jss.v042.i13. Note that this link
+provides R code to run everything discussed in the article. This article also discusses placebos in time.
+https://www.jstatsoft.org/article/view/v042i13
+Session 21: Synthetic Controls II
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Abadie, A., Diamond, A., & Hainmueller, J. (2015). Comparative politics and synthetic control method. American Journal of
+Political Science, 59(2), 495-510. *The section called “Comparison to Regression” is more advanced, tangential to our focus
+in this lesson plan, and therefore entirely optional. * Retrieved March 10, 2016 from:
+https://www.researchgate.net/publication/228322749_Comparative_Politics_and_the_Synthetic_Control_Method/download
+Abadie, A., Diamond, A., & Hainmueller, J. (2012). Synthetic control methods for comparative case studies: Estimating the
+effect of California’s tobacco control program. Journal of the American Statistical Association. *Sections 2.2 and 2.3 are
+entirely optional because they do little more than repeat technical details that have (for the most part) already been covered
+by your other synth-related readings in simpler terms. * Retrieved March 10, 2016 from:
+https://web.stanford.edu/~jhain/Paper/JASA2010.pdf
+Cunningham, S. 2021. "The Much Quieter Revolution of Synthetic Control: Episode 1" Substack.
+https://drive.google.com/file/d/1xaDajCUQxvRRf468xhWQCWnlXgeIYqgC/view?usp=drive_link
+Session 22: Encouragement Designs I
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+
+
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+Diamond, A and Hainmueller, J. (2007). The Encouragement Design for Program Evaluation. IFC (Unpublished).
+https://drive.google.com/file/d/0B7xb7ljgS9qYT2hrcHpST0x4NEQ4Y0tDb3lqQlpZOUFIVlp3/view?
+usp=sharing&resourcekey=0-TfOr03eJCG1cMqBRttBFYA
+Jamison, J.C., Karlan, D., & Raffler, P. (2013). Mixed method evaluation of a passive mHealth sexual information texting
+service in Uganda (No. w19107). National Bureau of Economic Research. Retrieved March 10, 2016 from:
+http://www.nber.org/papers/w19107
+Bundgaard, H., Bundgaard, J. S., Raaschou-Pedersen, D. E. T., von Buchwald, C., Todsen, T., Norsk, J. B., ... & Fogh, K.
+(2020). Effectiveness of Adding a Mask Recommendation to Other Public Health Measures to Prevent SARS-CoV-2 Infection
+in Danish Mask Wearers: A Randomized Controlled Trial. Annals of Internal Medicine.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7707213/
+Session 23: Encouragement Designs II
+Learning Outcomes
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+IEG (Independent Evaluation Group). 2013. Impact Evaluation of Business License Simplification in Peru: An Independent
+Assessment of an International Finance Corporation-Supported Project. Washington, DC: World Bank. DOI: 10.1596/978-0-
+8213- 9801-2.
+http://documents.worldbank.org/curated/en/330631468076134933/pdf/NonAsciiFileName0.pdf
+Job Training Partnership Act of 1982. (n.d.). In Wikipedia. Retrieved October 16, 2016, from
+https://en.wikipedia.org/wiki/Job_Training_Partnership_Act_of_1982
+
+
+Rubin, D. B. (2004). Basic concepts of statistical inference for causal effects in experiments and observational studies.
+Cambridge, MA: Harvard University, Department of Statistics. Read pages 118-123. (fair use)
+https://drive.google.com/file/d/1nNDMdCfR6BvNepx2bOb7VplDauKdNdwK/view?usp=sharing
+Hadavand, Aboozar (2020) “The LATE Estimator”.
+https://www.notion.so/The-LATE-estimator-a2ad7662247547ffbbbec2eb715c4f50
+Session 24: Regression Discontinuity and Bounds Estimation
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Jacob, R et al (2012) “A Practical Guide to Regression Discontinuity” MDRC. Retrieved on October 23 at:
+http://www.mdrc.org/sites/default/files/RDD%20Guide_Full%20rev%202016_0.pdf
+Summary of Bounds Estimation Derivation
+See the urls in the Why/Use
+Session 25: Causal Inference Synthesis
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code. (C) FA
+#cs130-decisionanalysis: Apply empirical methods to decision making.
+#cs130-decisionbrief: Effectively present findings and recommendations for statistically sophisticated and less
+sophisticated audiences (encompassing elements of the HC #professionalism)
+#cs130-decisiondata: Identify and evaluate opportunities to leverage data (especially big data) and computer-mediated
+transactions to enable rational decision making.
+#cs130-decisiondesign: Decide whether or not (and if so, how) to apply a method to solve a given decision problem,
+considering real-world factors such as data availability, the standard of evidence required, the anticipated level of effort, likely
+operationalizability of results.
+#cs130-decisioninference: Distinguish among problems of descriptive inference, predictive inference, and causal inference,
+recognizing the circumstances in which these problems overlap, and assessing the utility of these inferential frameworks in
+realistic settings.
+#cs130-decisionquestion: Frame decision questions in a conceptually coherent and tractable manner.
+#cs130-decisionreview: Judge the quality of applied computational methods for decision making.
+#cs130-decisiontheory: Explain and critically examine empirical analyses taught in the course, requiring intuitive and
+mathematical understanding of all key underlying assumptions.
+Reading, Videos, and Other Preparation Resources
+
+
+Sekhon, Jasjeet S. "Opiates for the matches: Matching methods for causal inference."_Annual Review of Political
+Science_12 (2009): 487-508.
+https://www.jsekhon.com/papers/opiates.pdf
+Imbens, G. W., & Wooldridge, J. M. (2009). Recent Developments in the Econometrics of Program Evaluation. Journal of
+Economic Literature, 47(1), 5-86. doi:10.1257/jel.47.1.5. Retrieved on 3 November 2016 from:
+https://dash.harvard.edu/bitstream/handle/1/3043416/imbens_recent.pdf?sequence=2
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course Scoring” section of this
+syllabus, above. The same information is reflected in the Outcome Index on Forum: from the "Courses" tab, click on "View
+Course Score Calculation".
+Overview
+There is no make-up work in CS130, but you must always submit pre-class work, even if you are going to be absent.
+Pre-class work
+The typical class format of CS130 places a strong emphasis on pre-class work. The pre-class work almost always forms the
+basis of an activity in class, and you will not learn meaningfully from the class session if you have not worked through the pre-
+class exercises in detail.
+You have to do the pre-class work every time.
+Even if you intend to skip a class, you have to do the pre-class work, and you will still get graded on it.
+You do not have to get everything right, but you have to try, and you have to show your work. If you get stuck and find that
+you are unable to complete the pre-class work, explain why. Explain what you attempted and why you think it didn’t work.
+Teaching assistants will provide formative feedback on your pre-class work to help you learn from your mistakes and
+improve.
+You will frequently get graded on pre-class work as part of your in-class assessment.
+Which sessions get graded on pre-class work is determined randomly.
+Not completing pre-class work to a satisfactory level will result in a low score.
+Not engaging meaningfully with the pre-class work at all will result in a score of 0.
+Make-up work
+There is no make-up work, but remember that you have to submit your pre-class work even if you will be absent from
+class.
+It is in your best interest to watch the class recording when it is available. If the video recording is unavailable for any
+reason (for example, due to a technical issue), please contact your instructor. Where possible, a recording of another
+section of the same course will be shared with you.
+When the going gets tough...
+
+
+This class is designed to be challenging, and not just because of its coding and statistics; beyond these technical challenges,
+the class is conceptually challenging as well. Therefore, I anticipate that from time to time, every student will get stuck and have
+questions. When this happens to you, do not fret, try not to get discouraged, and do not struggle on your own for more than 30-
+45 minutes without seeking assistance from peers/TAs/professors.
+Using AI tools
+Everyone has to follow Minerva's AI policies. If you use an AI tools to complete your submission, and/or you collaborated with
+another student, please explain at the top of your submission.
+Transparency
+Relevant code or a link to code must be included in all assignment submissions. One excellent and free way to share code is to
+use GitHub gists. Info on that here (same procedure for sharing code in any programming language, not just Python):
+https://python.plainenglish.io/how-to-make-beautiful-code-snippets-with-github-gist-e54af113578f

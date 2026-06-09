@@ -1,0 +1,851 @@
+CS156: Finding Patterns in Data with Machine Learning
+Spring 2026
+Course Description
+Students learn to apply core machine learning techniques — such as classification, perceptron, neural
+networks, support vector machines, hidden Markov models, and nonparametric models of clustering —
+as well as fundamental concepts such as feature selection, cross-validation and over-fitting. Students
+program machine learning algorithms to make sense of a wide range of data, including images and
+numerical data.
+Course Objectives & Learning Outcomes
+Core machine learning knowledge and skill mastery.
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a
+variety of machine learning systems using appropriate libraries and software tools.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and
+techniques using appropriate oral and written descriptions, mathematical notation, and
+visualizations.
+#cs156-MLMath: Evaluate problems and derive solutions in linear algebra, multivariate
+calculus, and Bayesian statistics.
+Produce original machine learning work that goes beyond the scope of what was covered in class.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future
+students by compiling learning resources, sharing code, creating study groups, and
+supporting other student's learning.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel
+work, and articulate meta-knowledge about machine learning.
+Prerequisites & Working Knowledge
+CS110 Problem Solving with Data Structures and Algorithms
+CS111 Single and Multivariable Calculas
+CS113 Theory and Applications of Linear Algebra
+CS114 Probability, Statistics, and the Structure of Randomness
+Assignments
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Pipeline - First Draft 4x Thu, Week 6 Mon of Week 1 Sun of Week 7
+Pipeline - Second Draft 6x Mon, Week 12 Mon of Week 7 Thu of Week 12
+Pipeline - Final Draft 10x Thu, Week 15 Mon of Week 12 Fri of Week 15
+Course Scoring
+Type % of Course Score
+Assignments 50%
+Pipeline - First Draft 10%
+Pipeline - Second Draft 15%
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Pipeline - Final Draft 25%
+Classroom Scores 50%
+Pre-Class Work 30%
+Poll Responses & Makeup Work 10%
+Verbal Contributions 10%
+Breakouts 0%
+Required Texts
+(Main Text) Murphy, K. P. (2022) Probabilistic Machine Learning (Creative Commons)
+https://probml.github.io/pml-book/book1.html
+(Supplemental) Barber, D. (2012). Bayesian reasoning and machine learning. Cambridge: Cambridge
+University Press. (Free online Access)
+http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage
+(Supplemental) Bishop, C. M. (2006). Pattern recognition and machine learning. New York: Springer.
+(Free online Access) https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/
+https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-
+Machine-Learning-2006.pdf
+(Supplemental) Downey, A. (2013). Think Bayes. Beijing: O'Reilly. (Creative Commons)
+http://www.greenteapress.com/thinkbayes/thinkbayes.pdf
+(Supplemental) MacKay, D. J. (2003). Information theory, inference, and learning algorithms.
+Cambridge, UK: Cambridge University Press. (Free online Access)
+http://www.inference.phy.cam.ac.uk/itila/book.html
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 0: ML Fundamentals
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Machine learning stands at the intersection of statistics and computer science. It is a greatly promising
+set of ideas that allow us to extract valuable information from the large volume of data that society is
+currently producing. In this unit we provide a basic framework we can use to begin to answer some of
+the more basic questions: What is a machine-learning algorithm? What data are appropriate for a given
+algorithm? How should we prepare the data and then validate the model afterwards? If we have a model,
+how do we decide on any actions to take based on the model's output?
+Session 1: Introduction and overview of machine learning concepts
+Learning Outcomes
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+Reading, Videos, and Other Preparation Resources
+Read Chapter 1 of Murphy, K (2022). Probabilistic Machine Learning
+Machine Learning: Solving Problems Big, Small, and Prickly. (2016, December 12). Retrieved August
+16, 2017, from https://www.youtube.com/watch?v=_rdINNHLYaQ
+https://www.youtube.com/watch?v=_rdINNHLYaQ
+Video Intro to CS156: Machine Learning
+https://youtu.be/WN7rCCloLbQ
+Video Machine Learning-Four Core Skills
+https://youtu.be/36ntbsE8n74
+Machine Learning Motivating Examples
+https://youtu.be/Gb8Ex7boHrk
+What Actually is a Machine Learning Model?
+https://youtu.be/crkz2vLn9nw
+Booting up--quick class instructions for the first session.
+https://youtu.be/RwURUy-Whxo
+Class Learning Evaluation and Major Assignments
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+https://youtu.be/ej7bVPto-kY
+Unit 1: Core Mathematics
+From the other side of the screen it all looks so easy.
+― Kevin Flynn
+This unit reviews linear models and statistical techniques from previous classes in the context of scikit
+learn. It introduces ML data ingestion and engineering techniques, and some simple models for
+classification, and regression. As well as some unsupervised techniques that capture data structure
+including PCA and maximum likelihood learning.
+Session 2: Linear Algebra 1: Tensors, Classification, and Regression
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Basic Linear Regression using the Iris Data set.
+https://medium.com/analytics-vidhya/linear-regression-using-iris-dataset-hello-world-of-machine-
+learning-b0feecac9cc1
+Basic Logistic Regression using the Iris Data set.
+https://scikit-learn.org/stable/auto_examples/linear_model/plot_iris_logistic.html
+Stat Quest: Linear Regresstion
+https://www.youtube.com/watch?v=nk2CQITm_eo
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Stat Quest: Logistic Regression
+https://www.youtube.com/watch?v=yIYKR4sgzI8
+[Extension] Read the "Linear regression" and "Logistic regression" Sections in (Main Text) Murphy, K.
+P. (2022) Probabilistic Machine Learning (Creative Commons)
+https://probml.github.io/pml-book/book1.html
+Session 3: Linear Algebra 2: Collinearity
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Murphy, K (2022).
+https://github.com/probml/pml-book/releases/latest/download/book1.pdf
+The Essence of Linear Algebra (3Blue1Brown, 2016)
+https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-
+GT3co4r2y2YErbmuJw2L5tW4Ew2O5B
+Multiple regression, clearly explained (StatQuest, Josh Starmer, 2017)
+https://www.youtube.com/watch?
+v=zITIFTsivN8&list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU&index=4
+Session 4: Trees 1: Classification by Partition
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Starmer, J. (2021, April 26). Decision and Classification Trees, Clearly Explained!!!
+https://www.youtube.com/watch?v=_L39rN6gz7Y
+Wilber, J., & Santamaría, L. (n.d.). Decision Trees. Retrieved October 14, 2022
+https://mlu-explain.github.io/decision-tree/
+scikit-learn developers. (n.d.). 1.10. Decision Trees. Scikit-Learn. Retrieved October 14, 2022
+https://scikit-learn/stable/modules/tree.html
+Murphy, K. P. (2022) Probabilistic Machine Learning. Chapter 18.1
+https://probml.github.io/pml-book/book1.html
+Session 5: Max Likelihood 1: Naive Bayes
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Starmer, J. (2020). Naive Bayes, Clearly Explained!!!
+https://youtu.be/O2L2Uv9pdDA
+Starmer, J. (2020). Gaussian Naive Bayes, Clearly Explained!!!
+https://www.youtube.com/watch?v=H3EjCKtlVog
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+VanderPlas, J. (2016). In Depth: Naive Bayes Classification
+https://jakevdp.github.io/PythonDataScienceHandbook/05.05-naive-bayes.html
+Session 6: Max likelihood 2: Parameter Estimation from Data
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+A Probability is not Likelihood (StatQuest, Starmer, J 2018).
+https://www.youtube.com/watch?v=pYxNSUDSFH4
+Maximum Likelihood (StatQuest, Starmer, J. 2021)
+https://www.youtube.com/watch?v=XepXtl9YKwc
+Neural Language Models (Shafkat I., 2022 Nov)
+https://irhum.github.io/blog/lm/#maximum-likelihood-estimation
+Maximum Likelihood for Logistic Regression (Ritvik Kharkar, 2019)
+https://www.youtube.com/watch?v=VOIhswqFWVc
+Skim Chapter 4 Murphy, K (2022), sections 4.1, 4.2 and 4.3.
+https://github.com/probml/pml-book/releases/latest/download/book1.pdf
+[Optional] Here are some additional maximum Likelihood Estimation Problems for practice.
+https://www.probabilitycourse.com/chapter8/8_2_3_max_likelihood_estimation.php
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Session 7: Networks 1: Feed-Forward Neural Networks
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Murphy, K (2022)
+Chapter 13:
+13.0 (Introduction)
+13.1
+13.2
+13.3.1
+13.3.2
+https://github.com/probml/pml-book/releases/latest/download/book1.pdf
+But what is a neural network? (3Blue1Brown 2017)
+https://www.youtube.com/watch?v=aircAruvnKk
+Gradient descent (3Blue1Brown 2017)
+https://www.youtube.com/watch?v=IHZwWFHWa-w&t=456s
+Session 8: Gradients: Multivariate Derivatives
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+CS231n. (n.d.). Backpropagation, Intuitions. Retrieved September 30, 2022.
+https://cs231n.github.io/optimization-2/
+Smilkov, D., & Carter, S. (n.d.). A Neural Network Playground. Retrieved September 30, 2022,
+https://playground.tensorflow.org/
+[Review] Murphy, K. P. (2022) Probabilistic Machine Learning. Chapters 13.3.1 and 13.3.2 (from
+Session 9) and Chapter 13.3.4 (new)
+https://probml.github.io/pml-book/book1.html
+[Optional] Shafkat, I. (2021). Intro to Machine Learning with JAX.
+https://www.youtube.com/watch?v=H_lfVUh03cM
+[Optional] Jacobians, RitvikMath, 2021
+https://www.youtube.com/watch?v=JsPFlmewq54
+Session 9: Metrics and Cross-Validation
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Reading, Videos, and Other Preparation Resources
+Wilber, J. & Werness, B. (n.d.). The Importance of Data Splitting. MLU-Explain
+https://mlu-explain.github.io/train-test-validation/
+Wilber, J. (2022, March). Precision & Recall. MLU-Explain
+https://mlu-explain.github.io/precision-recall/
+Wilber, J. (2022, June). ROC & AUC. MLU-Explain
+https://mlu-explain.github.io/roc-auc/
+Wilber, J. & Croome, J. (2022, May). Cross Validation. MLU-Explain
+https://mlu-explain.github.io/cross-validation/
+A Gentle Introduction to k-fold cross validation (J. Brownlee 2019)
+https://machinelearningmastery.com/k-fold-cross-validation/
+Cross-validation sklearn documentation
+https://scikit-learn.org/stable/modules/cross_validation.html
+[Optional] Murphy, K (2022) Sections 4.5.1 and 4.5.5
+https://github.com/probml/pml-book/releases/latest/download/book1.pdf
+Session 10: Review 1: Unit 1 Synthesis and Assignment 1 Prep
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Reading, Videos, and Other Preparation Resources
+Unit 2: High-dimensional Data
+"Ignorance is bliss"
+– Cypher
+This unit introduces high-dimensional data and the challenges this introduces for simplistic ML
+approaches. It begins by characterizing overfitting, cross-validation, and the bias-variance trade off. It
+continues with the challenges of high-dimensional spaces and how to use linear algebra to estimate
+values within them. The unit introduces a number of more complex ML models including SVMs, CNNs,
+Random forests, and Autoencoders.
+Session 11: Data Ethics and the Bias-Variance Trade off
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Mehotra, K. (2022, July 23). Human Touch. Fifty Two.
+https://fiftytwo.in/story/human-touch/
+Wilber, J. & Werness, B. (2021, January). The Bias Variance Tradeoff. MLU-Explain
+https://mlu-explain.github.io/bias-variance/
+Bias-Variance, Kilian Weinberger Cornell Open Lectures.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote12.html
+Federal Data Strategy Data Ethics Framework (2019)
+https://resources.data.gov/assets/documents/fds-data-ethics-framework.pdf
+[Optional, Alternate A] Bias-Variance Murphy, K (2022), Chapter 4 section 4.7.6.
+https://github.com/probml/pml-book/releases/latest/download/book1.pdf
+[Optional, Alternate B] Bias-Variance Trade off, Wikipedia.
+https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff
+[Optional but interesting] Machine learning techniques for biased data (MIT, 2021)
+https://news.mit.edu/2022/machine-learning-biased-data-0221
+Session 12: Basis Functions 1: Functions as Parameters
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Murphy, K (2022)
+Chapter 12: General Linear Models (short)
+https://github.com/probml/pml-book/releases/latest/download/book1.pdf
+Linear Regression and Basis Functions (2017)
+https://www.youtube.com/watch?v=rVviNyIR-fI
+Basis Functions (Starke, P, 2019)
+https://www.youtube.com/watch?v=xTo8Q9asVfc
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Session 13: Projections 1: Support Vector Machines & Kernels
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Rohrer, B. (2017, September 17). How Support Vector Machines work / How to open a black box
+[video file].
+https://www.youtube.com/watch?v=-Z4aojJ-pdg
+[3Blue1Brown]. (2016, August 15). Inverse matrices, column space and null space | Essence of linear
+algebra, chapter 6 [video file].
+https://www.youtube.com/watch?v=uQhTuRlWMxw
+Chapter 14.5
+Murphy, K. (2012). Machine Learning: A Probabilistic Perspective. Cambridge: The MIT Press.
+https://probml.github.io/pml-book/book0.html
+SVM Kernels (Ritvikmath, 2019)
+https://www.youtube.com/watch?v=OKFMZQyDROI
+Ranjan, C. (2017, July 26). Data Science for Mortals - The Kernal Trick [Blog post].
+https://dscm.quora.com/The-Kernel-Trick
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Session 14: Trees 2: XGBoost
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+xgboost developers. (n.d.). Introduction to Boosted Trees—Xgboost 1.6.2 documentation.
+https://xgboost.readthedocs.io/en/stable/tutorials/model.html
+Chen, T., & Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. Proceedings of the
+22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794.
+https://arxiv.org/abs/1603.02754
+[Optional] Murphy, K. P. (2022) Probabilistic Machine Learning. Chapter 18.5.5
+https://probml.github.io/pml-book/book1.html
+Session 15: Basis Functions 2: Ridge and Lasso
+Learning Outcomes
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#regression: Apply and interpret regression. (C) FA
+Reading, Videos, and Other Preparation Resources
+Starmer, J. (2018, September 25)._ Regularization Part 1: Ridge (L2) Regression._
+https://www.youtube.com/watch?v=Q81RR3yKn30
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Starmer, J. (2018, October 1)._ Regularization Part 2: Lasso (L1) Regression._
+https://www.youtube.com/watch?v=NGf0voTMlcs
+Starmer, J. (2020, May 19)._ Ridge vs Lasso Regression, Visualized!!!._
+https://www.youtube.com/watch?v=Xm2C_gTAl8c
+[Review] Wilber, J. & Werness, B. (2021, January). The Bias Variance Tradeoff. MLU-Explain
+https://mlu-explain.github.io/bias-variance/
+Parr, T. (2020, May) A visual explanation for regularization of linear models.
+https://explained.ai/regularization/index.html
+Session 16: Dimensionality reduction 1: PCA
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Starmer, J. (2018). StatQuest: Principal Component Analysis (PCA), Step-by-Step.
+https://www.youtube.com/watch?v=FgakZw6K1QQ
+Powell, V. & Lehe, L. (2009). Principal Component Analysis: Explained Visually.
+https://setosa.io/ev/principal-component-analysis/
+Richardson, M. (2009). Principal Component Analysis
+https://people.duke.edu/~hpgavin/SystemID/References/Richardson-PCA-2009.pdf
+VanderPlas, J. (2016). In Depth: Principal Component Analysis
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html
+[Optional, strongly recommended] Macken, F. (2022) CS156 4.1 (Principal Component Analysis)
+https://www.notion.so/CS156-4-1-Principal-Component-Analysis-
+98ece2a6218c4f23aa08d1bf9aaa3cec
+[Review] 3Blue1Brown: The essence of Linear Algebra (2016), Chapter 13: Change of Basis
+https://www.youtube.com/watch?v=P2LTAUO1TdA
+[Review] 3Blue1Brown: The essence of Linear Algebra (2016), Chapter 14: Eigenvectors
+https://www.youtube.com/watch?v=PFDu9oVAE-g&t=182s
+[Optional] Sections 20.1 and 20.2 of Murphy, K (2022)
+https://github.com/probml/pml-book/releases/latest/download/book1.pdf
+Session 17: Projections 2: Filters, Convolutions, & Transforms
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Shafkat, I. (2018, June 1). Intuitively Understanding Convolutions for Deep Learning. Towards Data
+Science.
+https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-
+1f6f42faee1
+Olah, C. (2014, July 8). Conv Nets: A Modular Perspective—Colah’s blog.
+https://colah.github.io/posts/2014-07-Conv-Nets-Modular/
+Olah, C., Mordvintsev, A., & Schubert, L. (2017). Feature Visualization. Distill.
+https://doi.org/10.23915/distill.00007
+[Optional] Murphy, K. P. (2022) Probabilistic Machine Learning. Chapters 14.1 and 14.2.1
+https://probml.github.io/pml-book/book1.html
+Session 18: Networks 2: Transfer Learning
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Ruder, S. (2017) Transfer Learning - Machine Learning's Next Frontier
+https://www.ruder.io/transfer-learning/
+Olah, C. (2015) Visualizing Representations: Deep Learning and Human Beings
+https://colah.github.io/posts/2015-01-Visualizing-Representations/
+Ruder, S. (2019) The State of Transfer Learning in NLP
+https://www.ruder.io/state-of-transfer-learning-in-nlp/
+[Skim] Howard, J. & Ruder, S. (2018). Universal Language Model Fine-tuning for Text Classification
+https://arxiv.org/abs/1801.06146
+[Skim] Brown et. al. (2020) Language Models are Few-Shot Learners
+https://arxiv.org/abs/2005.14165
+[Optional] Radford et. al. (2018) Improving Language Understanding by Generative Pre-Training
+https://cdn.openai.com/research-covers/language-
+unsupervised/language_understanding_paper.pdf
+[Optional] Radford. et. al. (2019) Language Models are Unsupervised Multitask Learners
+https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf
+Session 19: Review 2: Unit 2 Synthesis and Assignment 2 Prep
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Unit 3: Generative Models
+Del Spooner: Human beings have dreams. Even dogs have dreams, but not you, you are just a
+machine. An imitation of life. Can a robot write a symphony? Can a robot turn a canvas into a
+beautiful masterpiece?
+Sonny: Can you?
+Session 20: Time Series 1: Hidden Markov models
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+Reading, Videos, and Other Preparation Resources
+Normalized Nerd (2020) Markov Chains Clearly Explained! Part - 1
+https://youtu.be/i3AkTO9HLXo
+Normalized Nerd (2020) Hidden Markov Model Clearly Explained! Part - 5
+https://youtu.be/RWkHJnFj5rY
+Yoon B. J. (2009). Hidden Markov Models and their Applications in Biological Sequence Analysis.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2766791/
+Jurafsky D. & Martin J. H. (2023). Hidden Markov Models.
+https://web.stanford.edu/~jurafsky/slp3/A.pdf
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Session 21: Dimensionality Reduction 2: Autoencoders
+Learning Outcomes
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+Jordan, J. (2018, March 19). Introduction to autoencoders. Jeremy Jordan.
+https://www.jeremyjordan.me/autoencoders/
+Artificial Intelligence - All in One. (2017, September 24). Lecture 15.1—From PCA to autoencoders—[
+Deep Learning | Geoffrey Hinton | UofT ].
+https://www.youtube.com/watch?v=PSOt7u8u23w
+Artificial Intelligence - All in One. (2017, September 24). Lecture 15.2—Deep autoencoders—[ Deep
+Learning | Geoffrey Hinton | UofT ].
+https://www.youtube.com/watch?v=6jhhIPdgkp0
+Building Autoencoders in Keras. (n.d.). Retrieved October 21, 2022
+https://blog.keras.io/building-autoencoders-in-keras.html
+[Optional] Murphy, K. P. (2022) Probabilistic Machine Learning. Chapters 20.3.1 and 20.3.2
+https://probml.github.io/pml-book/book1.html
+Session 22: Time Series 2: Recurrent neural networks
+Learning Outcomes
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+Reading, Videos, and Other Preparation Resources
+Karpathy, A. (2015, May 21). The Unreasonable Effectiveness of Recurrent Neural Networks.
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+StatQuest with Josh Starmer. (2022, July 11). Recurrent Neural Networks (RNNs), Clearly
+Explained!!!
+https://www.youtube.com/watch?v=AsNTP8Kwu80
+[Optional] StatQuest with Josh Starmer. (2022, November 7). Long Short-Term Memory (LSTM),
+Clearly Explained.
+https://www.youtube.com/watch?v=YCzL96nL7j0
+[Optional] Murphy, K. P. (2022) Probabilistic Machine Learning. Chapter 15.2
+https://probml.github.io/pml-book/book1.html
+Session 23: Attention
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I.
+(2017). Attention is all you need. Advances in neural information processing systems, 30.
+https://papers.nips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-
+Paper.pdf
+What is a Transformer [3b1b]
+https://www.youtube.com/watch?v=wjZofJX0v4M
+Attention in Transformers [3b1b]
+https://www.youtube.com/watch?
+v=eMlx5fFNoYc&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=7&t=5s
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Session 24: Transformer-Based Large Language Models
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Hill, F. (2023). Why transformers are obviously good models of language.
+https://drive.google.com/file/d/1Z4raW0RRzGIvHeXtCRb0xjRil_4KBkWE/view
+Raschka, S. (2023). Understanding and Coding the Self-Attention Mechanism of Large Language
+Models From Scratch.
+https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html
+Shafkat, I. (2022). Neural Language Models.
+https://irhum.github.io/blog/lm/#part-b-language-models
+Gwern (2022). The Scaling Hypothesis.
+https://gwern.net/scaling-hypothesis#why-does-pretraining-work
+Session 25: Review 3: Course Synthesis and Final Project Prep
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+Reading, Videos, and Other Preparation Resources
+How go give a lightning talk (Woolston 2021)
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+https://www.nature.com/articles/d41586-021-01674-9
+Unit 8: Alternate Lessons
+Session 28: Gaussian processes
+Learning Outcomes
+#regression: Apply and interpret regression. (C) FA
+Reading, Videos, and Other Preparation Resources
+De Freitas, N. (2013, February 04). Introduction to Gaussian processes. Retrieved September 22,
+2017, from https://www.youtube.com/watch?v=4vGiHC35j9s
+https://www.youtube.com/watch?v=4vGiHC35j9s
+(Optional) Read sections 19.1-19.4 of Barber, D. (2012). Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+Bailey, K. Gaussian Processes for Dummies. Retrieved March 03, 2019, from
+http://katbailey.github.io/post/gaussian-processes-for-dummies/
+http://katbailey.github.io/post/gaussian-processes-for-dummies/
+(Optional) Murphy, K. (2012). Machine Learning: A Probabilistic Perspective. Cambridge: The MIT
+Press.
+https://probml.github.io/pml-book/book0.html
+(Optional) Cunningham, J. (2012, July 06). MLSS 2012: J. Cunningham - Gaussian Processes for
+Machine Learning (Part 1). Retrieved March 03, 2019, from https://www.youtube.com/watch?
+v=BS4Wd5rwNwE
+https://www.youtube.com/watch?v=BS4Wd5rwNwE
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Session 28: Fisher’s Linear discriminant
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+Reading, Videos, and Other Preparation Resources
+(Option 1) Read Chapter 16 of Barber, D. (2012). Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+(Option 2) Read section 8.6.3 of Murphy, K. (2012). Machine Learning: A Probabilistic Perspective.
+Cambridge: The MIT Press.
+https://probml.github.io/pml-book/book0.html
+Session 29: Topic modeling
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+Reading, Videos, and Other Preparation Resources
+Chen, E. (n.d.). Introduction to Latent Dirichlet Allocation. Retrieved October 05, 2017, from
+http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/
+http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/
+(Optional) Blei, D.; Ng, A.; Jordan, M (2003). "Latent Dirichlet Allocation". Journal of Machine
+Learning Research. 3 (4–5): pp. 993–1022.
+https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
+(Optional) Read Sections 20.6 of Barber, D. (2012).Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+(Optional) Murphy, K. (2012). Machine Learning: A Probabilistic Perspective. Cambridge: The MIT
+Press.
+https://probml.github.io/pml-book/book0.html
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Session 29: Bayesian decision theory
+Learning Outcomes
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#utility: Use utility to represent preferences and analyze purposeful decision-making. (C) FA
+#gametheory: Apply and evaluate game- theoretic models. (C) FA
+Reading, Videos, and Other Preparation Resources
+(Option 1) Read sections 7.1 and 7.2 of Barber, D. (2012). Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+Chorionic villus sampling (Beyond the Basics). (n.d.). Retrieved August 17, 2017, from
+http://www.uptodate.com/contents/chorionic-villus-sampling-beyond-the-basics
+http://www.uptodate.com/contents/chorionic-villus-sampling-beyond-the-basics
+(Option 2) Murphy, K. (2012). _Machine Learning: A Probabilistic Perspective. _Cambridge: The MIT
+Press.
+2.2.3.1 Example: medical diagnosis (p.29): read through the example as it may help with pre-
+class work
+5.7.3.2 Utility theory (p.185): provides a short introduction to utility theory
+10.6 Influence (decision) diagrams (p.328-331): read the graphical interpretation of decision
+diagrams up to POMDP.
+https://probml.github.io/pml-book/book0.html
+Session 32: Expectation maximization
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+Reading, Videos, and Other Preparation Resources
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+(Option 1) Read Sections 11.1 - 11.4 of Barber, D. (2012). Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+Do, C. B., & Batzoglou, S. (2008). What is the expectation maximization algorithm?. Nature
+biotechnology, 26(8), 897. Reading found in EBSCO Academic Search Complete database
+(Optional) Chapter 9 of Bishop, C. M. (2006). Pattern recognition and machine learning. New York:
+Springer.
+(Option 2) Read section 11.4 of Murphy, K. (2012). Machine Learning: A Probabilistic Perspective.
+Cambridge: The MIT Press.
+https://probml.github.io/pml-book/book0.html
+(Optional) Iacobelli F (2015). The EM Algorithm. Retrieved from Youtube on 4 November 2019.
+https://www.youtube.com/watch?v=7e65vXZEv5Q
+https://www.youtube.com/watch?v=7e65vXZEv5Q
+Session 33: Bayesian linear models
+Learning Outcomes
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#regression: Apply and interpret regression. (C) FA
+Reading, Videos, and Other Preparation Resources
+(Option 1) Read section 18.1 of Barber, D. (2012). Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+(Optional) Mathematicalmonk (2011, June 29). Bayesian Linear Regression. Retrieved August 29,
+2017, from https://www.youtube.com/watch?v=dtkGq9tdYcI
+https://www.youtube.com/watch?v=dtkGq9tdYcI
+(Option 2) Murphy, K. (2012). Machine Learning: A Probabilistic Perspective. Cambridge: The MIT
+Press.
+https://probml.github.io/pml-book/book0.html
+Brooks-Bartlett, J. (2018) Probability concepts explained: Bayesian inference for parameter
+estimation.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-
+estimation-90e8930e5348
+Koehrsen, W. (2018) Introduction to Bayesian Linear Regression.
+https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7
+Session 34: Dimensionality Reduction 3: Gaussian Mixture Models
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+Reading, Videos, and Other Preparation Resources
+Bekkers, E. (2020, November 27) 9.1 Unsupervised Learning: Latent Variable Models (UvA -
+Machine Learning 1 - 2020)
+https://www.youtube.com/watch?v=zFHwYvmDCCg
+Bekkers, E. (2020, November 27) 9.4 Gaussian Mixture Models And Expectation Maximization (UvA -
+Machine Learning 1 - 2020)
+https://www.youtube.com/watch?v=TfMtshd5mgo
+CS228 (n.d.) Learning in latent variable models
+https://ermongroup.github.io/cs228-notes/learning/latent/
+VanderPlas, J (2016) In Depth: Gaussian Mixture Models
+https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html
+Session 35: Networks 3: Distributions as Bayesian Networks
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Reading, Videos, and Other Preparation Resources
+[Review] Bayes Theorem (3b1b 2018)
+https://www.youtube.com/watch?v=HZGCoVF3YvM
+Bayesian networks and inference over graphs (Sanford 2019)
+https://www.youtube.com/watch?v=U23yuPEACG0
+[Optional In depth reading for Extension] Read sections 8.1 and 8.2 of
+Bishop, C. M. (2006). Pattern recognition and machine learning. New York: Springer.
+https://www.microsoft.com/en-us/research/wp-content/uploads/2016/05/Bishop-PRML-sample.pdf
+Session 40: Quantifying model quality
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#regression: Apply and interpret regression. (C) FA
+Reading, Videos, and Other Preparation Resources
+Read wikipedia's article on Sensitivity and Specificity.
+https://en.wikipedia.org/wiki/Sensitivity_and_specificity
+Scikit learn documentation, Chapter 3. Model selection and evaluation. (2010). Retrieved February
+23, 2017, from http://scikit-learn.org/stable/model_selection.html
+http://scikit-learn.org/stable/model_selection.html
+Domingos, P. (2012). A few useful things to know about machine learning. Communications of the
+ACM, 55(10), 78-87.
+https://cacm.acm.org/magazines/2012/10/155531-a-few-useful-things-to-know-about-machine-
+learning/fulltext
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+(Challenge) Chapter 5, Section 1. Murphy, K. (2012). Machine Learning: A Probabilistic Perspective.
+Cambridge: The MIT Press.
+https://probml.github.io/pml-book/book0.html
+Session 55: Logistic regression
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+Reading, Videos, and Other Preparation Resources
+(Option 1) Read Sections 17.4 of Barber, D. (2012). Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+(Option 2) Murphy, K. (2012). Machine Learning: A Probabilistic Perspective. Cambridge: The MIT
+Press.
+https://probml.github.io/pml-book/book0.html
+Session 70: Linear Algebra 3: Support Vector Machines MERGE WITH
+KERNEL TRICK
+Learning Outcomes
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#regression: Apply and interpret regression. (C) FA
+#cs156-MLCode: Produce working, readable, and performant Python implementations of a variety of
+machine learning systems using appropriate libraries and software tools.
+#cs156-MLDevelopment: Contribute to the quality of ML resources for current and future students
+by compiling learning resources, sharing code, creating study groups, and supporting other student's
+learning.
+#cs156-MLExplaination: Clearly articulate machine learning systems, algorithms, and techniques
+using appropriate oral and written descriptions, mathematical notation, and visualizations.
+#cs156-MLFlexibility: Reason flexibly, apply information in new contexts, produce novel work, and
+articulate meta-knowledge about machine learning.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Reading, Videos, and Other Preparation Resources
+Winston, P. (2014, January 10). Learning: Support Vector Machines. Retrieved September 01, 2017,
+from https://www.youtube.com/watch?v=_PwhiWxHK8o
+https://www.youtube.com/watch?v=_PwhiWxHK8o
+(Optional) Murphy, K. (2012). Machine Learning: A Probabilistic Perspective. Cambridge: The MIT
+Press.
+https://probml.github.io/pml-book/book0.html
+Session 74: Kalman filters
+Learning Outcomes
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+Reading, Videos, and Other Preparation Resources
+Visually Explained Kalman Filters
+https://www.youtube.com/watch?v=IFeCIbljreY
+Labbe, R. (n.d.). Kalman and Bayesian Filters in Python. Retrieved October 30, 2017, from
+http://nbviewer.jupyter.org/github/rlabbe/Kalman-and-Bayesian-Filters-in-
+Python/blob/master/table\_of\_contents.ipynb
+http://nbviewer.jupyter.org/github/rlabbe/Kalman-and-Bayesian-Filters-in-
+Python/blob/master/table_of_contents.ipynb
+(Optional) Read Chapter 24 of Barber, D. (2012). Bayesian reasoning and machine learning.
+Cambridge: Cambridge University Press.
+(Optional) Read Section 13.3 of Bishop, C. M. (2006). Pattern recognition and machine learning. New
+York: Springer.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)
+
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course
+Scoring” section of this syllabus, above. The same information is reflected in the Outcome Index on
+Forum: from the "Courses" tab, click on "View Course Score Calculation".
+Note: There may be minor changes to the syllabus before class launch due to integrating some
+new AI assessment tools and course structures. These are unlikely to substantially impact the
+content or class policies.
+For this course:
+1. 25% of the course's grade is in the form of pre-class work books. These are micro-assignments,
+not merely in course prep. If the pre-class work was submitted but you were unable to attend class
+your PCW will be evaluated as normal and can receive full credit. If your PCW is not submitted
+before class, it will receive a 0 even if it is your first or second absence. It is thus important to do
+the PCW even on days you can't make it. There no make-up work for the PCW, but each review
+day has an opportunity to resubmit one PCW for additional credit.
+2. 25% of the course's final grade is based on in-class participation. This is a combination of poll
+responses, verbal contributions, and breakouts. However, for bookkeeping reasons, these will all
+be integrated into scores attached to a poll on each review day. These days are therefore
+particularly important to attend. Please note that because class contributions are part of my overall
+assessment of participation, absences and tardiness can impact this score, both due to penalty
+scores and due to reduced opportunities to participate.
+3. It is highly recommended that you watch the class video for any classes you miss, but there is no
+make up work, and you're encouraged to shift to the next PCW and prep for the upcoming class
+rather than worrying about what's gone before. In each review class you can re-submit a PCW you
+missed to receive partial credit.
+4. Assignments turned in more than an hour after the due date will receive a late penalty.
+Assignments after the close date will not be accepted.
+(v.21. Last updated: 2026-03-23 17:27:48.959822+00:00)

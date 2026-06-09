@@ -1,0 +1,466 @@
+CS162: Software Development: Building Powerful Applications
+Spring 2026
+
+Course Description
+This course is organized around the principle that the only way to learn software development is to
+develop software. Collaborate as a team to develop a substantial web application. Examples include, but
+are not limited to, social media applications or distributed chat systems. You will have the opportunity to
+apply and experience all aspects of software development, including requirements analysis, design,
+planning, implementation, testing, and deployment.
+The Conquering CS162 document is an integral part of this syllabus and includes clarifications on the
+policies adopted in this course. Please bookmark it on your browser and refer to it regularly during the
+semester, especially in preparation for the work products to be submitted as assignments.
+Course Objectives & Learning Outcomes
+Identify and design the necessary system while keeping it as simple and understandable as possible
+#cs162-abstraction: Design interfaces (class interfaces, user interfaces, etc.) that are easy
+to use and hide much of the complexity needed for the implementation.
+#cs162-separationofconcerns: Design systems such that any task is handled by exactly
+one component and each component handles conceptually similar tasks.
+Collaborate efficiently within a large team through division of labor and standardized practices
+
+
+#designthinking: Apply design research processes and iterative design thinking to conceive
+and refine products or solutions. (H) MC
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise.
+Include meaningful comments, choose clear variable names, use naming conventions
+consistently, and include, where appropriate, helpful error messages. Strive to produce code
+that not only works but can also be run by external readers.
+Build systems that use appropriate technologies following best practices
+#cs162-deployment: Build a deployment process that can quickly scale to many machines if
+need be.
+#cs162-sql: Write fast queries for well-designed SQL tables.
+#cs162-testing: Write comprehensive and meaningful testing code for the system.
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g.
+http, html)
+Contribute to a productive learning environment by attending class prepared and on time,
+participating actively in class sessions, and applying learning outcomes through in-class assessments.
+#ClassParticipation: Contribute to a productive learning environment by attending class
+prepared and on time, participating actively in class sessions, and applying learning
+outcomes through in-class assessments.
+Prerequisites & Working Knowledge
+CS110: Computation: Solving Problems with Algorithms
+Assignments
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Project design 3x Wed, Week 2 Sun of Week 0 Thu of Week 2
+Project check-in 1 0x Fri, Week 6 Mon of Week 4 Sat of Week 6
+
+
+Web application 5x Fri, Week 8 Mon of Week 2 Sat of Week 8
+Project check-in 2 0x Fri, Week 9 Mon of Week 4 Sat of Week 9
+Project check-in 3 0x Fri, Week 12 Mon of Week 4 Sat of Week 12
+Final project 8x Mon, Week 15 Mon of Week 2 Tue of Week 15
+Location-based assignment 3x Mon, Week 15 Mon of Week 2 Tue of Week 15
+Tech interview 5x Thu, Week 15 Mon of Week 2 Fri of Week 15
+Course Scoring
+Type % of Course Score
+Assignments 80%
+Project design 10%
+Web application 15%
+Final project 25%
+Location-based assignment 5%
+Tech interview 25%
+Project check-in 2 0%
+Project check-in 1 0%
+Project check-in 3 0%
+Classroom Scores 20%
+Pre-Class Work 5%
+Poll Responses & Makeup Work 5%
+Verbal Contributions 10%
+Breakouts 0%
+Required Texts
+Intro to SQL: Querying and managing data. (n.d.). Retrieved July 24, 2017, from
+https://www.khanacademy.org/computing/computer-programming/sql
+https://www.khanacademy.org/computing/computer-programming/sql
+
+
+Pilgrim, M., & Willison, S. (2009). Dive Into Python 3 (Vol. 2). New York, NY: Apress. (Creative
+Commons)
+http://www.diveintopython3.net/
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Agile essentials
+Lean methodology guides you on what to build. The Scrum framework guides you on how to build it
+through effective processes. Git facilitates collaborative work on the codebase, enabling concurrent
+contributions from team members. This combination will equip you with the knowledge and tools
+necessary for efficient and successful software development, encompassing decision-making, project
+management, and collaborative coding practices.
+Session 1: Lean methodology
+Learning Outcomes
+#designthinking: Apply design research processes and iterative design thinking to conceive and
+refine products or solutions. (H) MC
+#rightproblem: Characterize a complex problem in detail to really understand it. (H) EA
+Reading, Videos, and Other Preparation Resources
+Ries, E. (2011). The Lean Startup. Talks at Google.
+https://www.youtube.com/watch?v=fEvKo90qBns
+Session 2: The Scrum framework
+Learning Outcomes
+
+
+#designthinking: Apply design research processes and iterative design thinking to conceive and
+refine products or solutions. (H) MC
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+Reading, Videos, and Other Preparation Resources
+What is Scrum? (n.d.).
+https://www.scrum.org/resources/what-is-scrum
+Session 3: Collaboration with Git
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include
+meaningful comments, choose clear variable names, use naming conventions consistently, and
+include, where appropriate, helpful error messages. Strive to produce code that not only works but
+can also be run by external readers.
+Reading, Videos, and Other Preparation Resources
+Chapters 1–3 of Chacon, S., & Straub, B. (2014). Pro git. Apress. (Creative Commons)
+https://git-scm.com/book/en/v2
+GitHub Guides. (n.d.).
+https://guides.github.com/
+Virtanen, T. (n.d.). Git for Computer Scientists. (Open Access)
+http://eagain.net/articles/git-for-computer-scientists/
+Unit 2: Web programming
+The internet has revolutionized the world, but comes with a bewildering array of various technologies.
+This unit covers how the different technologies fit together and how to use them securely.
+
+
+Session 4: An HTML primer
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+Introduction to HTML. (2017). Retrieved June 22, 2017, from https://developer.mozilla.org/en-
+US/docs/Learn/HTML/Introduction_to_HTML
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
+The Net Ninja. (2019). Chrome Dev Tools. HTML & CSS Crash Course.
+https://www.youtube.com/watch?v=25R1Jl5P7Mw
+(Optional) The Net Ninja. (2019b). HTML & CSS crash course tutorial. YouTube.
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G
+Session 5: Making HTTP requests
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+Requests: HTTP for Humans: Quickstart. (n.d.).
+https://requests.readthedocs.io/en/latest/user/quickstart/
+MDN Web Docs. (n.d.). An overview of HTTP.
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+
+MDN Web Docs. (n.d.). HTML forms.
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms
+Session 6: The Flask microframework I
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+Flask Tutorial. (n.d.). Retrieved 28 Aug, 2022.
+https://flask.palletsprojects.com/en/2.3.x/tutorial/
+Dugar, D. (2018). Jinja2 explained in 5 minutes! Codeburst.
+https://codeburst.io/jinja-2-explained-in-5-minutes-88548486834e
+(Optional) Python Decorators (n.d.). Programiz.
+https://www.programiz.com/python-programming/decorator
+(Optional) Tech With Tim. (2019, October 27). Flask tutorial #1: How to make websites with Python
+[Video]. Youtube.
+https://www.youtube.com/watch?v=mqhxxeeTbu0
+(Optional) [freeCodeCamp.org]. (2019, May 28). Learn Flask for Python — Full Tutorial. Youtube.
+https://www.youtube.com/watch?v=Z1RJmh_OqeA
+Session 7: The Flask microframework II
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+
+
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+Herbert, A. (2021, November 22). How To Add Authentication to Your App with Flask-Login.
+https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-
+flask-login
+Session 8: React I
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+Grinberg, M. (2022, April 2). The React Mega-Tutorial.
+https://blog.miguelgrinberg.com/post/the-react-mega-tutorial-chapter-1-modern-javascript
+Session 9: React II
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+Grinberg, M. (2022, April 2). The React Mega-Tutorial.
+https://blog.miguelgrinberg.com/post/the-react-mega-tutorial-chapter-1-modern-javascript
+
+
+Unit 3: Databases
+Robustly handling data is trickier and more subtle than one might imagine. As such it makes sense to
+use a special-purpose system, and the most popular option is a SQL database. In this unit, you will learn
+best practices on how to design and access tables with SQL.
+Session 10: SQL overview
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-sql: Write fast queries for well-designed SQL tables.
+Reading, Videos, and Other Preparation Resources
+Intro to SQL: Querying and managing data. (n.d.). Retrieved July 24, 2017, from
+https://www.khanacademy.org/computing/computer-programming/sql
+https://www.khanacademy.org/computing/computer-programming/sql
+Session 11: Data normalization
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-sql: Write fast queries for well-designed SQL tables.
+Reading, Videos, and Other Preparation Resources
+Wenzel, K. (2022, March 29). Database normalization — in easy to understand English.
+EssentialSQL.
+https://www.essentialsql.com/database-normalization/
+
+
+[channel5567]. (2015, August 14). Normalization — 1NF, 2NF, 3NF and 4NF. Youtube.
+https://www.youtube.com/watch?v=UrYLYV7WSHM
+Intro to SQL: Querying and managing data. (n.d.). Retrieved July 24, 2017, from
+https://www.khanacademy.org/computing/computer-programming/sql
+https://www.khanacademy.org/computing/computer-programming/sql
+Session 12: ACID and transactions
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-sql: Write fast queries for well-designed SQL tables.
+Reading, Videos, and Other Preparation Resources
+[ComputerScienceLessons]. (2021, September 3). Database Transactions, ACID. Youtube.
+https://www.youtube.com/watch?v=AcqtAEzuoj0
+Intro to SQL: Querying and managing data. (n.d.). Retrieved July 24, 2017, from
+https://www.khanacademy.org/computing/computer-programming/sql
+https://www.khanacademy.org/computing/computer-programming/sql
+Session 13: SQL indices
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-sql: Write fast queries for well-designed SQL tables.
+Reading, Videos, and Other Preparation Resources
+Chapter 1 of Winand, M. (n.d.). What every developer should know about SQL performance.
+
+
+https://use-the-index-luke.com/
+Query planning. (2020, May 21). SQLite documentation.
+https://sqlite.org/queryplanner.html
+Session 14: Object relational mapping
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-abstraction: Design interfaces (class interfaces, user interfaces, etc.) that are easy to use
+and hide much of the complexity needed for the implementation.
+#cs162-sql: Write fast queries for well-designed SQL tables.
+Reading, Videos, and Other Preparation Resources
+SQLAlchemy 1.4 / 2.0 Tutorial. (n.d.).
+https://docs.sqlalchemy.org/en/14/tutorial/index.html
+Unit 4: Object oriented programming
+Object oriented programming has proven to be the most successful methodology for building large
+software projects. It does this by bundling data and behavior together to create an object.
+Session 15: Abstraction
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-abstraction: Design interfaces (class interfaces, user interfaces, etc.) that are easy to use
+and hide much of the complexity needed for the implementation.
+Reading, Videos, and Other Preparation Resources
+
+
+Spolsky J. (2002, November 11). The Law of Leaky Abstractions.
+https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/
+Parts 1 and 2 of Giordani, L. (2014). Python 3 Object Oriented Programming Tutorial.
+http://blog.thedigitalcatonline.com/blog/2014/08/20/python-3-oop-part-1-objects-and-types/
+(Optional) Reitz, K., & Schlusser, T. (2016). The hitchhiker’s guide to Python. Sebastopol, CA:
+O’Reilly Media.
+http://docs.python-guide.org/en/latest/writing/style/
+Session 16: Composition versus inheritance
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-abstraction: Design interfaces (class interfaces, user interfaces, etc.) that are easy to use
+and hide much of the complexity needed for the implementation.
+Reading, Videos, and Other Preparation Resources
+Part 3 of Giordani, L. (2014). Python 3 Object Oriented Programming: Objects and Types. Retrieved
+June 14, 2017, from http://blog.thedigitalcatonline.com/blog/2014/08/20/python-3-oop-part-3-
+delegation-composition-and-inheritance/
+http://blog.thedigitalcatonline.com/blog/2014/08/20/python-3-oop-part-3-delegation-composition-
+and-inheritance/
+Rodriguez, I. (n.d.). Inheritance and Composition: A Python OOP guide. Real Python.
+https://realpython.com/inheritance-composition-python/
+Dalling T (2009). Solid Class Design: The Liskov Substitution Principle.
+https://www.tomdalling.com/blog/software-design/solid-class-design-the-liskov-substitution-
+principle/
+(Optional) Rhodes, B. (n.d.). The composition over inheritance principle. Python Design Patterns.
+https://python-patterns.guide/gang-of-four/composition-over-inheritance/
+(Optional) Dalling T (2009). Solid Class Design: The Open Closed Principle.
+https://www.tomdalling.com/blog/software-design/solid-class-design-the-open-closed-principle/
+
+
+Session 17: Polymorphism
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-abstraction: Design interfaces (class interfaces, user interfaces, etc.) that are easy to use
+and hide much of the complexity needed for the implementation.
+Reading, Videos, and Other Preparation Resources
+Shrivastava, S. (2018, September 13). Polymorphism. Youtube.
+https://www.youtube.com/watch?v=pii3hAksya0
+Part 4 of Giordani, L. (2014). Python 3 Object Oriented Programming: Objects and Types. Retrieved
+June 14, 2017, from
+http://blog.thedigitalcatonline.com/blog/2014/08/21/python-3-oop-part-4-polymorphism/
+Session 18: Design patterns: template and iterator
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-separationofconcerns: Design systems such that any task is handled by exactly one
+component and each component handles conceptually similar tasks.
+Reading, Videos, and Other Preparation Resources
+Peter Ullrich, P. (2017, October 6). Design patterns in Python. Youtube.
+https://www.youtube.com/watch?v=bsyjSW46TDg
+Martelli, A. (2007, June 04). Python Design Patterns. Talk from Google Developers Day.
+https://www.youtube.com/watch?v=0vJJlVBVTFg
+Chapter 7 (and optionally 8) of Pilgrim, M., & Willison, S. (2009). Dive Into Python 3 (Vol. 2). New
+York, NY: Apress.
+https://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf
+
+
+The Catalog of Design Patterns. (n.d.).
+https://refactoring.guru/design-patterns/catalog
+Unit 5: Testing, Deployment, and Security
+As systems grow it becomes increasingly difficult to change anything without breaking something. By
+writing comprehensive tests for the code, it becomes possible to introduce significant changes while
+remaining confident that any new bugs or regressions will be quickly discovered by the test suite.
+Large projects very often decompose into several subsystems that need to work together collectively to
+function correctly. Sometimes changing one subsystem breaks the overall system, so integration testing
+is used to make sure that all subsystems are currently working well together. This whole process can be
+automated into a process known as continuous integration.
+Although the system or application gets developed on a local machine, it still needs to be deployed onto
+a remote server. A poor deployment process will have many inconsistencies between the two
+environments, take the production system offline while the deployment is taking place and will require
+extensive manual intervention to get the system working again. This can significantly reduce the ability to
+scale out the application. Various best practices can help avoid the worst problems.
+Session 19: Unit testing
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-testing: Write comprehensive and meaningful testing code for the system.
+Reading, Videos, and Other Preparation Resources
+Chapters 9-10 of Pilgrim, M., & Willison, S. (2009). Dive Into Python 3 (Vol. 2). New York, NY: Apress.
+http://www.diveintopython3.net/
+Unittest — Unit testing framework. (n.d.). Retrieved March 12, 2021, from
+https://docs.python.org/3/library/unittest.html
+https://docs.python.org/3/library/unittest.html
+
+
+(Optional) Sharma, A. (2020, May 1). Unit Testing in Python. Retrieved March 12, 2021, from
+https://www.datacamp.com/community/tutorials/unit-testing-python
+https://www.datacamp.com/community/tutorials/unit-testing-python
+Session 20: Security and authentication
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+HttpWatch. (n.d.). HTTP Authentication. Retrieved February 21, 2018, from
+https://www.httpwatch.com/httpgallery/authentication/
+https://www.httpwatch.com/httpgallery/authentication/
+Acunetix. (n.d.). What is SQL Injection (SQLi) and How to Fix It. Retrieved February 21, 2018, from
+https://www.acunetix.com/websitesecurity/sql-injection/
+https://www.acunetix.com/websitesecurity/sql-injection/
+Session 21: Software containers
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-deployment: Build a deployment process that can quickly scale to many machines if need
+be.
+Reading, Videos, and Other Preparation Resources
+Docker documentation. (n.d.). Retrieved June 09, 2017, from https://docs.docker.com/get-started/
+https://docs.docker.com/get-started/
+
+
+LearnCode.academy. (2016). Docker Tutorials. Retrieved March 08, 2018, from
+https://www.youtube.com/playlist?list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
+https://www.youtube.com/playlist?list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
+Docker. (n.d.). Get started with Docker for Windows. Retrieved March 09, 2018, from
+https://docs.docker.com/docker-for-windows/
+https://docs.docker.com/docker-for-windows/
+Session 22: A cluster of containers
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-deployment: Build a deployment process that can quickly scale to many machines if need
+be.
+Reading, Videos, and Other Preparation Resources
+Docker documentation. (n.d.). Retrieved June 09, 2017, from https://docs.docker.com/get-started/
+https://docs.docker.com/get-started/
+Session 23: Continuous integration
+Learning Outcomes
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement
+working code. (C) FA
+#cs162-testing: Write comprehensive and meaningful testing code for the system.
+Reading, Videos, and Other Preparation Resources
+Quickstart For Github Actions
+Accessed on Mar 23 2021 at https://docs.github.com/en/actions/quickstart
+https://docs.github.com/en/actions/quickstart
+Learn Github Actions
+Accessed on Mar 23 2021 at https://docs.github.com/en/actions/learn-github-actions
+
+
+https://docs.github.com/en/actions/learn-github-actions
+Unit 6: Synthesis
+We synthesize all the content from previous sessions. An example synthesis exercise would be to take a
+large unspecified project and break it into discrete subsystems. Each subsystem can then be given a
+good object-oriented design with special attention being paid as to how the data might be stored in a
+database.
+Session 24: Good web server architecture
+Learning Outcomes
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs162-webstandards: Build systems that correctly use the standard web technologies (e.g. http,
+html)
+Reading, Videos, and Other Preparation Resources
+Wiggins, A. (n.d.). The Twelve-Factor App. Retrieved June 08, 2017, from https://12factor.net/
+https://12factor.net/
+Hughes, J. (2015, September 25). The Twelve Factor App Methodology. Retrieved February 23,
+2018, from https://www.youtube.com/watch?v=bLc3eKbyFNg
+https://www.youtube.com/watch?v=bLc3eKbyFNg
+Session 25: Retrospective
+Learning Outcomes
+#selfawareness: Identify and monitor your strengths and weaknesses; mitigate behaviors and habits
+that impair effective performance. (H) CX
+
+
+#designthinking: Apply design research processes and iterative design thinking to conceive and
+refine products or solutions. (H) MC
+Reading, Videos, and Other Preparation Resources
+Atlassian. (n.d.). How to run retrospective meetings. Retrieved March 26, 2018, from
+https://www.atlassian.com/team-playbook/plays/retrospective
+https://www.atlassian.com/team-playbook/plays/retrospective
+Atlassian. (n.d.). Agile retrospectives: Use the past to define the future. Retrieved April 02, 2018, from
+https://www.atlassian.com/agile/scrum/retrospectives
+https://www.atlassian.com/agile/scrum/retrospectives
+Session 26: Temp class for copying stuff
+Learning Outcomes
+Reading, Videos, and Other Preparation Resources
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course
+Scoring” section of this syllabus, above. The same information is reflected in the Outcome Index on
+Forum: from the "Courses" tab, click on "View Course Score Calculation".
+Makeup Work
+For this course, the makeup work process is as follows:
+1. Student misses class.
+
+
+2. The student has 7 days from the end of class to submit their PCW by committing the work to their
+repo. (If there are multiple successive absences, then the deadline for all PCW will be 7 days after
+the last absence.)
+3. They must email either their TA or Prof to review the PCW.
+4. Once the PCW has been reviewed then the process is as follows:
+1. If the MUW is insufficient then we will set an additional score from a 0 to a 1.
+2. A comment will mention that your work was submitted, and was adequate. In some cases,
+everyone's PCW is graded, and then your PCW will (probably) be graded too.

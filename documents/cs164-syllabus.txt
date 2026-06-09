@@ -1,0 +1,374 @@
+CS164: Optimization Methods
+Fall 2025
+Course Description
+Learn to use and analyze optimization techniques such as linear, quadratic, semidefinite and mixed-integer programming.
+Explore optimization algorithms such as Newton’s method, interior point methods and branch and bound methods. Apply these
+techniques to robotics, portfolio optimization, physical modeling, and more.
+Note: Syllabus subject to change.
+Course Objectives & Learning Outcomes
+Explain, analyze, and apply the theory and techniques of unconstrained optimization.
+#CS164-UnconstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of
+unconstrained optimization; solve unconstrained optimization problems using analytic techniques.
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to
+unconstrained optimization; solve unconstrained optimization problems using numerical techniques.
+Explain, analyze, and apply the theory and techniques of constrained optimization.
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+#CS164-ConstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to
+constrained optimization; solve constrained optimization problems using numerical techniques.
+KeySkills - Apply professional conventions to this course.
+#audience: Tailor oral and written work by considering the situation and perspective of the people receiving it. (H)
+MC
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+Class Scores - Participate meaningfully during class and class preparation.
+
+
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared and on time,
+participating actively in class sessions, and applying learning outcomes through in-class assessments.
+Prerequisites & Working Knowledge
+The content covered in CS111 and CS113 is assumed knowledge. In particular, students will be expected to have familiarity
+with linear algebra and multivariable calculus.
+There are four particular things you should review carefully before taking the course:
+The limit definition of derivative and its interpretation along with how it relates to linear and quadratic approximation in the
+univariate case.
+The calculation and interpretation of multivariate gradients, directional derivatives, and their relationship.
+The calculation of determinants via minors.
+The calculation and interpretation of eigenvalues.
+Having a solid grasp of these topics is essential.
+Assignments
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Assignment 1 3x Tue, Week 4 Sun of Week 2 Fri of Week 4
+Assignment 2 3x Sat, Week 7 Sun of Week 5 Tue of Week 8
+Assignment 3 3x Sun, Week 11 Wed of Week 9 Wed of Week 11
+LBA 2x Sat, Week 13 Sun of Week 10 Tue of Week 14
+Final Project 4x Thu, Week 15 Wed of Week 11 Fri of Week 15
+Course Scoring
+Objective % of Course Score
+Explain, analyze, and apply the theory and techniques of unconstrained optimization. 32.5%
+#CS164-UnconstrainedAnalytic
+#CS164-UnconstrainedNumerical
+
+
+Explain, analyze, and apply the theory and techniques of constrained optimization. 32.5%
+#CS164-ConstrainedAnalytic
+#CS164-ConstrainedNumerical
+KeySkills - Apply professional conventions to this course. 10%
+#audience
+#dataviz
+#professionalism
+#responsibility
+Class Scores - Participate meaningfully during class and class preparation. 20%
+#ClassParticipation
+Other 5%
+Required Texts
+(Optional, but recommended) Kochenderfer, Mykel J. and Wheeler, Tim A. (2019). Algorithms for Optimization. Cambridge,
+MA: The MIT Press.
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Introduction -- What is an Optimization Problem?
+This first unit introduces students to optimization problems in general. We discuss the notions of utility function, feasible sets
+and the difference between local and global optima
+Session 1: 1.1 What and Why to Optimize
+Learning Outcomes
+#audience: Tailor oral and written work by considering the situation and perspective of the people receiving it. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#CS164-UnconstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of unconstrained
+optimization; solve unconstrained optimization problems using analytic techniques.
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+
+
+(Optional) Read 1.1-1.4 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT Press.
+(2017, March 29). Retrieved December 18, 2017, from https://www.youtube.com/watch?v=Q2dewZweAtU
+(2017, June 22). Retrieved December 18, 2017, from https://www.youtube.com/watch?v=AoJQS10Ewn4
+(2017, July 29). Retrieved December 22, 2017, from https://www.youtube.com/watch?
+v=URkmNZuFzKg&list=PLLK3oSbvdxFdF67yVxF_1FQO9SbBY3yTL&index=3
+Unit 2: Unconstrained Optimization
+We begin our journey into the heart of optimization by first considering the case of optimization problems that do not require
+that the variables satisfy any other constraints than to optimize the relevant objective (or utility) function.
+Session 2: Taylor series and numerical approximation
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of unconstrained
+optimization; solve unconstrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Appendix C.2 and Section 2.3 of Kochenderfer, Mykel J. and Wheeler, Tim A. (2019). Algorithms for Optimization.
+Cambridge, MA: The MIT Press.
+Session 3: Quadratic Forms
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of unconstrained
+optimization; solve unconstrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read 1.5-1.6.1 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT Press.
+Session 4: Tests for Positive Definiteness
+
+
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of unconstrained
+optimization; solve unconstrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+Session 5: Bracketing Methods
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read chapter 3 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT Press.
+Session 6: Introduction to Descent
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read sections 4.1-4.3 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT
+Press.
+Session 7: Gradient Descent
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+
+
+(Optional) Read sections 4.3, 4.5, and 5.1 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The
+MIT Press.
+Session 8: Conjugate Gradient
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read section 5.2 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT Press.
+(Optional) Shewchuk, J. R. (1994). An Introduction to the Conjugate Gradient Method Without the Agonizing Pain.
+https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf
+Session 9: Momentum and Noisy Descent
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read sections 5.3 and 8.1 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT
+Press.
+Session 10: Newton's Method
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read section 6.1 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT Press.
+
+
+(Optional) Wikipedia contributors. (2023, April 13). Newton's method in optimization. In Wikipedia, The Free Encyclopedia.
+Retrieved 20:23, September 28, 2023, from https://en.wikipedia.org/w/index.php?
+title=Newton%27s_method_in_optimization&oldid=1149653425
+Session 11: Unconstrained Review
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-UnconstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of unconstrained
+optimization; solve unconstrained optimization problems using analytic techniques.
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Review sections 3-6 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT Press.
+Unit 3: Constrained Convex Optimization
+Most optimization problems have constraints of some sort imposed on the variables: in economics problems, we might be
+constrained to not spend more than we have as income, a road may not be able to support more than a certain number of cars
+in a network optimization problem, to mention a couple of examples. To solve constrained optimization problems we’ll have to
+delve into the intricacies of convex sets and convex functions. This study culminates in the theorems of Lagrange for equality
+type constraints and that of Karush, Kuhn and Tucker for inequality type constraints. We’ll then apply these techniques to
+Linear, Quadratic as well as Semidefinite programming problems.
+Session 12: Equality Constraints with Lagrange Multipliers
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read sections 10.1-10.4 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT
+Press.
+
+
+Session 13: Convex Sets and Functions
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Appendix C3 of Kochenderfer, Mykel J. and Wheeler, Tim A. (2019). Algorithms for Optimization. Cambridge, MA:
+The MIT Press.
+(Optional) Boyd, S. (2009). Lecture 2: Convex Optimization I (Stanford). [Video File]. Watch up to 34:42.
+https://www.youtube.com/watch?v=P3W_wFZ2kUo&list=PL3940DD956CDF0622&index=2
+(Optional). Boyd, S., & Vandenberghe, L. (2015). Convex optimization. Cambridge: Cambridge University Press. Read
+Sections 2.1.1 up to and including 2.3.1.
+Session 14: Inequality Constraints: the KKT Conditions
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Section 10.5 of Kochenderfer, Mykel J. and Wheeler, Tim A. (2019). Algorithms for Optimization. Cambridge, MA:
+The MIT Press.
+(Optional) Gonçalves, H. (n.d.). OnMyPhD: Karush-Kuhn-Tucker (KKT) conditions.
+http://www.onmyphd.com/?p=kkt.karush.kuhn.tucker
+Session 15: Applying & Interpreting the KKT Conditions
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+
+
+(Optional) [Engineer2009Ali]. (2016, September 17). Lagrange Multipliers with equality and inequality constraints (KKT
+conditions) [video file]. Video segment from 4:38 onwards.
+https://youtu.be/eREvLgRJWrE?t=271
+Session 16: Linear Programming
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+#CS164-ConstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to constrained
+optimization; solve constrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Read section 11.1 in Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for optimization. The MIT Press.
+(Optional) Section 4.3 of Boyd, S., & Vandenberghe, L. (2015). Convex optimization. Cambridge: Cambridge University
+Press.
+Diamond, S and Chu, E and Boyd, S. (2014). CVXPY 0.4.11 documentation [online].
+http://www.cvxpy.org
+Session 17: Duality
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+Slama, Tom. (2023, July 4). The Art of Linear Programming. YouTube. https://www.youtube.com/watch?v=E72DWgKP\_1Y
+https://www.youtube.com/watch?v=E72DWgKP_1Y
+(Optional) Section 10.6 of Kochenderfer, Mykel J. and Wheeler, Tim A. (2019). Algorithms for Optimization. Cambridge, MA:
+The MIT Press.
+(Optional) Boyd, S. (2009). Lecture 7: Convex Optimization I (Stanford). [Video File]. Skip the discussion on conjugate
+functions from 35:13-38:11.
+https://www.youtube.com/watch?v=FJVmflArCXc&list=PL3940DD956CDF0622&index=8
+
+
+Session 18: Integer Programming
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+#CS164-ConstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to constrained
+optimization; solve constrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+Taylor, B.W. (2019).Introduction to Management Science, Global Edition (13e) Companion Module C: Integer Programming:
+The Branch and Bound Method. New York: Pearson. Pages C2-C9
+https://media.pearsoncmg.com/ph/bp/bridgepages/bp_taylor_bridgepage/taylor_13e/online_modules/Taylor13_Mod_C.pdf
+Bradley, S. P., Hax, A. C., & Magnanti, T. L. (1977).Applied mathematical programming. Reading, Mass.: Addison-Wesley.
+Chapter 9, section 9.1 (Open Access)
+http://web.mit.edu/15.053/www/AMP-Chapter-09.pdf
+Diamond, S and Chu, E and Boyd, S. (2014). CVXPY 0.4.11 documentation [online].
+http://www.cvxpy.org/en/latest/index.html
+Session 19: Mixed-Integer Programming
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+#CS164-ConstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to constrained
+optimization; solve constrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+Schouwenaars, T. et al. (2001). Mixed Integer Programming for Multi-vehicle Path Planning. Proceedings of the European
+Control Conference.
+https://course-resources.minerva.edu/uploaded_files/mu/00333614-0334/mixed-integer-programming-for-multi-vehi.pdf
+(Optional) Bemporad, A., & Morari, M. (1999). Control of systems integrating logic, dynamics, and constraints. Automatica,
+35(3), 407-427. Found in Elsevier Social and Behavioral Sciences
+http://cse.lab.imtlucca.it/~bemporad/publications/papers/automatica-mld.pdf
+(Optional) Bradley, S. P., Hax, A. C., & Magnanti, T. L. (1992).Applied mathematical programming. Reading, Mass.: Addison-
+Wesley. Chapter 9, sections 9.2-9.3
+http://web.mit.edu/15.053/www/AMP-Chapter-09.pdf
+
+
+Session 20: Quadratic Programming
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+Heider, J. (2015). Quadratic Programming.
+https://optimization.cbe.cornell.edu/index.php?title=Quadratic_programming
+Session 21: LMIs
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+Session 22: Semidefinite Programming
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+Reading, Videos, and Other Preparation Resources
+Boyd, S. (2009). Lecture 7: Convex Optimization I (Stanford). [Video File]. Watch from 7:04 - 23:35.
+https://www.youtube.com/watch?v=VxQ8VHm1Ci4&list=PL3940DD956CDF0622&index=7
+[Optional] Boyd, S., & Vandenberghe, L. (2015). Convex optimization. Cambridge: Cambridge University Press. Section 4.6
+Diamond, S and Chu, E and Boyd, S. (2014). CVXPY 0.4.11 documentation [online].
+http://www.cvxpy.org/
+
+
+Session 23: Newton's Method with Linear Equality Constraints
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to constrained
+optimization; solve constrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+Boyd, S. (2008). Convex Optimization I: Lecture 16 [video file]. Watch from 1:02:44-1:06:19 and 1:10:07 to the end.
+https://www.youtube.com/watch?v=Ap8LGbCVx4I&list=PL3940DD956CDF0622&index=16
+Boyd, S. (2018). EE364a Notes: Equality constrained minimization [class handout]. Stanford University. Slides 1-11
+https://web.stanford.edu/class/ee364a/lectures/equality.pdf
+[Optional] Chapters 10 of Boyd, S., & Vandenberghe, L. (2015). Convex optimization. Cambridge: Cambridge University
+Press.
+Session 24: Barrier Methods
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#CS164-ConstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to constrained
+optimization; solve constrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+(Optional) Section 10.9 of Kochenderfer, Mykel J. and Wheeler, Tim A. (2019). Algorithms for Optimization. Cambridge, MA:
+The MIT Press.
+(Optional) Boyd, S. (2009). Lecture 18: Convex Optimization I (Stanford). [Video File]. Watch up until 45:10
+https://www.youtube.com/watch?v=oMRVDILkpUI&list=PL3940DD956CDF0622&index=18
+(Optional) Boyd, S., & Vandenberghe, L. (2015).Convex optimization. Cambridge: Cambridge University Press. Read
+Section 11.2.
+Session 25: Course Synthesis
+Learning Outcomes
+#CS164-UnconstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of unconstrained
+optimization; solve unconstrained optimization problems using analytic techniques.
+
+
+#CS164-UnconstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to unconstrained
+optimization; solve unconstrained optimization problems using numerical techniques.
+#CS164-ConstrainedAnalytic: Derive, interpret, or apply mathematical results related to the theory of constrained
+optimization; solve constrained optimization problems using analytic techniques.
+#CS164-ConstrainedNumerical: Analyze, interpret, or apply numerical techniques and theory related to constrained
+optimization; solve constrained optimization problems using numerical techniques.
+Reading, Videos, and Other Preparation Resources
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course Scoring” section of this
+syllabus, above. The same information is reflected in the Outcome Index on Forum: from the "Courses" tab, click on "View
+Course Score Calculation".
+**Preclass Work **is an essential component of this course. Most learning outside the classroom will take the form of
+completing the PCW workbook rather than reading. Substantial effort should be put into completing the exercises and
+presenting solutions. You will be assessed on the thoroughness and quality of your answers on many of your submissions and
+given formative feedback by the teaching assistant.
+The only Makeup Work for this course is to submit your answers to the Preclass Work within 1 week of the class session.
+Failing to do so results in a 0 on an LO related to the course session.
+**Submit the link to your PCW workbook **HERE.
+The submitted makeup work should be considered a minimal viable product. The activities contain essential course content and
+should be attempted. Consider coming to office hours to discuss. It is also recommended that you watch the video of the class
+session, particularly of the introduction and activity debriefs.

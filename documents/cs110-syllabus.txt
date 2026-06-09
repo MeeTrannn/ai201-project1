@@ -1,0 +1,906 @@
+CS110: Problem Solving with Data Structures and Algorithms
+Spring 2026
+Course Description
+In this course, students learn how to apply core concepts in designing and analyzing algorithms and data
+structures to address computational problems. Searching and sorting are a few examples of algorithmic strategies
+students learn to solve problems ranging from logistics and route optimization to auto-completion engines and
+plagiarism detection.
+The CS110 course guide is an integral part of this syllabus and includes clarifications on the policies adopted in
+this course. Please bookmark it on your browser and refer to it regularly during the semester, especially in
+preparation for the work products to be submitted as assignments.
+Course Objectives & Learning Outcomes
+Analyze, evaluate, and compare algorithmic strategies and data structures to develop effective and efficient
+solutions for computational problems, making informed decisions based on their strengths, limitations, and
+computational complexity.
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques
+(including sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms,
+among others), as well as data structures (their abstractions, implementations, and functional
+operations).
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to
+a problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of
+several algorithms or data structures that accomplish the same goal and choose the best option given
+relevant constraints.
+
+Implement data structures and algorithms in Python to address computational problems through clear,
+readable, and maintainable code. Concurrently, apply professional standards in your written communication,
+code formatting, and behavior.
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include
+meaningful comments, choose clear variable names, use naming conventions consistently, and
+include, where appropriate, helpful error messages. Strive to produce code that not only works but can
+also be run by external readers.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms
+and apply data structures. When appropriate, produce Python code to plot and visualize meaningful
+performance metrics.
+#ClassParticipation: Contribute to a productive learning environment by attending class prepared and
+on time, participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+Prerequisites & Working Knowledge
+Completing PR51 (Spring Structured Study Sessions, S^4) is a prerequisite for this course, which can be done by
+passing a technical interview or participating in the weekly sessions. The S^4 resources are listed on the SSS
+myMinerva page, including the interview study guide materials and all weekly Python notebooks. Students are
+expected to have a solid handle on this material for CS110, including variable scope, variable mutability, basics of
+OOP, binary numbers (including float representation basics), operations on lists/tuples, and recursion, and should
+take extra time to review certain topics as needed.
+CS110 is not a course about Python Programming. It is a course about algorithms and data structures
+implemented in Python. The course will assume a basic knowledge of significant data structures (such as lists and
+dictionaries) and essential Python fluency at the summer preparatory materials level. To be prepared for the
+course, please review sections 1 through 12 and 16-19 of "How to Think Like a Computer Scientist: Interactive
+Edition." Retrieved from August 24, 2020, https://runestone.academy/ns/books/published/thinkcspy/index.html.
+This reading will provide the necessary programming background to succeed in this course.
+Make sure to do the interactive exercises contained in each section. Watching the videos contained therein is
+not mandatory but highly recommended.
+After reading this resource, you should be able to:
+Use built-in Python data structure methods with dictionaries and lists,
+Implement essential Python functions, such as reversing lists or generating random numbers.
+
+
+Import known Python modules, such as random and NumPy.
+For students who have mastered the skills above, please familiarize yourself with Python classes—this blog
+post is particularly instructive, and you should go through it before the course starts since we will cover it
+roughly halfway through the semester.
+For students looking for more resources, this document contains helpful tips.
+Note: Please submit code that is at least compatible with Python 3.6, and avoid using new functionalities provided
+by more recent versions unnecessarily.
+Assignments
+Please refer to the CS110 course guide for all the details on submitting your CS110 assignments in Forum and
+what is expected from your submission.
+All assignments are strictly individual. Note the weighting of each assignment:
+Projects 1 and 2 each represent about 3.5 weeks of coursework. They assess all six LOs and one HC. They
+give you the opportunity to demonstrate progress across the full skills taught and practised in class. Their
+weighting reflects where your consistent time and effort will have the most significant impact and how the
+work you do in and out of class builds the independence to tackle new and complex problems, which is one
+of the main goals of this course.
+Pseudo Project 2 is narrower in scope. It assesses one technical LO and one HC. Its higher relative weight of
+2x compared to 1x for the other projects is intentional. This assignment provides a high-impact chance to
+plan, experiment, and grow before the final project. You will also receive targeted feedback on your
+approach. The impact on the overall course grade is about half that of a whole project, so you can give it the
+focus it deserves.
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Project 1 - Designing a Scheduler [A day in the life of a 1x Tue, Week 9 Sun of Week 6 Fri of Week 9
+Minervan Part I]
+Pseudo Project 2 - Choose your Final Computational 2x Tue, Week 13 Sun of Week 10 Wed of Week 13
+Application
+Project 2 - Final Computational Application 1x Wed, Week 15 Sun of Week 10 Thu of Week 15
+Course Scoring
+Objective % of Course Score
+Default Course Objective 0%
+Analyze, evaluate, and compare algorithmic strategies and data structures to develop 35%
+effective and efficient solutions for computational problems, making informed decisions
+based on their strengths, limitations, and computational complexity.
+#cs110-AlgoStratDataStruct
+#cs110-ComplexityAnalysis
+#cs110-ComputationalCritique
+Implement data structures and algorithms in Python to address computational problems 10%
+through clear, readable, and maintainable code. Concurrently, apply professional standards
+in your written communication, code formatting, and behavior.
+#cs110-CodeReadability
+#cs110-PythonProgramming
+#professionalism
+Contribute to a productive learning environment by attending class prepared and on time, 40%
+participating actively in class sessions, and applying learning outcomes through in-class
+assessments.
+#ClassParticipation
+Other 15%
+Required Texts
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.).
+Cambridge, MA: MIT Press. Rent E-Book
+https://mitpress.ublish.com/book/introduction-algorithms#purchase
+Real Python. (2021, September 6). How Long Does It Take to Learn Python? Https://Realpython.Com/.
+Retrieved May 17, 2022.
+https://realpython.com/how-long-does-it-take-to-learn-python/
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Algorithms—Design and Analysis
+How do we choose an optimal algorithm for a task when multiple choices exist? What does it mean to analyze an
+algorithm? What properties would we want to measure? We begin discussing these questions in this unit and start
+rigorously answering them in the context of basic sorting algorithms.
+
+
+We explore one of the most crucial algorithmic design paradigms, divide-and-conquer, and provide tools for
+analyzing algorithms of this type, along with asymptotic complexity analysis. Merge sort, introduced in Formal
+Analyses, and solutions to the maximum subarray problem are illustrative examples.
+This unit provides critical background knowledge for CS162 (Software Development: Developing Powerful
+Applications) and CS142 (Computability and Complexity).
+Session 1: [1.1] Writing algorithms in Python—part I
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+CS110 course guide
+https://drive.google.com/file/d/15qthc1zdBTcb7I0BhYjy0O0p186KwmG3/view?usp=sharing
+Part I, section 1.1 "Algorithms" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction
+to algorithms (3rd ed.). Cambridge, MA: MIT Press. (same section for 4th Edition)
+Minerva University (2022, August 20). Specifications Grading.
+https://drive.google.com/file/d/1cFG-4soekP9LoUW_HxERPKdy7ROWgWw9/view?usp=sharing
+Short interview with Mohamed Gaber (M21), October 2022
+https://www.loom.com/share/01b6606bd47b4ebb83838a4c921c305c?sid=08017116-032a-418f-a913-
+c87da3c8644c
+Session 2: [1.2] Aspects of algorithm design and analysis
+Learning Outcomes
+
+
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part I, sections 1.1 "Algorithms" and 1.2 "Algorithms as a technology" of Cormen, T. H., Leiserson, C. E.,
+Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press. (same
+sections if you use the 4th Edition).
+How to Think Like a Computer Scientist: Interactive Edition. (n.d.)., Section 5.4
+https://runestone.academy/runestone/books/published/thinkcspy/PythonModules/Therandommodule.html
+How to Think Like a Computer Scientist: Interactive Edition. (n.d.)., Chapter 8, Section 8.3
+https://runestone.academy/runestone/books/published/thinkcspy/MoreAboutIteration/ThewhileStatement.html
+Algorithm steps, one-by-one
+https://t.co/RkFu8GiiaK
+Minerva University (2022, August 5). A journey through CS110.
+https://drive.google.com/file/d/1H7Nt3FsFUPlTmSpWlXsf-4JMPZhsqkud/view?usp=sharing
+Kanat-Alexander, M. (2013). Code simplicity: The fundamentals of software. O'Reilly.
+https://www.codesimplicity.com/book-pdf/
+
+
+Session 3: [2.1] Analyzing elementary sorting algorithms
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part I, sections 2.1 "Insertion Sort" and 2.2 "Analyzing algorithms" of Cormen, T. H., Leiserson, C. E., Rivest, R.
+L., & Stein, C. (2009). Introduction to algorithms(3rd ed.). Cambridge, MA: MIT Press. (same sections if you
+use the 4th Edition).
+Part I, section 3.1 of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to
+algorithms (4th ed.). Cambridge, MA: MIT Press.If you are using the 4th Edition, you will need to read two
+sections, 3.1 "O-notation, Ω-notation and Θ-notation" and 3.2 "Asymptotic notation: formal definitions."
+Minerva University (2022, August 5). Translating Pseudocode.
+https://drive.google.com/file/d/1ZYxgwPiHR-qOQCpE-6vWyHEBIm5sewSA/view?usp=sharing
+Erbarth, Joram (2022, January 8). How to prepare for CS110 assignments?
+https://youtu.be/g4_rzFw4y_4
+[Optional] Study Guide for the session “Asymptotic notations; maximum-subarray problem—part I”, Minerva
+University, retrieved on 10 January, 2022
+https://drive.google.com/file/d/1yGzpiJySaX3RCK_o3ePpSKDoFGgwkfrC/view?usp=sharing
+
+
+Session 4: [2.2] Measuring algorithms' efficiency
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#variables: Identify and classify the relevant variables of a system, problem, or model. (H) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part I, section 2.2 "Analyzing algorithms" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009).
+Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press (if you are using the 4th Edition, it's the same
+section number).
+Part I, section 3.1 "Asymptotic notation" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009).
+Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press. If you are using the 4th Edition, you will need
+to read two sections, 3.1 "O-notation, Ω-notation and Θ-notation" and 3.2 "Asymptotic notation: formal
+definitions."
+TedED, John, C., What's the fastest way to alphabetize your bookshelf?, retrieved on 29 June 2021
+https://www.youtube.com/watch?v=WaNLJf8xzC4&t=9s
+[Optional] YouTube video, retrieved on 12 Sep 2020, “Visualization and Comparison of Sorting Algorithms”
+https://www.youtube.com/watch?v=ZZuD6iUe3Pc
+
+
+Session 5: [3.1] Divide and conquer algorithms and recurrence relations
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part I, sections 2.2 "Analyzing algorithms", 2.3 "Designing algorithms", and 4.4 "The recursion-tree method for
+solving recurrences" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to
+algorithms (3rd ed.). Cambridge, MA: MIT Press (same section numbers if you use the 4th Edition).
+A. Bari, 2.1.1 Recurrence Relation, retrieved in 17Aug2020
+https://www.youtube.com/watch?v=4V30R3I1vLI
+[Optional] Part I, sections 4.3 "The substitution method for solving recurrences" and 4.5 "The master method
+for solving recurrences" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to
+algorithms (3rd ed.). Cambridge, MA: MIT Press (same section numbers if you use the 4th Edition).
+Session 6: [3.2] Asymptotic notations
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+
+
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part I, section 3.1 "Asymptotic notation" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009).
+Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press.
+[Part I, section 3.2 "Asymptotic notation: formal deûnitions" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., &
+Stein, C. (2022). Introduction to algorithms (4th ed.). Cambridge, MA: MIT Press.]
+Yasuko, K. (2023, July 20). Dividing and Conquering the Maximum Subarray Problem.
+https://drive.google.com/file/d/1jDKyDq_EcRDx87abNQoUL19saQba_Qex/view
+Jackson, C. (2022, July 22). Time Complexity and Asymptotic Notations
+https://drive.google.com/file/d/1YtW9Irxt2tCXk2XmG_Mv2GmGHEh5TZsv/view?usp=sharing
+Session 7: [4.1] Dividing and conquering the maximum subarray problem
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+
+
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Yasuko, K. (2023, July 20). Dividing and Conquering the Maximum Subarray Problem.
+https://drive.google.com/file/d/1jDKyDq_EcRDx87abNQoUL19saQba_Qex/view
+[Hook] Part I, section 4.1 "The maximum-subarray problem", exercise 4.1-5 of Cormen, T. H., Leiserson, C. E.,
+Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press. (there is no
+equivalent exercise in the 4th Edition, but we will copy the prompt directly into the workbook).
+[Optional] The first CS110 PCW Workbook. [1.1] Writing algorithms in Python—part I
+Unit 2: Enhanced Strategies for Efficient Algorithms
+This unit continues the theme of exploring sorting algorithms and others, supported by randomization techniques
+that offer insights into the expected runtime complexity.
+This unit provides background knowledge for CS162 (Software Development: Developing Powerful Applications).
+Session 8: [4.2] Introduction to randomization techniques
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and generate
+predictions. (C) EA
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+
+
+#probability: Apply and interpret fundamental concepts of probability, including conditional and Bayesian
+probabilities. (C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part I, sections 5.1 "The hiring problem", 5.2 "Indicator random variables" and 5.3 "Randomized algorithms" of
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.).
+Cambridge, MA: MIT Press (same section numbers in the 4th Edition).
+Session 9: [5.1] Deterministic quicksort
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+
+
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part II, sections 7.1 "Description of quicksort " and 7.2 "Performance of quicksort " of Cormen, T. H., Leiserson,
+C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press (same
+sections in the 4th Edition).
+Matt Garland. (2014). Quicksort Visualized, retrieved on 26 July 2021
+https://youtu.be/3ApI8aiW784
+Session 10: [5.2] Randomized quicksort
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and generate
+predictions. (C) EA
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part II, sections 7.3 "A randomized version of quicksort" and 7.4 "Analysis of quicksort" of Cormen, T. H.,
+Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT
+Press (same sections in the 4th Edition).
+
+
+TedED, John, C., What's the fastest way to alphabetize your bookshelf?, retrieved on 29 June 2021
+https://www.youtube.com/watch?v=WaNLJf8xzC4&t=9s
+Unit 3: Tree and Graph-based Algorithms
+This unit explores trees and graphs as versatile data structures, as well as several algorithms supported by them
+(network and sorting algorithms). This unit provides background knowledge for CS162 (Software Development:
+Developing Powerful Applications) and CS166 (Modeling and Analysis of Complex Systems).
+Session 11: [6.2] Writing algorithms in Python—part II
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Knupp, J. (2017, March 27). Improve Your Python: Python Classes and Object Oriented Programming.
+Retrieved February 1, 2021., from hackernoon
+https://hackernoon.com/improve-your-python-python-classes-and-object-oriented-programming-
+d09ff461168d
+
+
+Code Academy, Function vs Method:
+Everything You Need to Know,
+Retrieved Jan 11, 2026.
+https://www.codecademy.com/article/method-vs-function-difference
+Session 12: [7.1] Heaps and heapsort
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part II, sections 6.1-6.4 "Heaps", "Maintaining the heap property", "Building a heap" and "The heapsort
+algorithm" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd
+ed.). Cambridge, MA: MIT Press.
+If you use the 4th Edition of the textbook, the section numbers and names will be the same.
+YouTube video, retrieved on 16 Aug 2019
+
+
+https://www.youtube.com/watch?v=YGMwn68FP3I&list=PLF_a-
+qBXTGFektoI6JUOTRL36JlvD04BR&index=6
+HackerRank, Heaps: Find the Running Median, retrieved on Jan 2022
+https://www.hackerrank.com/challenges/ctci-find-the-running-median/problem
+Session 13: [7.2] Heaps and priority queues
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#rightproblem: Characterize a complex problem in detail to really understand it. (H) EA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part II, sections 6.4 and 6.5 "The heapsort algorithm" and "Priority queues" of Cormen, T. H., Leiserson, C. E.,
+Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press.
+If you are using the 4th Edition, the section numbers and names are the same.
+[Optional] Minerva University. (n.d.). Data Classes for Scheduling. Google Colab. Retrieved June 28, 2022.
+https://colab.research.google.com/drive/1mdLN9iudTR3dVeTLG08wE8bH7MDOUPoU?usp=sharing
+Session 14: [8.1] Algorithms for computing the median efficiently
+
+
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part II, sections 6.1-6.3 "Heaps", "Maintaining the heap property" and "Building a heap" of Cormen, T. H.,
+Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT
+Press.
+If you are using the 4th Edition, the section numbers and names are the same.
+NeetCode. (Jan 28, 2021). Find Median from Data Stream - Heap & Priority Queue - Leetcode 295? [Video]
+Youtube.
+https://www.youtube.com/watch?v=itmhHWaHupI
+Session 15: [8.2] Binary Search Trees (BSTs)
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+
+
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part III, sections 12.1-12.3 "What is a binary search tree?", "Querying a binary search tree" and "Insertion and
+deletion" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd
+ed.). Cambridge, MA: MIT Press.
+If you are using the 4th Edition version of the textbook, the section numbers and names are the same.
+Knupp, J. (2017, March 27). Improve Your Python: Python Classes and Object Oriented Programming.
+Retrieved Jan 11, 2026.
+https://medium.com/hackernoon/improve-your-python-python-classes-and-object-oriented-programming-
+d09ff461168d
+[Optional] TK (Nov 5, 2017), Everything you need to know about tree data structures. Retrieved Feb 22, 2019.
+https://medium.freecodecamp.org/all-you-need-to-know-about-tree-data-structures-bceacb85490c
+[Optional] Binary Tree Bootcamp: Full, Complete, & Perfect Trees. Preorder, Inorder, & Postorder Traversal
+(2019), retrieved from
+https://youtu.be/BHB0B1jFKQc
+Session 16: [9.1] Randomly built BSTs
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+
+
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part III, section 12.4 "Randomly built binary search trees" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., &
+Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press.
+There is no equivalent section in the 4th Edition of the textbook.
+[Optional Review] Minerva University (2021). PCWBook of session 6, titled “Asymptotic Notations".
+https://drive.google.com/file/d/1yGzpiJySaX3RCK_o3ePpSKDoFGgwkfrC/view?usp=sharing
+Session 17: [9.2] Red-black trees
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+
+
+Reading, Videos, and Other Preparation Resources
+Part III, sections 13.1 and 13.2 "Properties of red-black trees" and "Rotations" of Cormen, T. H., Leiserson, C.
+E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press.
+If you are using the 4th Edition of the textbook, it will be the same section numbers and names.
+Sambol M., Red black trees in 4 minutes — The basics and insertions (strategies) (2016)
+https://www.youtube.com/watch?v=qvZGUFHWChY
+Sambol M., Red-black trees in 5 minutes — Insertions (strategy) (2017)
+https://www.youtube.com/watch?v=5IBxA-bZZH8
+Sambol M., Red black trees in 5 minutes — Insertions (examples) (2017)
+https://www.youtube.com/watch?v=A3JZinzkMpk&feature=youtu.be
+Galles, Red/Black trees visualization tool (retrieved in 2021)
+https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
+[Optional] Red Back Trees, Codescope, retrieved 2020
+https://www.codesdope.com/course/data-structures-red-black-trees/
+Session 18: [10.1] k-d Trees
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+
+
+Reading, Videos, and Other Preparation Resources
+Stable Sort, KD-Tree Nearest Neighbor Data Structure, retrieved on 12 July 2021
+https://youtu.be/Glp7THUpGow
+CS106L Handout, Assignment 3: KDTree. (2014). Stanford.
+http://stanford.edu/class/archive/cs/cs106l/cs106l.1162/handouts/assignment-3-kdtree.pdf
+Session 19: [10.2] Aspects of graphs
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part III, section 10.1 "Stacks and Queues" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009).
+Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press (section 10.1.3 "Stacks and Queues" for the 4th
+Edition).
+Part VI, sections 22.1-22.3 "Representations of graphs", "Breadth-first search ", and "Depth-first search " of
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.).
+Cambridge, MA: MIT Press (these are sections 20.1-20.3 in the 4th edition).
+[Optional] Joshi, Vaidehi. Stacks and Overflows (Jan 30, 2017). Retrieved from
+
+
+https://medium.com/basecs/stacks-and-overflows-dbcf7854dc67
+[Optional] Joshi, Vaidehi. To Queue Or Not To Queue (Jan 30, 2017). Retrieved from
+https://medium.com/basecs/to-queue-or-not-to-queue-2653bcde5b04
+Session 20: [12.1] Computational applications of trees and graphs
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part III, sections 13.1-13.4 "Properties of red-black trees", "Rotations", "Insertion" and "Deletion" of Cormen, T.
+H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT
+Press.
+If you are using the 4th Edition of the textbook, the section numbers and names are the same.
+AVL 1 Introduction. (2016). [Video]. YouTube.
+https://youtu.be/-9sHvAnLN_w
+
+
+Unit 4: Greedy Techniques and Dynamic Programming
+Dynamic programming is another algorithmic design paradigm studied in this course. Like divide-and-conquer, it is
+also based on breaking down problems into smaller components. We learn to use dynamic programming by
+analyzing and seeking optimal solutions to a rod-cutting problem and the longest common subsequence.
+We also cover the greedy algorithm design paradigm, first encountered in Formal Analyses, and implement
+Huffman codes.
+This unit provides background for CS162 (Software Development: Developing Powerful Applications), CS152
+(Harnessing Artificial Intelligence Algorithms), and CS156 (Machine Learning for Science and Profit).
+Session 21: [12.2] The rod-cutting problem
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part IV, section 15.1 "Rod cutting" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009).
+Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press.
+If you are using the 4th Edition of the textbook, this will be section 14.1 "Rod cutting."
+Thelin, R. , "Dynamic Programming Tutorial: making efficient programs in Python", retrieved on 12 Aug, 2021
+https://www.educative.io/blog/python-dynamic-programming-tutorial
+
+
+Session 22: [13.1] The knapsack and the money-game problems
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part IV, sections 16.1 and 16.2 "An activity-selection problem" and "Elements of the greedy strategy" of
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.).
+Cambridge, MA: MIT Press.
+If you are using the 4th Edition of the textbook, then these will be sections 15.1 and 15.2 of "An activity-
+selection problem" and "Elements of the greedy strategy."
+Jain, S., Dynamic Programming – Coin In a Line Game Problem (2016), retrieved from
+https://algorithms.tutorialhorizon.com/dynamic-programming-coin-in-a-line-game-problem/
+[Optional] Back to Back SWE, "The 0/1 Knapsack Problem (Demystifying Dynamic Programming)", retrieved on
+12 Aug, 2021
+https://youtu.be/xCbYmUPvc2Q
+Session 23: [13.2] Huffman codes
+Learning Outcomes
+
+
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part IV, sections 16.2 and 16.3 "Elements of the greedy strategy" and "Huffman codes" of Cormen, T. H.,
+Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT
+Press.
+If you are using the 4th Edition of the textbook, these will be sections 15.2 and 15.3 under the same names.
+Session 24: [14.1] Computational applications of dynamic programming and
+greedy algorithms
+Learning Outcomes
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+
+
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+Part IV, section 15.4 "Longest common subsequence" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein,
+C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press.
+If you are using the 4th Edition version of the textbook, this will be section 14.4.
+Part IV, section 16.2 "Elements of the greedy strategy" of Cormen, T. H., Leiserson, C. E., Rivest, R. L., &
+Stein, C. (2009). Introduction to algorithms (3rd ed.). Cambridge, MA: MIT Press.
+If you are using the 4th Edition version of the textbook, this will be section 15.2.
+Back to Back SWE, "Longest Common Subsequence (2 Strings) - Dynamic Programming & Competing
+Subproblems", retrieved on 12 Aug, 2021
+https://youtu.be/ASoaQq66foQ
+Unit 5: Course Synthesis
+This unit is only comprised of a lesson where we make a synthesis of the course and discuss the final assignment.
+Session 25: [14.2] Synthesis of algorithms and computational applications
+Learning Outcomes
+#audience: Tailor oral and written work by considering the situation and perspective of the people receiving it.
+(H) MC
+#composition: Communicate with a clear and precise style. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products professionally. (H)
+MC
+#algorithms: Apply algorithmic thinking strategies to solve problems and effectively implement working code.
+(C) FA
+#cs110-AlgoStratDataStruct: Explain and apply the underlying principles of algorithmic techniques (including
+sorting algorithms, randomization techniques, dynamic programming, and greedy algorithms, among others),
+
+
+as well as data structures (their abstractions, implementations, and functional operations).
+#cs110-CodeReadability: Generate and structure Python code that is clear and concise. Include meaningful
+comments, choose clear variable names, use naming conventions consistently, and include, where appropriate,
+helpful error messages. Strive to produce code that not only works but can also be run by external readers.
+#cs110-ComplexityAnalysis: Analyze the asymptotic behavior of an algorithm or algorithm solution to a
+problem using the appropriate Big-O, Big-Ω, or Big-Θ notations.
+#cs110-ComputationalCritique: Contrast theoretically and experimentally the relative merits of several
+algorithms or data structures that accomplish the same goal and choose the best option given relevant
+constraints.
+#cs110-PythonProgramming: Writes Python programs to implement, analyze, compare algorithms and apply
+data structures. When appropriate, produce Python code to plot and visualize meaningful performance metrics.
+Reading, Videos, and Other Preparation Resources
+CS110 course syllabus, accessible via Forum
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course Scoring”
+section of this syllabus, above. The same information is reflected in the Outcome Index on Forum: from the
+"Courses" tab, click on "View Course Score Calculation".
+The CS110 complete guide to the specific course policies can be found in this link. This guide is an integral part of
+the syllabus.

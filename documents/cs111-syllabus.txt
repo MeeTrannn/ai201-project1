@@ -1,0 +1,448 @@
+CS111: Single and Multivariable Calculus
+Spring 2026
+Course Description
+In this course, students learn the principles of single and multivariable calculus needed to succeed in CS
+concentration courses and beyond. While a traditional course in these topics focuses on the analytic
+techniques required to do complex computations by hand and evaluates students primarily on their
+ability to do so, this course takes a different approach. Students learn to understand and apply concepts
+to solve problems in various practical contexts. While the standard computational techniques are
+covered and practiced, students will fully utilize technologies such as SageMath to supplement their
+skills. Students practice communicating and collaborating effectively in quantitative fields throughout the
+course.
+Course Objectives & Learning Outcomes
+(LimitsContinuity) Apply the concept of a limit or continuity and interpret the results.
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+(Differentiation) Apply the tools of differentiation and interpret the results.
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+(Integration) Apply the tools of integration and interpret the results.
+#cs111-Integration: Apply the tools of integration and interpret the results.
+(KeySkills) Use appropriate computational tools and apply professional conventions that are
+appropriate in quantitative fields.
+
+
+#audience: Tailor oral and written work by considering the situation and perspective of the
+people receiving it. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to
+analyze or solve problems.
+Class Scores
+#ClassParticipation: Contribute to a productive learning environment by attending class
+prepared and on time, participating actively in class sessions, and applying learning
+outcomes through in-class assessments.
+Prerequisites & Working Knowledge
+There are no formal requirements for this course beyond the successful completion of the Cornerstones.
+You should be comfortable with the interpretation and manipulation of mathematical functions and their
+graphs. Depending on your background, you may wish to review the definitions, graphs, and properties
+of exponential, logarithmic, and trigonometric functions. If you would like to review these topics, there are
+some useful videos and exercises at Khan Academy:
+Functions
+Exponential and Logarithmic Functions
+Trigonometric Functions
+Assignments
+You will complete two types of assignments in this course:
+Skill-Builder problems reinforce the skills you build during class sessions. You will complete these
+problems weekly.
+Deep Dive problems that are robust applications of the LOs to theoretical and applied contexts.
+
+
+There will be two 20-minute technical interviews with your professor. The first technical interview will take
+place over weeks 7, 8 or 9 and the second during weeks 13, 14, or 15.
+See the Math Core Assessment Guide for more details on grading in this course.
+Note: Sunday is considered the beginning of the academic week for determining due dates.
+Assignment Title Weight Due Released Closed
+Skill Builder Week 1: Limits 1x Sun, Week 2 Mon of Week 1 Mon of Week 2
+Skill Builder Week 2: Multivariate Limits and 1x Sun, Week 3 Mon of Week 1 Mon of Week 3
+Continuity
+Skill Builder Week 3: Defining and Finding 1x Sun, Week 4 Mon of Week 1 Mon of Week 4
+Derivatives
+Skill Builder Week 4: Approximations and Related 1x Sun, Week 5 Mon of Week 1 Mon of Week 5
+Rates
+Deep Dive 1: Limits, Continuity, and Single Variable 3x Fri, Week 6 Mon of Week 1 Mon of Week 7
+Differentiation
+Technical Interview 1 and mid-semester 7x Sun, Week 7 Fri of Week 3 Wed of Week 7
+reflection
+Skill Builder Weeks 5&6: Single-variable Optimization and 1x Sun, Week 7 Mon of WeekMon of Week
+Multivariable Differentiation 5 7
+Skill Builder Week 7: Multivariate Differentiation and 1x Sun, Week 8 Mon of Week 5 Mon of Week 8
+Optimization
+Skill Builder Week 8: Best Fit and Lagrange 1x Sun, Week 9 Mon of Week 5 Mon of Week 9
+Multiplier
+Skill Builder Week 9: Lagrange Multipliers and 1x Sun, Week 10 Mon of Week 5 Mon of Week 10
+Integration
+Skill Builder Week 10 Finding Integrals 1x Sun, Week 13 Mon of Week 9 Mon of Week 13
+
+
+Technical Interview 2 and Self-Reflection 7x Fri, Week 13 Sun of Week 9 Mon of Week 14
+Skill Builder Weeks 12 & 13: Improper and Double 1x Sun, Week 14 Mon of Week 9Mon of Week 14
+Integration
+^^Deep Dive 2 (LBA): Integration and Its 3x Thu, Week 15 Sun of Week 12 Fri of Week 15
+Applications
+Course Scoring
+Objective % of Course Score
+(LimitsContinuity) Apply the concept of a limit or continuity and interpret the 19%
+results.
+#cs111-LimitsContinuity
+(Differentiation) Apply the tools of differentiation and interpret the results. 23%
+#cs111-Differentiation
+(Integration) Apply the tools of integration and interpret the results. 23%
+#cs111-Integration
+(KeySkills) Use appropriate computational tools and apply professional conventions 10%
+that are appropriate in quantitative fields.
+#CS-ComputationalTools
+#audience
+#dataviz
+#professionalism
+#responsibility
+Class Scores 20%
+#ClassParticipation
+Other 5%
+Required Texts
+Course videos and notes included in the PCWorkbooks
+
+
+Schedule of Topics & Readings
+This course meets for 2 class sessions each week.
+Unit 1: Limits and Continuity
+This unit is an introduction to limits and the continuity of functions - the foundations of calculus. These
+topics are covered from algebraic, graphical, and applied points of view.
+Session 1: (1.1) Functions and Sequences
+Learning Outcomes
+#audience: Tailor oral and written work by considering the situation and perspective of the people
+receiving it. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Custom resource on functions
+https://drive.google.com/file/d/1ornL8JQZN-b7cMGhG1aywDE--DwzfIAP/view?usp=drive_link
+Custom resource on limits of sequences.
+https://drive.google.com/file/d/1Dp3nYCUJKUaAziPpPR0TK0x9HQcPpbXr/view?usp=drive_link
+Session 2: (1.2) Limits I
+
+
+Learning Outcomes
+#audience: Tailor oral and written work by considering the situation and perspective of the people
+receiving it. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Custom resource for limits of functions
+https://drive.google.com/file/d/1VUJ3XG5rMcdRYN5JvU_-zpE8xS_Ym2pH/view?usp=drive_link
+Session 3: (2.1) Limits II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#distributions: Identify different types of distributions and make inferences based on samples from
+distributions appropriately. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 4: (2.2) Continuity
+
+
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Unit 2: Differentiation and its Application
+Differential calculus is fundamentally about how functions change - often, but not exclusively, with
+respect to time. In this unit, such change is studied from the point of view of both a single independent
+variable, and multiple independent variables. The ultimate goal is to build competence in solving a large
+variety of rate and optimization problems.
+Session 5: (3.1) Defining Derivatives
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Session 6: (3.2) Finding Derivatives
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 7: (4.1) Linear Approximation
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 8: (4.2) Related Rates
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#modeling: Recognize how models can be used to describe a system, explain a set of data, and
+generate predictions. (C) EA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+
+
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 9: (5.1) Single-Variable Optimization
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 10: (5.2) Multivariable Differentiation I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Session 11: (6.2) Vectors and Geometry
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 12: (7.1) Multivariable Differentiation II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 13: (7.2) Multivariable Optimization
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+
+
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 14: (8.1) Lines of Best Fit
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#regression: Apply and interpret regression. (C) FA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Terrana, A., et.all. (2023). #Regression. In HC Handbook. Retrieved from
+https://my.minerva.edu/academics/hc-resources/hc-handbook/regression/
+https://my.minerva.edu/academics/hc-resources/hc-handbook/regression/
+Session 15: (8.2) Lagrange Multipliers I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+
+
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 16: (9.1) Lagrange Multipliers II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#optimization: Evaluate and apply optimization techniques appropriately. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs113-Vectors: Apply the tools of vector spaces and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Unit 3: Integration and its Application
+While integration is not as easy to colloquially define as differentiation, at its heart it is about summation.
+It is also a much less compact topic in that there are many more ad hoc techniques, and also general
+approaches to problem solving. This unit starts with the essentials of single variable intervals over
+intervals and multivariable integrals over rectangular domains. However, it culminates with an exploration
+of improper integrals with the goal of understanding, manipulating, and applying distribution functions -
+essential tools for probability and statistics.
+
+
+Session 17: (9.2) Single Variable Integration I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 18: (10.1) Single Variable Integration II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 19: (10.2) Single Variable Integration III
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+
+
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 20: (12.1) Improper Integrals I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 21: (12.2) Multivariable Integration I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Session 22: (13.1) Multivariable Integration II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#probability: Apply and interpret fundamental concepts of probability, including conditional and
+Bayesian probabilities. (C) FA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Unit 4: Semester Synthesis
+Session 23: (13.2) Differential Equations I
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+
+
+Reading, Videos, and Other Preparation Resources
+Session 24: (14.1) Differential Equations II
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 25: (14.2) Differential Equations III
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+
+
+Unit 5: Alternative lesson plans
+This unit contains lesson plans that are not going to be included in this semester.
+Session 100: (1.1a) Limits I (Alternative to be used when session1 is
+removed)
+Learning Outcomes
+#audience: Tailor oral and written work by considering the situation and perspective of the people
+receiving it. (H) MC
+#professionalism: Follow established guidelines to present yourself and your work products
+professionally. (H) MC
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#dataviz: Interpret, analyze, and create data visualizations. (C) EA
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Session 200: (14.2a) Semester Synthesis (Alternative to be used when session
+1 is removed)
+Learning Outcomes
+#responsibility: Follow through on commitments; be proactive and adaptable. (H) CX
+#breakitdown: Organize problems into tractable components and design solutions. (H) EA
+#cs111-Differentiation: Apply the tools of differentiation and interpret the results.
+#cs111-Integration: Apply the tools of integration and interpret the results.
+#cs111-LimitsContinuity: Apply the concept of a limit or continuity and interpret the results.
+
+
+#CS-ComputationalTools: Use appropriate computational tools (SymPy, Sage, etc.) to analyze or
+solve problems.
+Reading, Videos, and Other Preparation Resources
+Course Policies and Assessment
+Please refer to the following pages on myMinerva regarding general course policies and assessment:
+https://my.minerva.edu/academics/policies/course-policies/
+https://my.minerva.edu/academics/policies/course-grading-assessment/
+For the details regarding the overall course score calculation in this course, please refer to the “Course
+Scoring” section of this syllabus, above. The same information is reflected in the Outcome Index on
+Forum: from the "Courses" tab, click on "View Course Score Calculation".
+Pre-class work:
+Pre-class work is required for every session in CS111. Class grading will often be done by assessing
+completeness and effort for pre-class work. If you find that you struggle to complete some task in the
+pre-class work, you are expected to leave a comment describing the issues you face in as much detail
+as possible to allow the instructor and TAs to help you as much as possible. You are also expected to
+raise any problems you had in completing the pre-class work during the initial discussion of each
+session.
+If you are likely to be absent from a session, we still expect you to submit your pre-class work for that
+session in time.
+If you are absent from CS111:
+The content and skills in this course are scaffolded, each session building upon the previous ones.
+Missing a class session in CS111 may create a domino effect, as you might find it difficult to follow future
+sessions unless you perform the following actions:
+1) Watch the pre-class work videos for the missed session,
+2) Complete the pre-class work problems, AND
+3) Watch the session recording.
+
+
+Ideally, you should also attempt the breakout problems, as they are crucial aspects of this course.**
+**They should be attempted prior to watching the debrief in the video. You will not be required to turn in a
+report on this make-up work.
